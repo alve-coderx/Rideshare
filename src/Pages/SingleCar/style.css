@@ -1,0 +1,23 @@
+.slick-dots {
+    bottom : 30px!important
+}
+.slick-dots li button {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.slick-dots li button::before{
+    background-color: #7D7AFF;
+    border-radius:  20px;
+    color: #7D7AFF!important
+}
+
+:root {
+    --rsbs-backdrop-bg: transparent;
+    --rsbs-bg: #fff;
+    --rsbs-handle-bg: hsla(0, 0%, 0%, 0.14);
+    --rsbs-max-w: auto;
+    --rsbs-ml: env(safe-area-inset-left);
+    --rsbs-mr: env(safe-area-inset-right);
+    --rsbs-overlay-rounded: 16px;
+  }
