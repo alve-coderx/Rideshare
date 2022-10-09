@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import 'flowbite'
 import Slider from "react-slick";
 import { ImKey } from 'react-icons/im'
 import { AiFillStar, AiOutlineInfoCircle, AiOutlineCheckCircle } from 'react-icons/ai'
