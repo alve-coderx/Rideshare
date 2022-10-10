@@ -60,8 +60,6 @@ const SingleCar = () => {
   };
   return (
     <div>
-
-
       <div id="carousel">
         <Slider {...settings}>
           {
@@ -90,7 +88,7 @@ const SingleCar = () => {
         blocking={false}
       >
         <div className='w-[100%] rounded-t-xl	shadow-xl' >
-          <div style={{overflowY : 'scroll',maxHeight : 'auto'}}>
+          <div style={{ overflowY: 'scroll', maxHeight: 'auto' }}>
             <div className='flex justify-between mx-5 border-b-2'>
               <p className="text-[32px] font-[600]">Tesla <br /> <span className='text-[12px] text-slate-500'>Model 3</span></p>
               <p className="text-[32px] font-[600]">30 €  <br /> <span className='text-[12px] text-slate-500'>für 2 std</span></p>
@@ -115,10 +113,12 @@ const SingleCar = () => {
               </div>
             </div>
             <div className='mx-5 mt-4 flex items-center justify-between'>
-              <div className='flex items-center'>
-                <img src={avater} />
-                <p className='ml-1 text-[14px] font-[600]'>Jackie Forman</p>
-              </div>
+              <Link to='/user/1/testominal'>
+                <div className='flex items-center'>
+                  <img src={avater} />
+                  <p className='ml-1 text-[14px] font-[600]'>Jackie Forman</p>
+                </div>
+              </Link>
               <div >
                 <p className='ml-1 text-[#FAAD14] text-[20px] flex font-[600]'>
                   {[1, 2, 3, 4, 5].map((index) => <AiFillStar />)}

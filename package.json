@@ -19,6 +19,7 @@
     "react-places-autocomplete": "^7.3.0",
     "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
+    "react-scroll-to-bottom": "^4.2.0",
     "react-slick": "^0.29.0",
     "react-social-icons": "^5.15.0",
     "react-spring-bottom-sheet": "^3.4.1",

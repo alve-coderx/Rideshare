@@ -12,7 +12,7 @@ const Navigator = () => {
     {icons : <BiSearchAlt2/> , href : '/startsite/search'},
     {icons : <HiOutlineKey/> , href : '/startsite/user'},
     {icons : <AiFillCar/> , href : '/startsite/cars'},
-    {icons : <AiOutlineUser/> , href : '/startsite/dasd'},
+    {icons : <AiOutlineUser/> , href : '/startsite/user/1'},
   ]
   console.log(window.location.pathname)
   return (

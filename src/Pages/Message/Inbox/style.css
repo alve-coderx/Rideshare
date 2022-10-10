@@ -1,0 +1,32 @@
+.speech {
+    background: #7D7AFF;
+    position: relative;
+    outline: none;
+    height: auto;
+    font-size: 13px;
+}
+
+/* Creates triangular tip on the
+   end, for our speech bubble 
+   with some styling */
+.speech:before {
+    content: "";
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid #7D7AFF;
+    border-top: 20px solid #7D7AFF;
+    border-bottom: 20px solid transparent;
+    right: 0;
+    bottom: -10px;
+    outline: none;
+
+}
+
+:root {
+    --rsbs-bg: url('../../../assets//rsb_bg.png') no-repeat center;
+    --rsbs-handle-bg: hsla(0, 0%, 0%, 0.14);
+    --rsbs-max-w: auto;
+    --rsbs-ml: env(safe-area-inset-left);
+    --rsbs-mr: env(safe-area-inset-right);
+    --rsbs-overlay-rounded: 16px;
+  }
