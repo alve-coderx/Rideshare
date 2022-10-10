@@ -57,7 +57,7 @@ const Inbox = () => {
         </div>
         {
           messages?.[0] && (
-            <div class="mx-6 bg-white  pt-3 rounded-xl relative shadow-xl mt-3">
+            <div className="mx-6 bg-white  pt-3 rounded-xl relative shadow-xl mt-3">
               <div className='flex items-top px-3'>
                 <div className='relative'>
                   <span className='absolute top-1 left-1 bg-[#7D7AFF] text-white text-sm flex items-center rounded-lg p-1'><GoLocation /> 20 km</span>

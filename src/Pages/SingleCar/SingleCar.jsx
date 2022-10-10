@@ -162,7 +162,7 @@ const SingleCar = () => {
             </div>
           </div>
           <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%]'>
-            <button class="mt-10 bg-[#1E2024] hover:bg-blue-700 text-white py-4 px-4 rounded-lg w-full">
+            <button className="mt-10 bg-[#1E2024] hover:bg-blue-700 text-white py-4 px-4 rounded-lg w-full">
               Buchung anfragen
             </button>
           </div>

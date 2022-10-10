@@ -30,9 +30,9 @@ const Search = () => {
           <span className='text-[#838D95] text-[10px]'>Vermieter akzeptiert alle Anfragen</span>
         </p>
         <div>
-          <label for="default-toggle" class="inline-flex relative items-center cursor-pointer">
-            <input type="checkbox" value="" id="default-toggle" class="sr-only peer" />
-            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#73D13D] rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#73D13D]"></div>
+          <label for="default-toggle" className="inline-flex relative items-center cursor-pointer">
+            <input type="checkbox" value="" id="default-toggle" className="sr-only peer" />
+            <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#73D13D] rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#73D13D]"></div>
           </label>
         </div>
       </div>
@@ -44,8 +44,8 @@ const Search = () => {
         <p className='border-b border-gray-300 text-white w-[100px]'>a</p>
       </div>
       <div className='mx-[18px]'>
-        <Link to='/startsite'>
-          <button class="mt-10 bg-[#1E2024] hover:bg-blue-700 text-white py-2 px-4 rounded-lg w-full">
+        <Link to='/startsite/map'>
+          <button className="mt-10 bg-[#1E2024] hover:bg-blue-700 text-white py-2 px-4 rounded-lg w-full">
             Auto suchen
           </button>
         </Link>

@@ -23,10 +23,10 @@ const Message = () => {
                 </div>
                 <div className='mx-5 mt-10'>
                     <p className='font-black text-sm'>Ergänzungen zu Zeit und Ortt</p>
-                    <textarea id="message" rows="4" class="p-3 bg-[#D8DBEC] rounded-xl shadow-2xl mt-5 block w-full text-sm rounded-lg border border-gray-300 dark:placeholder-gray-400 " placeholder="Wie flexibel bist du? Mögliche Einschränkungen (Optional)"></textarea>
+                    <textarea id="message" rows="4" className="p-3 bg-[#D8DBEC] rounded-xl shadow-2xl mt-5 block w-full text-sm rounded-lg border border-gray-300 dark:placeholder-gray-400 " placeholder="Wie flexibel bist du? Mögliche Einschränkungen (Optional)"></textarea>
                 </div>
                 <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%]'>
-                    <button onClick={() => handleMessage(msg)} type='submit' class="mt-10 bg-[#7D7AFF] text-white py-4 px-4 rounded-lg w-full">
+                    <button onClick={() => handleMessage(msg)} type='submit' className="mt-10 bg-[#7D7AFF] text-white py-4 px-4 rounded-lg w-full">
                         Nachricht senden
                     </button>
                 </div>

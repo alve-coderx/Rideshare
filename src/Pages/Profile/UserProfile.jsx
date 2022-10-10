@@ -16,7 +16,7 @@ const UserProfile = () => {
             <div className='flex flex-col items-center justify-center mt-10 mx-5'>
                 <img className='mt-3' src={avater} />
                 <p className='mt-3 font-black text-sm'>Vorname Nachname</p>
-                <button class="mt-3 bg-[#7D7AFF] w-32 hover:bg-blue-700 text-white text-[11px] font-bold py-2 px-4 rounded-lg w-full">
+                <button className="mt-3 bg-[#7D7AFF] w-32 hover:bg-blue-700 text-white text-[11px] font-bold py-2 px-4 rounded-lg w-full">
                     Profil bearbeiten
                 </button>
             </div>

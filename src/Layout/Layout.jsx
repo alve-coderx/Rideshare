@@ -13,6 +13,9 @@ import Testominal from '../Pages/Testominal/Testominal'
 import Message from '../Pages/Message/Message'
 import Inbox from '../Pages/Message/Inbox/Inbox'
 import OrderInfo from '../Pages/Confirm/OrderInfo'
+import Paying from '../Pages/Confirm/Paying'
+import MyCars from '../Pages/MyCars/MyCars'
+import CreateCar from '../Pages/CreateCar/CreateCar'
 
 const Layout = () => {
   return (
@@ -24,12 +27,15 @@ const Layout = () => {
       <Route path='/user/:id/testominal' element={<Testominal />} />
       <Route path='/user/:id/message' element={<Message />} />
       <Route path='/order/info' element={<OrderInfo />} />
+      <Route path='/order/payment' element={<Paying />} />
       <Route path='/user/:id/inbox' element={<Inbox />} />
+      <Route path='/createcar' element={<CreateCar />} />
       <Route path='/startsite' element={<Main />}>
         <Route path='/startsite/search' element={<Search />} />
         <Route path='/startsite/user/:id' element={<UserProfile />} />
         <Route path='/startsite/map' element={<Map />} />
         <Route path='/startsite/cars' element={<CarList />} />
+        <Route path='/startsite/mycars' element={<MyCars />} />
       </Route>
     </Routes>
   )

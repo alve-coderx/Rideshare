@@ -3,6 +3,7 @@ import { GoLocation } from 'react-icons/go'
 import Slider from 'react-rangeslider'
 import RangeSlider from '../../Components/RangeSlider'
 import drive_eta from '../../assets/drive_eta.png'
+import { Link } from 'react-router-dom'
 const OrderInfo = () => {
     return (
         <div>
@@ -19,8 +20,8 @@ const OrderInfo = () => {
                     Extrakilometer <br /> hinzubuchen
                 </p>
                 <p className='text-[12px] text-[#838D95] font-[400]'>falls inkl. KM nicht ausreichen</p>
-                {/* <input type="range" name="price" min="1" max="100" initValue={100}  class="w-full h-1 bg-[#D0D4D9] appearance-none" /> */}
-                <RangeSlider/>
+                {/* <input type="range" name="price" min="1" max="100" initValue={100}  className="w-full h-1 bg-[#D0D4D9] appearance-none" /> */}
+                <RangeSlider />
             </div>
             <div className='mt-8 mx-5 bg-white p-5 shadow-xl rounded-xl flex items-center justify-between'>
                 <img src={drive_eta} />
@@ -41,9 +42,11 @@ const OrderInfo = () => {
                 </div>
             </div>
             <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%]'>
-                <button class="mt-10 bg-[#1E2024] hover:bg-blue-700 text-white py-4 px-4 rounded-lg w-full">
-                    Bestätigen
-                </button>
+                <Link to={`/order/payment`}>
+                    <button className="mt-10 bg-[#1E2024] hover:bg-blue-700 text-white py-4 px-4 rounded-lg w-full">
+                        Bestätigen
+                    </button>
+                </Link>
             </div>
         </div>
     )
