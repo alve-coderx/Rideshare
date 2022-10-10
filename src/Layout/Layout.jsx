@@ -12,6 +12,7 @@ import UserProfile from '../Pages/Profile/UserProfile'
 import Testominal from '../Pages/Testominal/Testominal'
 import Message from '../Pages/Message/Message'
 import Inbox from '../Pages/Message/Inbox/Inbox'
+import OrderInfo from '../Pages/Confirm/OrderInfo'
 
 const Layout = () => {
   return (
@@ -22,6 +23,7 @@ const Layout = () => {
       <Route path='/car/:id' element={<SingleCar />} />
       <Route path='/user/:id/testominal' element={<Testominal />} />
       <Route path='/user/:id/message' element={<Message />} />
+      <Route path='/order/info' element={<OrderInfo />} />
       <Route path='/user/:id/inbox' element={<Inbox />} />
       <Route path='/startsite' element={<Main />}>
         <Route path='/startsite/search' element={<Search />} />

@@ -1,27 +1,31 @@
 import React from 'react';
 import useSupplier from '../../../Hook/useSupplier';
 import avater from '../../../assets/avater.png'
-import { AiOutlineArrowUp } from 'react-icons/ai'
+import { AiOutlineArrowUp, AiOutlineCheckCircle } from 'react-icons/ai'
 import { GoLocation } from 'react-icons/go'
 import { AiOutlineClockCircle } from 'react-icons/ai'
-import ScrollToBottom from 'react-scroll-to-bottom';
 import './style.css'
 import { useState } from 'react';
 import { useRef } from 'react';
 import { useEffect } from 'react';
 import { MdDateRange } from 'react-icons/md';
 import { BottomSheet } from 'react-spring-bottom-sheet';
+import { Link } from 'react-router-dom';
 const Inbox = () => {
   const { text } = useSupplier()
   const [messages, setMessages] = useState([])
   const [message, setMessage] = useState('')
   const [orderConfirm, setOrderConfirm] = useState(false)
+  const [toast, setToast] = useState(0)
   const messagesEndRef = useRef(null)
   const sheetRef = useRef()
 
   const handleSubmitMsg = (e) => {
     setMessage(e.target.value)
-    setTimeout(() => setOrderConfirm(true), 5000);
+    setTimeout(() => {
+      setOrderConfirm(true)
+      setToast(1)
+    }, 5000);
   }
 
   const scrollToBottom = () => {
@@ -73,17 +77,26 @@ const Inbox = () => {
           )
         }
       </div>
-      {/* {
-        orderConfirm && ( */}
+      {
+        orderConfirm && (
           <BottomSheet open
-            snapPoints={({ minHeight, maxHeight }) => [minHeight * 5.9]}
+            blocking={false}
+            className='red'
+            snapPoints={({ minHeight, maxHeight }) => [minHeight * toast]}
             ref={sheetRef}>
-            <div className='text-center'>
-              <p className='text-white text-lg'>Thomas hat deinen Auftrag bestätigt</p>
+            <div className='mx-5 py-5 flex flex-col items-center text-center'>
+              <AiOutlineCheckCircle className='text-[29px] mb-5 font-[600] text-[#52C41A] ' />
+              <p className='text-white text-[25px] font-[600] text-lg'>Thomas hat deinen Auftrag bestätigt</p>
+              <Link to={`/order/info`}>
+                <button className="mt-5 mb-5 bg-[#7D7AFF] text-[14px] font-[500] text-white py-4 px-4 rounded-lg w-full">
+                  Anmietung bestätigen
+                </button>
+              </Link>
+              <p className='text-white text-[15px] font-[500] text-lg'>Anderes Auto suchen</p>
             </div>
           </BottomSheet>
-        {/* )
-      } */}
+        )
+      }
       <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%] flex items-center'>
         <AiOutlineArrowUp onClick={() => setMessages(current => [...current, { msg: message, author: 'me' }])} className='absolute right-5 bg-[#7D7AFF] p-1 text-[30px] rounded-lg shadow-xl text-white' />
         <input onChange={(e) => handleSubmitMsg(e)} step={{ outline: 'none' }} className="shadow-lg rounded w-full py-2 px-3 text-gray-700  border-0" id="username" type="text" placeholder="Nachricht senden..." />
