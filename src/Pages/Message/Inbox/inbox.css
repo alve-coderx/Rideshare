@@ -1,5 +1,5 @@
-.speech {
-    background: #7D7AFF;
+.text {
+    background: #7D7AFF!important;
     position: relative;
     outline: none;
     height: auto;
@@ -9,12 +9,12 @@
 /* Creates triangular tip on the
    end, for our speech bubble 
    with some styling */
-.speech:before {
+.text:before {
     content: "";
     position: absolute;
     border-left: 20px solid transparent;
-    border-right: 20px solid #7D7AFF;
-    border-top: 20px solid #7D7AFF;
+    border-right: 20px solid #7D7AFF!important;
+    border-top: 20px solid #7D7AFF!important;
     border-bottom: 20px solid transparent;
     right: 0;
     bottom: -10px;

@@ -1,7 +1,5 @@
 import React from 'react'
-import { GoLocation } from 'react-icons/go'
-import Slider from 'react-rangeslider'
-import RangeSlider from '../../Components/RangeSlider'
+import {RangeSlider} from '../../Components'
 import drive_eta from '../../assets/drive_eta.png'
 import { Link } from 'react-router-dom'
 const OrderInfo = () => {

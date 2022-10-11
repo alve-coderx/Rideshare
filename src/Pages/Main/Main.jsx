@@ -1,6 +1,5 @@
 import React from 'react'
-import Navigator from '../../Components/Navigator'
-import BaseLayout from '../../Layout/BaseLayout'
+import {Navigator} from '../../Components'
 const Main = () => {
   return (
     <div>

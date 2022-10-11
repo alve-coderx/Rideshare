@@ -20,12 +20,23 @@ import Rentals from '../Pages/Rentals/Rentals'
 import RentalDetails from '../Pages/Rentals/RentalDetails'
 import CreateRent from '../Pages/Rentals/CreateRent'
 import FinishedPage from '../Pages/Rentals/FinishedPage'
+import RentalDoc from '../Pages/Rentals/RentalDoc'
+import RentalContract from '../Pages/Rentals/RentalContract'
+import RentalSign from '../Pages/Rentals/RentalSign'
 
 const Layout = () => {
   return (
     <Routes>
       <Route path='/' element={<Entry />} />
       <Route path='/login' element={<Login />} />
+      <Route path='/startsite' element={<Main />}>
+        <Route path='/startsite/search' element={<Search />} />
+        <Route path='/startsite/user/:id' element={<UserProfile />} />
+        <Route path='/startsite/map' element={<Map />} />
+        <Route path='/startsite/cars' element={<CarList />} />
+        <Route path='/startsite/mycars' element={<MyCars />} />
+        <Route path='/startsite/rentals' element={<Rentals />} />
+      </Route>
       <Route path='/register' element={<Register />} />
       <Route path='/car/:id' element={<SingleCar />} />
       <Route path='/user/:id/testominal' element={<Testominal />} />
@@ -37,14 +48,10 @@ const Layout = () => {
       <Route path='/rent/:id' element={<RentalDetails />} />
       <Route path='/create/rent' element={<CreateRent />} />
       <Route path='/rent/finished' element={<FinishedPage />} />
-      <Route path='/startsite' element={<Main />}>
-        <Route path='/startsite/search' element={<Search />} />
-        <Route path='/startsite/user/:id' element={<UserProfile />} />
-        <Route path='/startsite/map' element={<Map />} />
-        <Route path='/startsite/cars' element={<CarList />} />
-        <Route path='/startsite/mycars' element={<MyCars />} />
-        <Route path='/startsite/rentals' element={<Rentals />} />
-      </Route>
+      <Route path='/rental/documents' element={<RentalDoc />} />
+      <Route path='/rental/contract' element={<RentalContract />} />
+      <Route path='/rental/sign' element={<RentalSign />} />
+
     </Routes>
   )
 }

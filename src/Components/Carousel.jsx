@@ -39,12 +39,12 @@ export default class Responsive extends Component {
       ]
     };
     return (
-      <div className="mt-5">
-        <h2 className="ml-5"> Fahrzeugtyp wählen </h2>
+      <div className="mx-4">
+        <h2 className="text-[14.35px] font-[600] mb-3"> Fahrzeugtyp wählen </h2>
         <Slider {...settings}>
           {
             [1,2,3,4,5,6].map((index) => (
-                <Card/>
+                <Card key={index} index={index}/>
             ))
           }
         </Slider>

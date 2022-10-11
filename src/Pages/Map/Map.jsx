@@ -1,9 +1,8 @@
 import React from "react";
 import GoogleMapReact from 'google-map-react';
 import { GrLocation } from "react-icons/gr";
-import { GoLocation } from "react-icons/go";
 import { AiFillStar } from "react-icons/ai";
-import Filter from '../../Components/Filter'
+import {Filter} from '../../Components'
 import filter_alt from '../../assets/filter_alt.png';
 import mapcar from '../../assets/mapcar.png';
 import { Link } from "react-router-dom";
@@ -29,14 +28,14 @@ export default function SimpleMap() {
     return (
         // Important! Always set the container height explicitly
         <div className="relative" style={{ height: '100vh', width: '100%' }}>
-            <div className='absolute z-10 top-10 w-full left-2  items-center mt-1'>
+            <div className='absolute z-10 top-5 w-full left-2 mt-1'>
                 <div className='flex justify-around items-center mt-5'>
-                    <div className='flex justify-between items-center mt-1'>
-                        <p className='text-sm text-black flex items-center border bg-white border-gray-300 rounded-l-md p-2'><GrLocation /> Aktueller Standort</p>
+                    <div className='flex justify-between items-center'>
+                        <p className='text-[14px] font-[600] text-[#636B75] flex items-center bg-white rounded-l-md p-2'><GrLocation /> Aktueller Standort</p>
                         <Filter />
                     </div>
-                    <div className='bg-black p-3 rounded-lg'>
-                        <img className='' src={filter_alt} />
+                    <div className='bg-black p-2 rounded-lg '>
+                        <img className='w-6' src={filter_alt} />
                     </div>
                 </div>
             </div>
@@ -54,17 +53,17 @@ export default function SimpleMap() {
                     text="Auto"
                 />
             </GoogleMapReact>
-            <div className="absolute bottom-20  rounded-xl right-8">
+            <div className="absolute bottom-20  rounded-xl right-10">
                 <Link to='/startsite/cars'>
                     <div className="bg-white p-1 rounded-xl shadow-xl ">
                         <img src={mapcar} />
                         <div className='mx-4 flex items-end justify-between'>
                             <div>
-                                <p className='mt-1 font-black text-sm font-[900]'>Autoname</p>
-                                <p className='mt-1 text-[#838D95] text-sm'>Model 3</p>
-                                <p className='mt-1 text-[#7D7AFF] font-[600] text-sm'>30 € <span className='text-[#838D95] font-[400]'>für 2 std</span>  </p>
+                                <p className='mt-1 font-black text-[20px] font-[600]'>Autoname</p>
+                                <p className='mt-1 text-[#838D95] text-[12px] font-[400]'>Model 3</p>
+                                <p className='mt-1 text-[#7D7AFF] font-[600] text-[18px]'>30 € <span className='text-[#838D95] text-[12px] font-[400]'>für 2 std</span>  </p>
                             </div>
-                            <span className='bg-[#FFC53D] text-white text-sm flex items-center rounded-lg p-1'><AiFillStar /> 5.0</span>
+                            <span className='bg-[#FFC53D] text-white text-sm flex items-center rounded-lg py-1 px-2'><AiFillStar /> 5.0</span>
                         </div>
                     </div>
                 </Link>

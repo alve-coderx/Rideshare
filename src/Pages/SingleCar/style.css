@@ -4,12 +4,17 @@
 .slick-dots li button {
     background-color: white;
     border-radius: 10px;
+    width: 13px;
+    height: 13px;
 }
 
 .slick-dots li button::before{
     background-color: #7D7AFF;
     border-radius:  20px;
-    color: #7D7AFF!important
+    color: #7D7AFF!important;
+    width:  13px!important;
+    height: 13px!important;
+
 }
 
 :root {

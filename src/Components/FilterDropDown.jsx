@@ -10,9 +10,9 @@ export default function Example() {
   return (
     <Menu as="div" className="relative inline-block text-left ">
       <div>
-        <Menu.Button className="inline-flex items-center w-full justify-center rounded-md border border-gray-300 bg-[#1E2024] px-4 py-2 text-sm font-medium text-black shadow-sm hover:bg-[#1E2024] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100">
-          <p className='text-sm text-white'>Fahrzeugtypen</p>
-          <AiOutlineDown className="-mr-1 ml-2 h-5 w-5 text-[#9B99FF]" aria-hidden="true" />
+        <Menu.Button className="inline-flex items-center w-full justify-center rounded-md border border-gray-300 bg-[#1E2024] px-4 py-2 text-sm font-medium text-black shadow-sm ">
+          <p className='text-[12px] font-[500] text-white'>Fahrzeugtypen</p>
+          <AiOutlineDown className="ml-2 h-3 w-3 text-[#9B99FF]" aria-hidden="true" />
         </Menu.Button>
       </div>
 

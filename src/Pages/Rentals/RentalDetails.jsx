@@ -24,7 +24,7 @@ const RentalDetails = () => {
                     <p className='text-[#7D7AFF] text-[500] text-[16px]'>zurück</p>
                     <div className='flex items-center ml-16'>
                         <img src={avater} />
-                        <p className='text-[900] text-[14px] ml-5'>
+                        <p className='font-[600] text-[14px] ml-5'>
                             Thomas
                             <p className='text-[#AAAFB6] text-[12px]'>Online</p>
                         </p>
@@ -36,9 +36,11 @@ const RentalDetails = () => {
                     }
                 </div>
             </div>
-            <div className='mx-5 mt-5 h-96' style={{ overflowY: 'scroll' }}>
+            <div className='mx-5 mt-5 flex flex-col items-center' style={{ overflowY: 'scroll' }}>
                 <p className='text-[24px] text-center font-[600]'>Anfrage von <span className='text-[#7D7AFF]'>Thomas</span></p>
-                <img src={car} className='w-[342px] h-[248px] mt-3' />
+                <img src={car} className='w-[302px] h-[208px] mt-3' />
+            </div>
+            <div className='mx-5 mt-5'>
                 <div className='flex justify-between' >
                     <div>
                         <p className='text-[32px] font-[600]'>Tesla </p>
@@ -46,17 +48,16 @@ const RentalDetails = () => {
                     </div>
                     <p className='text-[32px] font-[600]'>30 € </p>
                 </div>
-                <p className='bg-slate-200 text-[10px] mb-5 w-40 text-[400] flex items-center rounded-lg px-2 py-2  mt-3'><MdDateRange className='mr-1' /> Do. 23. Juni  14:00 - 17:00</p>
-
+                <p className='bg-slate-200 text-[10px] mb-5 w-40 font-[600] flex items-center rounded-lg px-2 py-2  mt-3'><MdDateRange className='mr-1' /> Do. 23. Juni  14:00 - 17:00</p>
             </div>
             <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%] flex justify-around'>
                 <Link to='/create/rent'>
-                    <button className="mt-10 bg-[#7D7AFF] text-[14px] font-[500] text-white py-4 px-6 rounded-lg">
+                    <button className="mt-10 bg-[#7D7AFF] text-[14px] font-[500] text-white py-3 px-6 rounded-lg">
                         Akzeptieren
                     </button>
                 </Link>
                 <Link to='/startsite/rentals'>
-                    <button className="mt-10 bg-[#1E2024] text-[14px] font-[500] text-white py-4 px-6 rounded-lg">
+                    <button className="mt-10 bg-[#1E2024] text-[14px] font-[500] text-white py-3 px-6 rounded-lg">
                         Ablehnen
                     </button>
                 </Link>

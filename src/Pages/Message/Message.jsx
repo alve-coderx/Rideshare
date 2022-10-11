@@ -2,9 +2,9 @@ import React from 'react'
 import avater from '../../assets/avater.png'
 import './style.css'
 import { MdDateRange } from 'react-icons/md'
-import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import useSupplier from '../../Hook/useSupplier'
+
 const Message = () => {
     const [msg, setMsg] = useState("");
     const { handleMessage ,text} = useSupplier()
@@ -13,7 +13,7 @@ const Message = () => {
         <div>
                 <div className='flex flex-col items-center justify-center mt-3 mx-5'>
                     <img className='mt-3' src={avater} />
-                    <p className='mt-3 font-black text-sm'>Schreibe <span className='text-[#7D7AFF]'>Thomas</span> eine Nachricht</p>
+                    <p className='mt-3 font-black text-sm text-center'>Schreibe <span className='text-[#7D7AFF]'>Thomas</span>  eine <br/> Nachricht</p>
                     <div onBlur={(e) => setMsg(e.target.innerHTML)} contentEditable="true" className="mt-5 shadow-xl rounded-xl speech bubble w-full pt-3 pb-24 px-2">Hey...</div>
                 </div>
                 <div className='mx-5 mt-6'>

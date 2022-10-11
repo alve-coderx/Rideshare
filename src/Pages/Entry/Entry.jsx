@@ -14,18 +14,18 @@ const Entry = () => {
   ]
 
   return (
-    <div className='text-center flex flex-col items-center' style={{height : '100vh',background : `url(https://i.ibb.co/Hhfj0Z6/main.png)`,backgroundRepeat : 'no-repeat',backgroundSize : 'cover',backgroundPosition : 'bottom'}} >
+    <div className='text-center flex flex-col items-center' style={{height : '100vh',background : `url(https://i.ibb.co/Hhfj0Z6/main.png)`,backgroundRepeat : 'no-repeat',backgroundSize : 'cover'}} >
       <div className='pt-12 w-[306px]'>
-        <p className="text-[40px] font-[600]	">Search, Book and Rent Your Vehincle Easily</p>
+        <p className="text-[40px] font-[600] leading-[48px]		">Search, Book and Rent Your Vehincle Easily</p>
       </div>
-      <div className='pt-80'>
+      <div className='absolute bottom-14'>
             <Link to='/register'>
-              <button className={'border-t border-r border-b border-[white] bg-[white] text-gray-800 font-semibold py-2 px-4 rounded-l-xl shadow w-[150px]'}>
+              <button className={'border-t border-r border-b border-[white] bg-[white] text-[#0E0F11] text-[14px] font-[500] py-2 px-4 rounded-l-xl shadow w-[150px]'}>
                 Register
               </button>
             </Link>
             <Link to='/login'>
-              <button className={'border-t border-r border-b border-[white] bg-slate-600 text-white font-semibold py-2 px-4 rounded-r-xl shadow w-[150px]'}>
+              <button className={'border-t border-r border-b border-[white] bg-slate-700 text-[14px] font-[500] text-white font-semibold py-2 px-4 rounded-r-xl shadow w-[150px]'}>
                 Login
               </button>
             </Link>

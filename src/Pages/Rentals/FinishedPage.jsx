@@ -1,11 +1,14 @@
 import React from 'react'
 import { AiOutlineArrowRight } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 import avater from '../../assets/avater.png'
 const FinishedPage = () => {
   return (
     <div>
       <div className='mx-5 mt-5'>
-        <p className='flex justify-between text-[14px] font-[600]'><span className='text-[#7D7AFF]'>fertig</span><span>Anmietung #2395753</span><span className='text-[#7D7AFF]'>hilfe</span></p>
+        <Link to='/rental/documents'>
+          <p className='flex justify-between text-[14px] font-[600]'><span className='text-[#7D7AFF]'>fertig</span><span>Anmietung #2395753</span><span className='text-[#7D7AFF]'>hilfe</span></p>
+        </Link>
         <li className='text-[#636B75] text-[12px] font-[400] mt-5 mx-1 w-92'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum, tincidunt quisque mattis risus.</li>
         <li className='text-[#636B75] text-[12px] font-[400] mt-5 mx-1 w-92'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum, tincidunt quisque mattis risus.</li>
         <button className="mt-10 bg-[#1E2024] hover:bg-blue-700 text-white py-4 px-4 rounded-lg w-full">

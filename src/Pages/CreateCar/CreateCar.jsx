@@ -5,10 +5,10 @@ import { GoLocation } from 'react-icons/go'
 import { BiImages } from 'react-icons/bi'
 import filter_alt from '../../assets/filter_alt.png'
 import map from '../../assets/map.png'
+import { Link } from 'react-router-dom'
 const CreateCar = () => {
   const [prograss, setPrograss] = useState(11.11);
   const [active, setActive] = useState(false);
-  console.log(prograss)
   const clickHandler = (index) => {
     setActive((prev) => {
       return prev === index ? null : index;
@@ -203,10 +203,16 @@ const CreateCar = () => {
         }
       </div>
       <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%]'>
-        <button onClick={() => setPrograss((prevState) => prevState + 11.11)} className="flex items-center justify-center mt-10 bg-[#7D7AFF] text-white py-4 px-4 rounded-lg w-full">
+        <button onClick={() => setPrograss((prevState) => prevState + 11.11)} className={prograss === 99.99 ? "hidden" : "flex items-center justify-center mt-10 bg-[#7D7AFF] text-white py-4 px-4 rounded-lg w-full"}>
           Nächster Schritt
           <AiOutlineRight className='ml-5 text-[20px]' />
         </button>
+        <Link to='/startsite/mycars'>
+          <button className={prograss === 99.99 ? "flex items-center justify-center mt-10 bg-[#7D7AFF] text-white py-4 px-4 rounded-lg w-full" : "hidden"}>
+            Nächster Schritt
+            <AiOutlineRight className='ml-5 text-[20px]' />
+          </button>
+        </Link>
       </div>
     </div>
   )

@@ -15,7 +15,6 @@ const SingleCar = () => {
   const [open, setOpen] = useState(true)
   const [bottomHeigth, setBottomHeihgt] = useState()
   const sheetRef = useRef()
-  console.log(open)
   const ref = useRef(null);
   useEffect(() => {
     // 👇️ use document.getElementById()
@@ -66,10 +65,10 @@ const SingleCar = () => {
             [1, 2, 3].map((index) => (
               <div className='relative'>
                 <p className='absolute flex justify-between top-10 right-4 left-4 z-10	'>
-                  <p className='bg-[#7D7AFF] text-white text-sm flex items-center rounded-lg px-3'><GoLocation /> 20 km</p>
-                  <p className='bg-white p-3 rounded-lg'>
+                  <p className='bg-[#7D7AFF] text-white font-[500] text-[13.51px] flex items-center justify-between rounded-lg px-2'><GoLocation className='mr-1'/> 20 km</p>
+                  <p className='bg-white p-3 rounded-xl'>
                     <Link to={`/startsite/cars`}>
-                      <GrClose />
+                      <GrClose className='font-[900] text-[15px]'/>
                     </Link>
                   </p>
                 </p>
@@ -89,34 +88,34 @@ const SingleCar = () => {
       >
         <div className='w-[100%] rounded-t-xl	shadow-xl' >
           <div style={{ overflowY: 'scroll', maxHeight: 'auto' }}>
-            <div className='flex justify-between mx-5 border-b-2'>
-              <p className="text-[32px] font-[600]">Tesla <br /> <span className='text-[12px] text-slate-500'>Model 3</span></p>
-              <p className="text-[32px] font-[600]">30 €  <br /> <span className='text-[12px] text-slate-500'>für 2 std</span></p>
+            <div className='mx-5 border-b-2 '>
+              <p className="text-[32px] font-[600] flex justify-between"><span>Tesla</span> <span>30 €</span></p>
+              <p className="text-[12px] font-[400] text-slate-500 flex justify-between">  <span>Model 3</span> <span>für 2 std</span></p>
             </div>
             <div className='flex justify-between mx-5 my-4'>
               <p className="flex items-center justify-around text-[32px] font-[600]">
-                <span className='text-[12px] text-slate-500 mr-5'>Sitzanzahl</span>
-                <span className='bg-[#7D7AFF] text-white text-sm flex items-center rounded-lg px-3 py-1'> 4</span>
+                <span className='text-[12px] font-[400] text-slate-500 mr-5'>Sitzanzahl</span>
+                <span className='bg-[#7D7AFF] text-white text-[10px] rounded-lg px-3 py-1'> 4</span>
               </p>
               <p className="flex items-center justify-around text-[32px] font-[600]">
-                <span className='text-[12px] text-slate-500 mr-5'>Kraftstoff</span>
-                <span className='bg-[#7D7AFF] text-white text-sm flex items-center rounded-lg px-2 py-1'> Elektro</span>
+                <span className='text-[12px] font-[400] text-slate-500 mr-5'>Kraftstoff</span>
+                <span className='bg-[#7D7AFF] text-white text-[10px] rounded-lg px-2 py-1'> Elektro</span>
               </p>
             </div>
-            <div className='mx-5 p-3 bg-[#F0F0FF] rounded-xl shadow-2xl flex items-center'>
+            <div className='mx-5 p-3 bg-[#F0F0FF] rounded-xl flex items-center'>
               <div className='ml-4'>
                 <ImKey />
               </div>
               <div>
-                <p className='ml-5 font-black text-sm'>Vermieter*in treffen </p>
-                <p className='ml-5 font-black text-[10px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lectus in tellus luctus quis massa.</p>
+                <p className='ml-5 font-black font-[600] text-[14px]'>Vermieter*in treffen </p>
+                <p className='ml-5 font-black font-[400] text-[10px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lectus in tellus luctus quis massa.</p>
               </div>
             </div>
             <div className='mx-5 mt-4 flex items-center justify-between'>
               <Link to='/user/1/testominal'>
                 <div className='flex items-center'>
                   <img src={avater} />
-                  <p className='ml-1 text-[14px] font-[600]'>Jackie Forman</p>
+                  <p className='ml-3 text-[14px] font-[600]'>Jackie Forman</p>
                 </div>
               </Link>
               <div >
@@ -162,9 +161,11 @@ const SingleCar = () => {
             </div>
           </div>
           <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%]'>
-            <button className="mt-10 bg-[#1E2024] hover:bg-blue-700 text-white py-4 px-4 rounded-lg w-full">
+          <Link to={'/user/1/message'}>
+            <button className="mt-10 bg-[#1E2024] text-white text-[14px] py-4 px-4 rounded-lg w-full">
               Buchung anfragen
             </button>
+          </Link>
           </div>
         </div>
       </BottomSheet>

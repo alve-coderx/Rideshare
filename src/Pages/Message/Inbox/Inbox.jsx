@@ -2,9 +2,8 @@ import React from 'react';
 import useSupplier from '../../../Hook/useSupplier';
 import avater from '../../../assets/avater.png'
 import { AiOutlineArrowUp, AiOutlineCheckCircle } from 'react-icons/ai'
-import { GoLocation } from 'react-icons/go'
 import { AiOutlineClockCircle } from 'react-icons/ai'
-import './style.css'
+import './inbox.css'
 import { useState } from 'react';
 import { useRef } from 'react';
 import { useEffect } from 'react';
@@ -37,7 +36,7 @@ const Inbox = () => {
   }, [messages]);
   return (
     <div >
-      <div className='flex items-center bg-white p-9 shadow-xl'>
+      <div className='flex items-center bg-white p-9 shadow-sm'>
         <p className='text-[#7D7AFF] text-[500] text-[16px]'>zurück</p>
         <div className='flex items-center ml-16'>
           <img src={avater} />
@@ -51,7 +50,7 @@ const Inbox = () => {
         <div className='mx-5 flex flex-col items-end' >
           {
             messages.map((element, index) => (
-              <div ref={messagesEndRef} contentEditable="true" className="mt-5 mr-3 text-white shadow-xl bg-[#7D7AFF] rounded-xl speech bubble w-60 py-5  px-2">{element.msg}</div>
+              <div ref={messagesEndRef} contentEditable="true" className="mt-5 mr-3 text-white shadow-xl bg-[#7D7AFF] rounded-xl text bubble w-60 py-5  px-2">{element.msg}</div>
             ))
           }
         </div>
@@ -60,13 +59,12 @@ const Inbox = () => {
             <div className="mx-6 bg-white  pt-3 rounded-xl relative shadow-xl mt-3">
               <div className='flex items-top px-3'>
                 <div className='relative'>
-                  <span className='absolute top-1 left-1 bg-[#7D7AFF] text-white text-sm flex items-center rounded-lg p-1'><GoLocation /> 20 km</span>
                   <img src={'https://i.ibb.co/S3cY7Ct/tesla.png'} />
                 </div>
                 <div className='ml-4'>
                   <p className='mt-1 font-black text-sm'>Tesla</p>
-                  <p className='mt-1 text-[#838D95] text-sm'>Model 3</p>
-                  <p className='mt-1 font-black text-sm'>30 € <span className='text-[#838D95]'>für 2 std</span>  </p>
+                  <p className='mt-1 text-[#838D95] text-[12px]'>Model 3</p>
+                  <p className='mt-1 font-black text-sm'>30 € <span className='text-[#838D95] text-[12px]'>für 2 std</span>  </p>
                   <p className='bg-[#E6E6FF] text-[10px] text-[400] flex items-center rounded-lg px-2 py-1 w-22 mt-3'><MdDateRange className='mr-1' /> Do. 23. Juni  14:00 - 17:00</p>
                 </div>
               </div>
@@ -79,14 +77,15 @@ const Inbox = () => {
       </div>
       {
         orderConfirm && (
-          <BottomSheet open
+          <BottomSheet 
+            open
             blocking={false}
             className='red'
             snapPoints={({ minHeight, maxHeight }) => [minHeight * toast]}
             ref={sheetRef}>
             <div className='mx-5 py-5 flex flex-col items-center text-center'>
-              <AiOutlineCheckCircle className='text-[29px] mb-5 font-[600] text-[#52C41A] ' />
-              <p className='text-white text-[25px] font-[600] text-lg'>Thomas hat deinen Auftrag bestätigt</p>
+              <AiOutlineCheckCircle onClick={() => setToast(0)} className='text-[29px] mb-5 font-[600] text-[#52C41A] ' />
+              <p className='text-white text-[25px] font-[600] text-lg'>Thomas hat deinen <br/> Auftrag bestätigt</p>
               <Link to={`/order/info`}>
                 <button className="mt-5 mb-5 bg-[#7D7AFF] text-[14px] font-[500] text-white py-4 px-4 rounded-lg w-full">
                   Anmietung bestätigen

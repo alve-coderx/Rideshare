@@ -28,12 +28,12 @@ const Rentals = () => {
                 {
                     [1, 2, 3].map((index) => (
                         <Link to={`/rent/${index}`}>
-                            <div key={index} className='bg-white rounded-lg shadow-lg mt-2 p-4 flex item-center'>
-                                <img className='w-[100px]' src={avater} />
+                            <div key={index} className='bg-white rounded-lg shadow-lg mt-2 p-4 flex items-center relative'>
+                                <img className='w-[50px] h-[50px]' src={avater} />
                                 <div className='ml-5'>
                                     <p className='font-[900] '>Thomas</p>
                                     <p className='bg-slate-200 text-[10px] text-[400] flex items-center rounded-lg px-2 py-2  mt-3'><MdDateRange className='mr-1' /> Do. 23. Juni  14:00 - 17:00</p>
-                                    <p className='text-[10px] text-[#7D7AFF] mt-5 flex justify-between w-full'><span>20 €</span> <span className='flex items-center text-black'>Antworten <AiOutlineArrowRight className='ml-2' /></span> </p>
+                                    <p className='text-[10px] font-[900] text-[#7D7AFF] mt-5 w-full'><span>20 €</span> <span className='flex items-center text-black text-[12px] font-[600] absolute right-3 bottom-4'>Antworten <AiOutlineArrowRight className='ml-2' /></span> </p>
                                 </div>
                             </div>
                         </Link>
