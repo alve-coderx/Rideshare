@@ -6,7 +6,7 @@ import { BiImages } from 'react-icons/bi'
 import filter_alt from '../../assets/filter_alt.png'
 import map from '../../assets/map.png'
 const CreateCar = () => {
-  const [prograss, setPrograss] = useState(37.22222222222222);
+  const [prograss, setPrograss] = useState(11.11);
   const [active, setActive] = useState(false);
   console.log(prograss)
   const clickHandler = (index) => {
@@ -36,13 +36,13 @@ const CreateCar = () => {
         </div>
         <div className='mt-3'>
           <div className="w-full bg-gray-200 h-1">
-            <div className="bg-[#7D7AFF] h-1" style={{ width: prograss }}></div>
+            <div className="bg-[#7D7AFF] h-1" style={{ maxWidth: '100%', width: `${prograss}%` }}></div>
           </div>
         </div>
       </div>
       <div className='text-center mx-5 mt-8'>
         {
-          prograss === 37.22222222222222 ? (
+          prograss === 11.11 ? (
             <div>
               <p className='text-[24px] font-[600]'>Modell deines Fahrzeugs</p>
               <div className='flex justify-between bg-white rounded-lg shadow-xl p-3 mt-8'>
@@ -62,7 +62,7 @@ const CreateCar = () => {
             </div>
           )
             :
-            prograss === 74.44444444444444 ? (
+            prograss === 22.22 ? (
               <div>
                 <p className='text-[24px] font-[600]'>Gebe den Kilometerstand ein</p>
                 <div className='flex justify-between bg-white rounded-lg shadow-xl p-3 mt-8'>
@@ -77,7 +77,7 @@ const CreateCar = () => {
               </div>
             )
               :
-              prograss === 111.66666666666666 ? (
+              prograss === 33.33 ? (
                 <div>
                   <p className='text-[24px] font-[600]'>Details hinzufügen</p>
                   <div className='flex justify-between bg-white rounded-lg shadow-xl p-3 mt-8'>
@@ -97,7 +97,7 @@ const CreateCar = () => {
                 </div>
               )
                 :
-                prograss === 148.88888888888889 ? (
+                prograss === 44.44 ? (
                   <div>
                     <p className='text-[24px] font-[600]'>Details hinzufügen</p>
                     <div className='flex justify-between p-3 mt-8 border-b border-[gray]'>
@@ -118,7 +118,7 @@ const CreateCar = () => {
 
                 )
                   :
-                  prograss === 186.11111111111111 ? (
+                  prograss === 55.55 ? (
                     <div>
                       <p className='text-[24px] font-[600] '>Weitere Merkmale</p>
                       <div className='flex flex-wrap p-3 mt-8 '>
@@ -135,7 +135,7 @@ const CreateCar = () => {
 
                   )
                     :
-                    prograss === 223.33333333333334 ? (
+                    prograss === 66.66 ? (
                       <div>
                         <p className='text-[24px] font-[600] '>Treffpunkt einstellen</p>
                         <div className='flex justify-center'>
@@ -152,7 +152,7 @@ const CreateCar = () => {
 
                     )
                       :
-                      prograss === 260.55555555555554 ? (
+                      prograss === 77.77 ? (
                         <div>
                           <p className='text-[24px] font-[600] '>Preisangabe</p>
                           <div className='flex justify-between p-3 mt-8 '>
@@ -169,7 +169,7 @@ const CreateCar = () => {
 
                       )
                         :
-                        prograss === 297.77777777777777 ? (
+                        prograss === 88.88 ? (
                           <div>
                             <p className='text-[24px] font-[600] '>Gib deine Telefonnummer ein </p>
                             <div className='text-left bg-white rounded-lg shadow-xl p-3 mt-5'>
@@ -184,26 +184,26 @@ const CreateCar = () => {
 
                         )
                           :
-                          prograss === 335 ? (
+                          prograss === 99.99 ? (
                             <div>
                               <p className='text-[24px] font-[600] '>Lade Bilder von deinem Auto hoch</p>
                               <div className='text-center bg-[#E6E6FF] flex items-center justify-center rounded-lg shadow-xl px-5 py-10 mt-5'>
-                                <p className='text-[#7D7AFF] text-center text-[32px] font-[400]'><BiImages/></p>
+                                <p className='text-[#7D7AFF] text-center text-[32px] font-[400]'><BiImages /></p>
                               </div>
-  
+
                               <div className='flex items-center text-left justify-between bg-white rounded-lg shadow-xl py-3 mt-10 px-5'>
                                 <p > <AiOutlineInfoCircle className='text-black text-[30px]' /></p>
                                 <p className='text-[#838D95] w-60 text-[10px] font-[400]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum dictum tortor odio at. Feugiat sapien orci imperdiet nisi, venenatis, tincidunt. Dui semper amet leo, nulla. Bibendum purus,</p>
                               </div>
                             </div>
-  
+
                           )
-                          :
-                          ''
+                            :
+                            ''
         }
       </div>
       <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%]'>
-        <button onClick={() => setPrograss((prevState) => prevState + 37.22222222222222)} className="flex items-center justify-center mt-10 bg-[#7D7AFF] text-white py-4 px-4 rounded-lg w-full">
+        <button onClick={() => setPrograss((prevState) => prevState + 11.11)} className="flex items-center justify-center mt-10 bg-[#7D7AFF] text-white py-4 px-4 rounded-lg w-full">
           Nächster Schritt
           <AiOutlineRight className='ml-5 text-[20px]' />
         </button>

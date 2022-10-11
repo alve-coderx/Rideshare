@@ -16,6 +16,10 @@ import OrderInfo from '../Pages/Confirm/OrderInfo'
 import Paying from '../Pages/Confirm/Paying'
 import MyCars from '../Pages/MyCars/MyCars'
 import CreateCar from '../Pages/CreateCar/CreateCar'
+import Rentals from '../Pages/Rentals/Rentals'
+import RentalDetails from '../Pages/Rentals/RentalDetails'
+import CreateRent from '../Pages/Rentals/CreateRent'
+import FinishedPage from '../Pages/Rentals/FinishedPage'
 
 const Layout = () => {
   return (
@@ -30,12 +34,16 @@ const Layout = () => {
       <Route path='/order/payment' element={<Paying />} />
       <Route path='/user/:id/inbox' element={<Inbox />} />
       <Route path='/createcar' element={<CreateCar />} />
+      <Route path='/rent/:id' element={<RentalDetails />} />
+      <Route path='/create/rent' element={<CreateRent />} />
+      <Route path='/rent/finished' element={<FinishedPage />} />
       <Route path='/startsite' element={<Main />}>
         <Route path='/startsite/search' element={<Search />} />
         <Route path='/startsite/user/:id' element={<UserProfile />} />
         <Route path='/startsite/map' element={<Map />} />
         <Route path='/startsite/cars' element={<CarList />} />
         <Route path='/startsite/mycars' element={<MyCars />} />
+        <Route path='/startsite/rentals' element={<Rentals />} />
       </Route>
     </Routes>
   )

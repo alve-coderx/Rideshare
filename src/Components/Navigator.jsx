@@ -10,7 +10,7 @@ const Navigator = () => {
 
   const navigations = [
     {icons : <BiSearchAlt2/> , href : '/startsite/search'},
-    {icons : <HiOutlineKey/> , href : '/startsite/user'},
+    {icons : <HiOutlineKey/> , href : '/startsite/rentals'},
     {icons : <AiFillCar/> , href : '/startsite/mycars'},
     {icons : <AiOutlineUser/> , href : '/startsite/user/1'},
   ]
