@@ -7,7 +7,7 @@ import map from '../../assets/map.png'
 
 const Search = () => {
   return (
-    <div style={{overflowY : 'hidden',height : '100vh'}}>
+    <div style={{overflowY : 'hidden'}}>
       <div className='bg-[white] flex flex-col items-center'>
         <p className='mt-10 font-[600] text-[20px]'>Suche dein Auto</p>
         <Link to='/startsite/map'>

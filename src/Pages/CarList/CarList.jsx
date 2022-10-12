@@ -38,7 +38,7 @@ const CarList = () => {
           </div>
         </div>
       </div>
-      <div className='mx-4 h-3/4 pb-10' style={{overflowY : 'scroll'}}>
+      <div className='mx-4 h-3/4 pb-16' style={{overflowY : 'scroll'}}>
         {
           cars.map((car) => (
             <CarCard key={car.id} car={car}/>

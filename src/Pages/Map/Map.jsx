@@ -2,7 +2,7 @@ import React from "react";
 import GoogleMapReact from 'google-map-react';
 import { GrLocation } from "react-icons/gr";
 import { AiFillStar } from "react-icons/ai";
-import {Filter} from '../../Components'
+import { Filter } from '../../Components'
 import filter_alt from '../../assets/filter_alt.png';
 import mapcar from '../../assets/mapcar.png';
 import { Link } from "react-router-dom";
@@ -27,7 +27,7 @@ export default function SimpleMap() {
 
     return (
         // Important! Always set the container height explicitly
-        <div className="relative" style={{ height: '100vh', width: '100%' }}>
+        <div className="relative "  style={{overflowX : 'hidden'}}>
             <div className='absolute z-10 top-5 w-full left-2 mt-1'>
                 <div className='flex justify-around items-center mt-5'>
                     <div className='flex justify-between items-center'>
@@ -39,21 +39,24 @@ export default function SimpleMap() {
                     </div>
                 </div>
             </div>
-            <GoogleMapReact
-                bootstrapURLKeys={{ key: "AIzaSyBTNNAmliJk6iXrSGYbbED_OXun6PSAPU8" }}
-                defaultCenter={defaultProps.center}
-                defaultZoom={defaultProps.zoom}
-                options={{ disableDefaultUI: true, zoomControl: false }}
+            <div style={{ height: '93vh', width: '100%' }}>
 
-            >
+                <GoogleMapReact
+                    bootstrapURLKeys={{ key: "AIzaSyBTNNAmliJk6iXrSGYbbED_OXun6PSAPU8" }}
+                    defaultCenter={defaultProps.center}
+                    defaultZoom={defaultProps.zoom}
+                    options={{ disableDefaultUI: true, zoomControl: false }}
 
-                <AnyReactComponent
-                    lat={59.955413}
-                    lng={30.337844}
-                    text="Auto"
-                />
-            </GoogleMapReact>
-            <div className="absolute bottom-20  rounded-xl right-10">
+                >
+
+                    <AnyReactComponent
+                        lat={59.955413}
+                        lng={30.337844}
+                        text="Auto"
+                    />
+                </GoogleMapReact>
+            </div>
+            <div className="absolute bottom-32 rounded-xl right-12">
                 <Link to='/startsite/cars'>
                     <div className="bg-white p-1 rounded-xl shadow-xl ">
                         <img src={mapcar} />
