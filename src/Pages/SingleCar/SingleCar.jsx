@@ -11,10 +11,19 @@ import avater from '../../assets/avater.png'
 import { Link } from 'react-router-dom';
 import { GoLocation } from 'react-icons/go';
 import { GrClose } from 'react-icons/gr';
+
+const style = { 
+  li : 'ml-1 text-[13px] text-[#838D95] font-[600]',
+  smText : 'mt-4 flex items-center text-[14px] font-[600]',
+  liWrapper : 'mt-4 flex items-center justify-between',
+  span : 'flex items-center justify-around text-[32px] font-[600]',
+  spanVal : 'text-[12px] font-[400] text-slate-500 mr-5'
+}
+
 const SingleCar = () => {
-  const [open, setOpen] = useState(true)
-  const [bottomHeigth, setBottomHeihgt] = useState()
-  const sheetRef = useRef()
+  const [open, setOpen] = useState(true);
+  const [bottomHeigth, setBottomHeihgt] = useState();
+  const sheetRef = useRef();
   const ref = useRef(null);
   useEffect(() => {
     // 👇️ use document.getElementById()
@@ -63,15 +72,15 @@ const SingleCar = () => {
         <Slider {...settings}>
           {
             [1, 2, 3].map((index) => (
-              <div className='relative'>
-                <p className='absolute flex justify-between top-10 right-4 left-4 z-10	'>
+              <div key={index} className='relative'>
+                <h1 className='absolute flex justify-between top-10 right-4 left-4 z-10	'>
                   <p className='bg-[#7D7AFF] text-white font-[500] text-[13.51px] flex items-center justify-between rounded-lg px-2'><GoLocation className='mr-1'/> 20 km</p>
                   <p className='bg-white p-3 rounded-xl'>
                     <Link to={`/startsite/cars`}>
                       <GrClose className='font-[900] text-[15px]'/>
                     </Link>
                   </p>
-                </p>
+                </h1>
                 <img className='w-screen' src='https://i.ibb.co/vkjDgxN/Frame-31-1.png' />
                 <span className='z-10 absolute bottom-10 right-4 bg-[#FFC53D] text-white text-sm flex items-center rounded-lg px-3 py-1'><AiFillStar /> 5.0</span>
               </div>
@@ -93,12 +102,12 @@ const SingleCar = () => {
               <p className="text-[12px] font-[400] text-slate-500 flex justify-between">  <span>Model 3</span> <span>für 2 std</span></p>
             </div>
             <div className='flex justify-between mx-5 my-4'>
-              <p className="flex items-center justify-around text-[32px] font-[600]">
-                <span className='text-[12px] font-[400] text-slate-500 mr-5'>Sitzanzahl</span>
+              <p className={style.span}>
+                <span className={style.spanVal}>Sitzanzahl</span>
                 <span className='bg-[#7D7AFF] text-white text-[10px] rounded-lg px-3 py-1'> 4</span>
               </p>
-              <p className="flex items-center justify-around text-[32px] font-[600]">
-                <span className='text-[12px] font-[400] text-slate-500 mr-5'>Kraftstoff</span>
+              <p className={style.span}>
+                <span className={style.spanVal}>Kraftstoff</span>
                 <span className='bg-[#7D7AFF] text-white text-[10px] rounded-lg px-2 py-1'> Elektro</span>
               </p>
             </div>
@@ -120,7 +129,7 @@ const SingleCar = () => {
               </Link>
               <div >
                 <p className='ml-1 text-[#FAAD14] text-[20px] flex font-[600]'>
-                  {[1, 2, 3, 4, 5].map((index) => <AiFillStar />)}
+                  {[1, 2, 3, 4, 5].map((index) => <AiFillStar key={index}/>)}
                 </p>
                 <p className='ml-1 text-[11px] text-[#838D95] font-[500]'>25 Bewertungen</p>
               </div>
@@ -130,32 +139,32 @@ const SingleCar = () => {
                 Kilometer inklusive
                 <span className='ml-1 text-[21px] text-[#838D95] font-[500]'><AiOutlineInfoCircle /></span>
               </p>
-              <p className='mt-4 flex items-center text-[14px] font-[600]'>
+              <p className={style.smText}>
                 <span className='mr-3 text-[21px] text-[#52C41A] font-[500]'><AiOutlineCheckCircle /></span>
                 Kilometer inklusive
               </p>
             </div>
             <div className='mx-5' >
-              <p className='mt-4 flex items-center text-[14px] font-[600]'>
+              <p className={style.smText}>
                 Technische Daten
               </p>
-              <div className='mt-4 flex items-center justify-between'>
-                <p className='ml-1 text-[13px] text-[#838D95] font-[600]'>Baujahr</p>
-                <p className='ml-1 text-[13px] text-[#838D95] font-[600]'>2018</p>
+              <div className={style.liWrapper}>
+                <p className={style.li}>Baujahr</p>
+                <p className={style.li}>2018</p>
               </div>
-              <div className='mt-4 flex items-center justify-between'>
-                <p className='ml-1 text-[13px] text-[#838D95] font-[600]'>Kilometerstand</p>
-                <p className='ml-1 text-[13px] text-[#838D95] font-[600]'>100.000 km</p>
+              <div className={style.liWrapper}>
+                <p className={style.li}>Kilometerstand</p>
+                <p className={style.li}>100.000 km</p>
               </div>
-              <div className='mt-4 flex items-center justify-between'>
-                <p className='ml-1 text-[13px] text-[#838D95] font-[600]'>Kraftstoff</p>
-                <p className='ml-1 text-[13px] text-[#838D95] font-[600]'>Elektro</p>
+              <div className={style.liWrapper}>
+                <p className={style.li}>Kraftstoff</p>
+                <p className={style.li}>Elektro</p>
               </div>
-              <div className='mt-4 flex items-center justify-between'>
-                <p className='ml-1 text-[13px] text-[#838D95] font-[600]'>Getriebe</p>
-                <p className='ml-1 text-[13px] text-[#838D95] font-[600]'>Automatisch</p>
+              <div className={style.liWrapper}>
+                <p className={style.li}>Getriebe</p>
+                <p className={style.li}>Automatisch</p>
               </div>
-              <p className='mt-4 flex items-center text-[14px] font-[600]'>
+              <p className={style.smText}>
                 Übergabe- & Rückgabeort
               </p>
             </div>

@@ -3,13 +3,14 @@ import { AiFillStar } from 'react-icons/ai'
 import avater from '../../assets/avater.png'
 import filter_alt from '../../assets/filter_alt.png'
 import Content from '../../assets/Content.png'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 const Testominal = () => {
+    const {id} = useParams()
     return (
         <div>
             <div className='mx-5'>
-                <Link to='/car/3'>
+                <Link to={`/car/${id}`}>
                     <p className='z-10 absolute top-10 left-5 text-[#7D7AFF]'>zurück</p>
                 </Link>
 
@@ -22,7 +23,7 @@ const Testominal = () => {
                 <img className='mt-3' src={avater} />
                 <p className='mt-3 font-black text-sm'>Thomas</p>
                 <p className='ml-1 mt-2 text-[#FAAD14] text-[20px] flex font-[600]'>
-                    {[1, 2, 3, 4, 5].map((index) => <AiFillStar />)}
+                    {[1, 2, 3, 4, 5].map((index) => <AiFillStar index={index}/>)}
                 </p>
                 <div className='flex justify-around w-full mt-3'>
                     <div className='text-center'>

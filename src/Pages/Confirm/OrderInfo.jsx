@@ -1,12 +1,15 @@
 import React from 'react'
-import {RangeSlider} from '../../Components'
+import { RangeSlider } from '../../Components'
 import drive_eta from '../../assets/drive_eta.png'
 import { Link } from 'react-router-dom'
 const OrderInfo = () => {
     return (
         <div>
             <div className='flex items-center p-9 '>
-                <p className='text-[#7D7AFF] text-[500] text-[16px]'>zurück</p>
+                <Link to='/user/1/inbox'>
+
+                    <p className='text-[#7D7AFF] text-[500] text-[16px]'>zurück</p>
+                </Link>
                 <div className='flex items-center ml-10'>
                     <p className='font-[600] text-[14px] ml-5'>
                         Extrakilometer

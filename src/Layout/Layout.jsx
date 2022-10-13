@@ -1,34 +1,13 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import Entry from '../Pages/Entry/Entry'
-import Login from '../Pages/Login/Login'
-import Main from '../Pages/Main/Main'
-import Map from '../Pages/Map/Map'
-import Register from '../Pages/Register/Register'
-import Search from '../Pages/Search/Search'
-import CarList from '../Pages/CarList/CarList'
-import SingleCar from '../Pages/SingleCar/SingleCar'
-import UserProfile from '../Pages/Profile/UserProfile'
-import Testominal from '../Pages/Testominal/Testominal'
-import Message from '../Pages/Message/Message'
-import Inbox from '../Pages/Message/Inbox/Inbox'
-import OrderInfo from '../Pages/Confirm/OrderInfo'
-import Paying from '../Pages/Confirm/Paying'
-import MyCars from '../Pages/MyCars/MyCars'
-import CreateCar from '../Pages/CreateCar/CreateCar'
-import Rentals from '../Pages/Rentals/Rentals'
-import RentalDetails from '../Pages/Rentals/RentalDetails'
-import CreateRent from '../Pages/Rentals/CreateRent'
-import FinishedPage from '../Pages/Rentals/FinishedPage'
-import RentalDoc from '../Pages/Rentals/RentalDoc'
-import RentalContract from '../Pages/Rentals/RentalContract'
-import RentalSign from '../Pages/Rentals/RentalSign'
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { CarList, CreateCar, CreateRent, Entry, FinishedPage, Inbox, Login, Main, Map, Message, MyCars, OrderInfo, Paying, Register, RentalContract, RentalDetails, RentalDoc, Rentals, RentalSign, Search, SingleCar, Testominal, UserProfile } from '../Pages';
 
 const Layout = () => {
   return (
     <Routes>
       <Route path='/' element={<Entry />} />
       <Route path='/login' element={<Login />} />
+      <Route path='/register' element={<Register />} />
       <Route path='/startsite' element={<Main />}>
         <Route path='/startsite/search' element={<Search />} />
         <Route path='/startsite/user/:id' element={<UserProfile />} />
@@ -37,7 +16,6 @@ const Layout = () => {
         <Route path='/startsite/mycars' element={<MyCars />} />
         <Route path='/startsite/rentals' element={<Rentals />} />
       </Route>
-      <Route path='/register' element={<Register />} />
       <Route path='/car/:id' element={<SingleCar />} />
       <Route path='/user/:id/testominal' element={<Testominal />} />
       <Route path='/user/:id/message' element={<Message />} />

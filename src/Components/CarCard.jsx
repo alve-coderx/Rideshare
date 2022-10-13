@@ -1,14 +1,19 @@
-import React from 'react'
-import tesla from '../assets/tesla.png'
-import { GoLocation } from 'react-icons/go'
-import { AiFillStar } from 'react-icons/ai'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { GoLocation } from 'react-icons/go';
+import { AiFillStar } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
+import { BsClock } from 'react-icons/bs';
+
+
 const CarCard = ({ car }) => {
     return (
         <div className="w-full flex items-top bg-white p-3 rounded-xl relative shadow-xl mt-2 ">
             <Link to={`/car/${car.id}`}>
                 <div className='relative'>
-                    <span className='absolute top-1 left-1 bg-[#7D7AFF] text-white text-[8px] flex items-center rounded-lg p-1'><GoLocation /> 20 km</span>
+                    
+                    {
+                        window.location.pathname === '/startsite/rentals' ? (<p className='absolute top-1 left-1 p-2 rounded-xl bg-[#FFE58F] font-[900] text-[20px]'><BsClock /></p>) : (<span className='absolute top-1 left-1 bg-[#7D7AFF] text-white text-[8px] flex items-center rounded-lg p-1'><GoLocation /> 20 km</span>)
+                     }
                     <img src={car.img} />
                 </div>
             </Link>
@@ -22,4 +27,4 @@ const CarCard = ({ car }) => {
     )
 }
 
-export default CarCard 
+export default CarCard;

@@ -24,15 +24,15 @@ const RentalDetails = () => {
                     <p className='text-[#7D7AFF] text-[500] text-[16px]'>zurück</p>
                     <div className='flex items-center ml-16'>
                         <img src={avater} />
-                        <p className='font-[600] text-[14px] ml-5'>
+                        <h1 className='font-[600] text-[14px] ml-5'>
                             Thomas
                             <p className='text-[#AAAFB6] text-[12px]'>Online</p>
-                        </p>
+                        </h1>
                     </div>
                 </div>
                 <div className='bg-slate-200 flex justify-evenly mx-5 mt-8 shadow-sm rounded-lg py-1'>
                     {
-                        navigators.map((element) => <p onClick={() => clickHandler(element.id)} className={active === element.id ? 'font-[600] text-[11.346px] bg-white py-2 px-3 text-[#7D7AFF] rounded-lg' : 'py-2 px-3 text-[11.346px] text-black'}>{element.name}</p>)
+                        navigators.map((element) => <p key={element.id} onClick={() => clickHandler(element.id)} className={active === element.id ? 'font-[600] text-[11.346px] bg-white py-2 px-3 text-[#7D7AFF] rounded-lg' : 'py-2 px-3 text-[11.346px] text-black'}>{element.name}</p>)
                     }
                 </div>
             </div>

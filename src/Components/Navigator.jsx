@@ -21,14 +21,13 @@ const Navigator = () => {
     { icons: <AiFillCar />, href: '/startsite/mycars', id : 3 },
     { icons: <AiOutlineUser />, href: '/startsite/user/1', id : 4 },
   ]
-  console.log(window.location.pathname)
   return (
     <div>
       <Outlet />
       <div className='flex justify-around bg-white p-5 absolute bottom-0 w-full shadow-2xl	'>
         {
           navigations.map((nav) => (
-            <Link to={nav.href}>
+            <Link key={nav.id} to={nav.href}>
               <p key={nav.icons} onClick={() => clickHandler(nav.id)} className={toggle === nav.id ? 'text-[25.2px] text-[#7D7AFF]' : 'text-[25.2px] text-[black]'}>
                 {nav.icons}
               </p>

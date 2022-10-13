@@ -9,11 +9,34 @@ import { Link } from 'react-router-dom'
 const CreateCar = () => {
   const [prograss, setPrograss] = useState(11.11);
   const [active, setActive] = useState(false);
+  const [value, setValue] = React.useState('fruit');
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
   const clickHandler = (index) => {
     setActive((prev) => {
       return prev === index ? null : index;
     });
 
+  };
+ 
+  const models = [
+    { value: 'Volkswagen' },
+    { value: 'Mercedes' },
+    { value: 'Audi ' },
+    { value: 'Porsche  ' },
+  ];
+  const Dropdown = ({ value, options, onChange }) => {
+    return (
+      <div className='absolute right-9'>
+        <select className='flex items-center text-[#636B75] text-[13px] font-[600] border-0 px-6' value={value} onChange={onChange}>
+          {options.map((option) => (
+            <option value={option.value}>{option.value}</option>
+          ))}
+        </select>
+      </div>
+    );
   };
   const texts = [
     { name: 'Klimaanlage/AC', id: 1 },
@@ -47,13 +70,19 @@ const CreateCar = () => {
               <p className='text-[24px] font-[600]'>Modell deines Fahrzeugs</p>
               <div className='flex justify-between bg-white rounded-lg shadow-xl p-3 mt-8'>
                 <p className='text-[#838D95] text-[12px] font-[400]'>Marke</p>
-                <p className='flex items-center text-[#636B75] text-[13px] font-[600]'>Volkswagen <AiOutlineRight className='ml-5 text-black text-[20px]' /></p>
-
+                <Dropdown
+                  options={models}
+                  value={value}
+                  onChange={handleChange}
+                />
               </div>
               <div className='flex justify-between bg-white rounded-lg shadow-xl p-3 mt-5'>
                 <p className='text-[#838D95] text-[12px] font-[400]'>Marke</p>
-                <p className='flex items-center text-[#636B75] text-[13px] font-[600]'>Golf <AiOutlineRight className='ml-5 text-black text-[20px]' /></p>
-
+                <Dropdown
+                  options={models}
+                  value={value}
+                  onChange={handleChange}
+                />
               </div>
               <div className='flex items-center text-left justify-between bg-white rounded-lg shadow-xl py-3 mt-10 px-5'>
                 <p > <AiOutlineInfoCircle className='text-black text-[30px]' /></p>
@@ -123,7 +152,7 @@ const CreateCar = () => {
                       <p className='text-[24px] font-[600] '>Weitere Merkmale</p>
                       <div className='flex flex-wrap p-3 mt-8 '>
                         {
-                          texts.map((text) => <p onClick={() => clickHandler(text.id)} className={active === text.id ? 'text-[white] m-1 p-2 rounded-lg text-[12px] bg-[#7D7AFF] font-[400]' : 'text-[black] border border-black m-1 p-2 rounded-lg text-[12px] bg-[transparent] font-[400]'}>{text.name}</p>)
+                          texts.map((text) => <p key={text.id} onClick={() => clickHandler(text.id)} className={active === text.id ? 'text-[white] m-1 p-2 rounded-lg text-[12px] bg-[#7D7AFF] font-[400]' : 'text-[black] border border-black m-1 p-2 rounded-lg text-[12px] bg-[transparent] font-[400]'}>{text.name}</p>)
                         }
                       </div>
 
