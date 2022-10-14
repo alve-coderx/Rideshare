@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { CarList, CreateCar, CreateRent, Entry, FinishedPage, Inbox, Login, Main, Map, Message, MyCars, OrderInfo, Paying, Register, RentalContract, RentalDetails, RentalDoc, Rentals, RentalSign, Search, SingleCar, Testominal, UserProfile } from '../Pages';
+import LandlordOverView from '../Pages/Rentals/RentalOverView/LandlordOverView';
 
 const Layout = () => {
   return (
@@ -18,6 +19,7 @@ const Layout = () => {
       </Route>
       <Route path='/car/:id' element={<SingleCar />} />
       <Route path='/user/:id/testominal' element={<Testominal />} />
+      <Route path='/rental/overview' element={<LandlordOverView />} />
       <Route path='/user/:id/message' element={<Message />} />
       <Route path='/order/info' element={<OrderInfo />} />
       <Route path='/order/payment' element={<Paying />} />

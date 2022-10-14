@@ -51,7 +51,7 @@ const RentalDetails = () => {
                 <p className='bg-slate-200 text-[10px] mb-5 w-40 font-[600] flex items-center rounded-lg px-2 py-2  mt-3'><MdDateRange className='mr-1' /> Do. 23. Juni  14:00 - 17:00</p>
             </div>
             <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%] flex justify-around'>
-                <Link to='/create/rent'>
+                <Link to='/rental/overview'>
                     <button className="mt-10 bg-[#7D7AFF] text-[14px] font-[500] text-white py-3 px-6 rounded-lg">
                         Akzeptieren
                     </button>
