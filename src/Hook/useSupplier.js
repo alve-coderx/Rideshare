@@ -44,14 +44,22 @@ const useSupplier = () => {
   }
 
   // register auth 
-  const registerUser = (email, password) => {
+  const registerUser = (email, password, firstname, lastname, companyname) => {
     createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      navigate('/startsite/search')
-    })
-    .catch(error => {
-      setError(error.message);
-    })
+      .then((userCredential) => {
+        navigate('/startsite/search')
+        const { photoUrl, email } = userCredential.user;
+        const loggerInUser = {
+          name: firstname + '' + lastname,
+          email: email,
+          photo: photoUrl,
+          companyname: companyname
+        }
+        setUser(loggerInUser)
+      })
+      .catch(error => {
+        setError(error.message);
+      })
   }
 
   // login auth
@@ -66,23 +74,23 @@ const useSupplier = () => {
   }
 
   const handleMessage = (msg) => {
-    console.log(msg); 
+    console.log(msg);
     setText(msg);
     navigate('/user/1/inbox');
   }
   // signout
   const logout = () => {
     signOut(auth).then(() => {
-    }) 
-    .catch(error => {
-      setError(error.message);
     })
+      .catch(error => {
+        setError(error.message);
+      })
   }
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, user => {
       if (user) {
         getIdToken(user)
-        .then((idToken) => localStorage.setItem('idToken', idToken))
+          .then((idToken) => localStorage.setItem('idToken', idToken))
         setUser(user);
       } else {
         setUser({})

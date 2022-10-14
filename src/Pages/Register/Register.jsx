@@ -27,7 +27,7 @@ const Register = () => {
       alert("Password Not Matched")
       return;
     }
-    registerUser(loginData.email, loginData.password)
+    registerUser(loginData.email, loginData.password,loginData.firstname,loginData.lastname,loginData.company);
   }
   const clickCheckbox = (index) => {
     setShow((prev) => {
@@ -56,12 +56,15 @@ const Register = () => {
           }
         </div>
       </div>
-      <div className='mt-8'>
+      <div className='mt-3'>
         <form onSubmit={handleSubmit}>
           <div className='flex justify-between'>
-            <input type="text" className={`w-[133px] ${style.input}`} placeholder="Nachname" required />
-            <input type="text" className={`w-[133px] ${style.input}`} placeholder="Vorname" required />
+            <input name='lastname' onChange={(e) => handleOnChage(e)} type="text" className={`w-[133px] ${style.input}`} placeholder="Nachname" required />
+            <input name='firstname' onChange={(e) => handleOnChage(e)} type="text" className={`w-[133px] ${style.input}`} placeholder="Vorname" required />
           </div>
+          {
+            toggle === 1 && <input name='company' onChange={(e) => handleOnChage(e)} type="text" className={`${style.input}`} placeholder="firmenname" required />
+          }
           <div className='relative'>
             <AiOutlineMail className='absolute top-3 left-4 text-[#636B75]' />
             <input name='email' onChange={(e) => handleOnChage(e)} type="text" className={`pl-10 ${style.input}`} placeholder="E-Mail" required />
