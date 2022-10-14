@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
 import { AiOutlineMail } from 'react-icons/ai'
 import useSupplier from '../../Hook/useSupplier';
 import {refs,checkbox} from '../../fakeDB/elements';
@@ -72,7 +71,7 @@ const Register = () => {
           <div className='flex justify-around mt-5'>
             {
               checkbox.map((item) => (
-                <div key={item.id} className={show === item.id ? 'w-[150px] border-2 border-[#7D7AFF] text-left bg-white rounded-lg p-3' : 'w-[150px]  text-left bg-white rounded-lg p-3'}>
+                <div key={item.id} className={show === item.id ? 'w-[150px] border-2 border-[#7D7AFF] text-left bg-white rounded-lg p-3' : 'w-[150px] text-left bg-white rounded-lg p-3'}>
                   <span className='font-[600] text-[#0E0F11] text-[14px]'>{item.name}</span>
                   <p className='font-[400] text-[#636B75] text-[14px]'>{item.details}</p>
                   <div className="flex items-center mt-4">
