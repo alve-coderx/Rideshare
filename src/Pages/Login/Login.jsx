@@ -4,10 +4,11 @@ import google from '../../assets/google.png';
 import apple from '../../assets/apple.png';
 import useSupplier from '../../Hook/useSupplier';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const style = {
-    authIcons : 'mt-10 shadow-lg bg-[white] font-bold py-3 px-8 rounded-xl',
-    input : 'mt-3 bg-white text-black text-sm rounded-lg   block w-full p-2.5 border-0 shadow-sm'
+    authIcons: 'mt-10 shadow-lg bg-[white] font-bold py-3 px-8 rounded-xl',
+    input: 'mt-3 bg-white text-black text-sm rounded-lg   block w-full p-2.5 border-0 shadow-sm'
 }
 
 const Login = () => {
@@ -37,7 +38,9 @@ const Login = () => {
                 <form onSubmit={handleSubmit}>
                     <input name='email' onChange={(e) => handleOnChage(e)} type="text" className={style.input} placeholder="Dein Username" required />
                     <input name='password' onChange={(e) => handleOnChage(e)} type="password" className={style.input} placeholder="Dein Password" required />
-                    <p className='text-right text-[13px] text-[#1E2024] font-[600]'>Passwort vergessen?</p>
+                    <Link to={'/passwordreset'}>
+                        <p className='text-right text-[13px] text-[#1E2024] font-[600]'>Passwort vergessen?</p>
+                    </Link>
                     <button type='submit' className="mt-10 text-[14px] bg-[#7D7AFF] text-white font-[500] py-2 px-4 rounded-lg w-full">
                         Login
                     </button>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { createUserWithEmailAndPassword, FacebookAuthProvider, signOut, onAuthStateChanged, getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword, getIdToken } from 'firebase/auth'
+import { sendPasswordResetEmail, createUserWithEmailAndPassword, FacebookAuthProvider, signOut, onAuthStateChanged, getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword, getIdToken } from 'firebase/auth'
 import initializeAuth from '../Firebase/firebase.init';
 import { useEffect } from 'react';
 
@@ -71,8 +71,12 @@ const useSupplier = () => {
       .catch(error => {
         setError(error.message);
       })
-  }
+  };
 
+  // forget password
+  const handleForgetPass = (email) => {
+    sendPasswordResetEmail(auth,email)
+  };
   const handleMessage = (msg) => {
     console.log(msg);
     setText(msg);
@@ -107,7 +111,8 @@ const useSupplier = () => {
     logout,
     signInWithFb,
     registerUser,
-    loginUser
+    loginUser,
+    handleForgetPass
   }
 }
 
