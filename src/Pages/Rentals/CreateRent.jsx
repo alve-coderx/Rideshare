@@ -6,9 +6,8 @@ import metar from '../../assets/metar.png'
 import { useState } from 'react'
 import { BiImages } from 'react-icons/bi'
 import { Link } from 'react-router-dom'
-// https://i.ibb.co/rZrWVSX/Untitled-design-removebg-preview.png
-// https://i.ibb.co/nr7zQqb/Untitled-design-1-removebg-preview-1.png
-// https://i.ibb.co/MPb9hnQ/Untitled-design-2-removebg-preview.png
+
+
 const CreateRent = () => {
   const [prograss, setPrograss] = useState(33.33)
   console.log(prograss)
@@ -20,7 +19,7 @@ const CreateRent = () => {
             <img src={filter_alt} />
           </div>
           {
-            prograss === 99.99 ? (<Link to='/rent/finished'><p className='text-white font-[500] text-[16px]'>zurück</p></Link>)
+            prograss === 99.99 ? (<Link to='/rental/contract'><p className='text-white font-[500] text-[16px]'>zurück</p></Link>)
             :(<p onClick={() => setPrograss((prevState) => prevState + 33.33)} className='text-white font-[500] text-[16px]'>zurück</p>)
           }
         </div>

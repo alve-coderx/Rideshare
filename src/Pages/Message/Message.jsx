@@ -4,18 +4,12 @@ import './style.css'
 import { MdDateRange } from 'react-icons/md'
 import { useState } from 'react'
 import useSupplier from '../../Hook/useSupplier'
-import { useRef } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import { Fragment } from 'react'
-import { GrClose, GrKey } from 'react-icons/gr'
-import { AiOutlineCheck,AiOutlineClose } from 'react-icons/ai'
+import { AiOutlineClose } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 
 const Message = () => {
     const [msg, setMsg] = useState("");
-    const { handleMessage, text } = useSupplier();
-    
-    const [show, setShow] = useState(1);
+    const { handleMessage } = useSupplier();
    
     return (
         <div>

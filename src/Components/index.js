@@ -6,3 +6,4 @@ export {default as FilterDropDown} from './FilterDropDown' ;
 export {default as Navigator} from './Navigator' ;
 export {default as RangeSlider} from './RangeSlider' ;
 export {default as Modal} from './Modal' ;
+export {default as RenatalCard} from './RenatalCard' ;

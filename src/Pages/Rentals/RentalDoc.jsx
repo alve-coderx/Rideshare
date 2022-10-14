@@ -11,7 +11,7 @@ const RentalDoc = () => {
             <div className='bg-[#1E2024] '>
                 <div className='flex mx-5 pt-5 justify-between ' >
                     <p className='text-white font-[500] text-[16px]'>schließen</p>
-                    <Link to='/rental/contract'> 
+                    <Link to='/create/rent'> 
                     <p className='text-white font-[500] text-[16px]'>weiter</p>
                     </Link>
                 </div>

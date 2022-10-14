@@ -1,5 +1,5 @@
 import React from 'react'
-import { CarCard } from '../../../Components'
+import { RenatalCard } from '../../../Components'
 import { cars } from '../../../fakeDB/cars';
 
 const RentalRoles = () => {
@@ -8,7 +8,7 @@ const RentalRoles = () => {
       <div className='mx-4 ' >
         {
           cars.map((car) => (
-            <CarCard key={car.id} car={car} />
+            <RenatalCard key={car.id} car={car} />
           ))
         }
       </div>
