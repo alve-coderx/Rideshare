@@ -1,18 +1,9 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 const Entry = () => {
-  const [toggle, setToggle] = useState(null);
-  const clickHandler = (index) => {
-    setToggle((prev) => {
-      return prev === index ? null : index;
-    });
-
-  };
-  const refs = [
-    { name: "Register", href: '/register', id: 1 },
-    { name: "Login", href: '/login', id: 2 }
-  ]
-
+  const style = {
+    btn : 'border-t border-r border-b border-[white] text-[14px] font-[500] py-2 px-4 shadow w-[150px]'
+  }
   return (
     <div className='text-center flex flex-col items-center' style={{height : '100vh',background : `url(https://i.ibb.co/Hhfj0Z6/main.png)`,backgroundRepeat : 'no-repeat',backgroundSize : 'cover'}} >
       <div className='pt-12 w-[306px]'>
@@ -20,12 +11,12 @@ const Entry = () => {
       </div>
       <div className='absolute bottom-14'>
             <Link to='/register'>
-              <button className={'border-t border-r border-b border-[white] bg-[white] text-[#0E0F11] text-[14px] font-[500] py-2 px-4 rounded-l-xl shadow w-[150px]'}>
+              <button className={`${style.btn} bg-[white] text-[#0E0F11] rounded-l-xl`}>
                 Register
               </button>
             </Link>
             <Link to='/login'>
-              <button className={'border-t border-r border-b border-[white] bg-slate-700 text-[14px] font-[500] text-white font-semibold py-2 px-4 rounded-r-xl shadow w-[150px]'}>
+              <button className={`${style.btn} bg-slate-700 text-white rounded-r-xl`}>
                 Login
               </button>
             </Link>
