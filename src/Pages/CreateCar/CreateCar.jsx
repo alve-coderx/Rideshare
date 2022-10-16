@@ -2,7 +2,6 @@ import React from 'react';
 import { useState } from 'react';
 import { AiOutlineInfoCircle, AiOutlineRight, AiOutlineClose } from 'react-icons/ai';
 import { GoLocation } from 'react-icons/go';
-import { BiImages } from 'react-icons/bi';
 import map from '../../assets/map.png';
 import { models, kilometers, fuel, transmission } from '../../fakeDB/cars';
 import { texts } from '../../fakeDB/elements';

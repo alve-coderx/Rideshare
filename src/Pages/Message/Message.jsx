@@ -1,7 +1,6 @@
 import React from 'react';
 import avater from '../../assets/avater.png';
 import './style.css';
-import { MdDateRange } from 'react-icons/md';
 import { useState } from 'react';
 import useSupplier from '../../Hook/useSupplier';
 import { AiOutlineClose } from 'react-icons/ai';

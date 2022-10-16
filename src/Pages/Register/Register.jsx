@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { AiOutlineMail } from 'react-icons/ai'
 import useSupplier from '../../Hook/useSupplier';
 import {refs,checkbox} from '../../fakeDB/elements';
-import { TypeWrapper } from '../../Components';
 
 const style = {
   input : 'mt-3 bg-white text-black text-sm rounded-lg block w-full p-2.5 border-0',

@@ -11,7 +11,9 @@ const RentalContract = () => {
   return (
     <div>
       <div className='mx-5 mt-8 flex items-center'>
-        <p className='text-[#7D7AFF] text-[500] text-[16px]'>zurück</p>
+        <Link to='/create/rent'>
+          <p className='text-[#7D7AFF] text-[500] text-[16px]'>zurück</p>
+        </Link> 
         <p className='font-[600] text-[14px] ml-16'>
           Mietvertrag
         </p>
@@ -52,13 +54,13 @@ const RentalContract = () => {
           <div className='relative'>
             <p className={style.boldText}>Anmietung</p>
             <div className='relative'>
-              <TypeWrapper style={style} placeholder='Start' text='13/10/2022 21:10'/>
+              <TypeWrapper style={style} placeholder='Start' text='13/10/2022 21:10' />
             </div>
             <div className='relative'>
-              <TypeWrapper style={style} placeholder='Geschätztes Ende' text='21/10/2022 21:10'/>
+              <TypeWrapper style={style} placeholder='Geschätztes Ende' text='21/10/2022 21:10' />
             </div>
             <div className='relative'>
-              <TypeWrapper style={style} placeholder='Kilometer inklusive' text='200km (danach 0,38 € / km)'/>
+              <TypeWrapper style={style} placeholder='Kilometer inklusive' text='200km (danach 0,38 € / km)' />
             </div>
           </div>
         </div>

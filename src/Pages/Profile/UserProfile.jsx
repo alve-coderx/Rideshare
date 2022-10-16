@@ -1,6 +1,6 @@
 import React from 'react';
 import { AiFillStar, AiOutlineRight } from 'react-icons/ai';
-import { BiLogIn, BiLogOut } from 'react-icons/bi';
+import { BiLogOut } from 'react-icons/bi';
 import avater from '../../assets/avater.png';
 import op1 from '../../assets/op1.png';
 import op2 from '../../assets/op2.png';

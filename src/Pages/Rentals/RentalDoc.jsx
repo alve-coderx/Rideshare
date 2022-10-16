@@ -9,7 +9,7 @@ import { RentBanner, TypeWrapper } from '../../Components';
 
 const RentalDoc = () => {
     const style = {
-        bolcdText: 'text-[#636B75] text-[13px] font-[600] mt-3',
+        bolcdText: 'text-[#636B75] text-[10px] font-[600] mt-3',
         wrapper: 'w-[150px] h-12 text-center bg-[#E6E6FF] flex items-center justify-center rounded-2xl shadow-sm px-2 py-8 mt-2',
         input: 'p-3 bg-white rounded-xl shadow-2xl mt-2 block w-full text-sm rounded-lg dark:placeholder-[#7D7AFF] ',
         primary: 'text-[#7D7AFF] text-center text-[32px] font-[400]',
