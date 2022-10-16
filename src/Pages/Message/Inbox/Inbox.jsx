@@ -24,7 +24,7 @@ const Inbox = () => {
   const sheetRef = useRef();
   const [active, setActive] = useState(1);
   const style = {
-    mesage  : 'mt-5 text-white shadow-xl bg-[#7D7AFF] rounded-xl text bubble w-60 py-5  px-2'
+    mesage: 'mt-5 text-white shadow-xl bg-[#7D7AFF] rounded-xl text bubble w-60 py-5  px-2'
   }
   const clickHandler = (index) => {
     setActive((prev) => {
@@ -77,13 +77,14 @@ const Inbox = () => {
       </div>
 
       <div style={{ overflowY: 'scroll' }} className='h-3/4 pb-16'>
-        <div className='mx-5 flex flex-col items-end'>
-          <div className={style.mesage}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
-        </div>
+
         {
           active === 1 ?
             (
               <>
+                <div className='mx-5 flex flex-col items-end'>
+                  <div className={style.mesage}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                </div>
                 <div className='mx-5 flex flex-col items-end' >
                   {
                     messages.map((element, index) => (
@@ -131,7 +132,7 @@ const Inbox = () => {
                     </div>
                     <p className='text-[32px] font-[600]'>30 € </p>
                   </div>
-                  <DatePicker color='#E6E5FF'/>
+                  <DatePicker color='#E6E5FF' />
                   <p className='text-[12px] mb-5 w-40 font-[900] flex items-center mt-3'> Kilometer inklusive <AiOutlineInfoCircle className='ml-1' /></p>
                   <p className='text-[10px] mb-5 w-40 font-[600] flex items-center mt-3'><AiOutlineCheckCircle className=' font-[600] text-[#52C41A] mr-1 text-[15px]' /> 40km kostenlos </p>
                 </div>
@@ -167,8 +168,11 @@ const Inbox = () => {
         active === 1 ?
           (
             <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%] flex items-center'>
-              <AiOutlineArrowUp onClick={() => setMessages(current => [...current, { msg: message, author: 'me' }])} className='absolute right-5 bg-[#7D7AFF] p-1 text-[30px] rounded-lg shadow-xl text-white' />
-              <input onChange={(e) => handleSubmitMsg(e)} step={{ outline: 'none' }} className="shadow-lg rounded w-full py-2 px-3 text-gray-700  border-0" id="username" type="text" placeholder="Nachricht senden..." />
+              <button onClick={() => setMessages(current => [...current, { msg: message, author: 'me' }])} className='absolute right-5 bg-[#7D7AFF] p-1 rounded-lg shadow-xl text-white' >
+                <AiOutlineArrowUp className='text-[25px] '/>
+
+              </button>
+              <input onChange={(e) => handleSubmitMsg(e)} step={{ outline: 'none' }} className="shadow-lg rounded w-full py-2 px-3 text-gray-700  border-0" type="text" placeholder="Nachricht senden..." />
             </div>
           )
           :

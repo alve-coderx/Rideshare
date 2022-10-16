@@ -13,8 +13,7 @@ const Register = () => {
   const [loginData, setLogindata] = useState({});
   const [toggle, setToggle] = useState(2);
   const [show, setShow] = useState();
-  const { registerUser } = useSupplier();
-
+  const { registerUser,error } = useSupplier();
   const handleOnChage = (e) => {
     const field = e.target.name;
     const value = e.target.value;
@@ -71,7 +70,6 @@ const Register = () => {
             <AiOutlineMail className='absolute top-3 left-4 text-[#636B75]' />
             <input name='email' onChange={(e) => handleOnChage(e)} type="text" className={`pl-10 ${style.input}`} placeholder="E-Mail" required />
           </div>
-          {/* <TypeWrapper  preFixIcon={true} placeholder='E-mail' icon={false} style={style}/> */}
           <input name='password' onChange={(e) => handleOnChage(e)} type="password" className={style.input} placeholder="Passwort" required />
           <input name='password2' onChange={(e) => handleOnChage(e)} type="password" className={style.input} placeholder="Passwort wiederholen" required />
           <div className='flex justify-around mt-5'>
@@ -81,7 +79,7 @@ const Register = () => {
                   <span className='font-[600] text-[#0E0F11] text-[14px]'>{item.name}</span>
                   <p className='font-[400] text-[#636B75] text-[14px]'>{item.details}</p>
                   <div className="flex items-center mt-4">
-                    <input onClick={() => clickCheckbox(item.id)} id="default-checkbox" type="checkbox" checked={show === item.id} className="w-4 h-4 text-blue-600 rounded " />
+                    <input onClick={() => clickCheckbox(item.id)} type="checkbox" defaultChecked={show === item.id} className="w-4 h-4 text-blue-600 rounded " />
                     <label className="ml-2 text-[14px] font-[400] text-[#636B75]">Checkbox</label>
                   </div>
                 </div>

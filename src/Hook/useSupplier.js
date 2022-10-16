@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {sendEmailVerification, sendPasswordResetEmail, createUserWithEmailAndPassword, FacebookAuthProvider, signOut, onAuthStateChanged, getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword, getIdToken } from 'firebase/auth';
+import { sendEmailVerification, sendPasswordResetEmail, createUserWithEmailAndPassword, FacebookAuthProvider, signOut, onAuthStateChanged, getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword, getIdToken } from 'firebase/auth';
 import initializeAuth from '../Firebase/firebase.init';
 import { useEffect } from 'react';
 
@@ -65,9 +65,9 @@ const useSupplier = () => {
   // verify email
   const emailVerification = () => {
     sendEmailVerification(auth.currentUser)
-    .then((res) => {
-      console.log(res);
-    })
+      .then((res) => {
+        console.log(res);
+      })
   }
 
   // login auth
@@ -83,7 +83,7 @@ const useSupplier = () => {
 
   // forget password
   const handleForgetPass = (email) => {
-    sendPasswordResetEmail(auth,email)
+    sendPasswordResetEmail(auth, email)
   };
   // send msg
   const handleMessage = (msg) => {

@@ -1,10 +1,11 @@
 import { BsClock } from "react-icons/bs";
-import { AiOutlineClose,AiOutlineCheck } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineCheckCircle } from "react-icons/ai";
 
 export const cars = [
     { name: 'Tesla', img: 'https://i.ibb.co/S3cY7Ct/tesla.png', icon : <BsClock /> , id: 1, tagBg : '#FFE58F' },
-    { name: 'Tesla', img: 'https://i.ibb.co/xFdLNkM/Image-Placeholder-2.png', icon : <AiOutlineClose /> , id: 2, tagBg : '#D9F7BE' },
-    { name: 'Tesla', img: 'https://i.ibb.co/VxHD9nJ/Image-Placeholder-3.png', icon : <AiOutlineCheck /> , id: 3, tagBg : '#D9F7BE' },
+    { name: 'Tesla', img: 'https://i.ibb.co/xFdLNkM/Image-Placeholder-2.png', icon : <AiOutlineClose /> , id: 2, tagBg : '#FFCCC7' },
+    { name: 'Tesla', img: 'https://i.ibb.co/VxHD9nJ/Image-Placeholder-3.png', icon : <AiOutlineCheckCircle /> , id: 3, tagBg : '#D9F7BE' },
+    { name: 'Tesla', img: 'https://i.ibb.co/0rMgGtf/Image-Placeholder-5.png', icon : <AiOutlineCheckCircle /> , id: 4, tagBg : '#D9F7BE' },
 ]
 
 

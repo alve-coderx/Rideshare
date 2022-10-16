@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import paypal from '../../assets/paypal.png';
 const OrderInfo = () => {
-  const [show, setShow] = useState();
+  const [show, setShow] = useState(1);
 
     const clickHandler = (index) => {
         setShow((prev) => {

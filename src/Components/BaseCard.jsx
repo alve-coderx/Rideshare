@@ -19,7 +19,7 @@ const BaseCard = ({edit,arrow,color,bg, link, image, primaryTag, secondaryTag, t
 
                         <img src={image} />
                         {
-                            iconTag && <p className={`absolute top-1 left-1 p-2 rounded-xl bg-[${(tagBg)}] font-[900] text-[20px]`}>{iconTag}</p>
+                            iconTag && <p style={{backgroundColor : tagBg}} className={`absolute top-1 left-1 p-2 rounded-xl font-[900] text-[20px]`}>{iconTag}</p>
                         }
                     </div>
                     <div className='ml-4'>
