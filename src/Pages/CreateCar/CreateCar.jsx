@@ -1,19 +1,22 @@
 import React from 'react';
 import { useState } from 'react';
-import { AiOutlineInfoCircle, AiOutlineMinus, AiOutlinePlus, AiOutlineRight } from 'react-icons/ai'
+import { AiOutlineInfoCircle, AiOutlineRight, AiOutlineClose } from 'react-icons/ai';
 import { GoLocation } from 'react-icons/go';
 import { BiImages } from 'react-icons/bi';
-import filter_alt from '../../assets/filter_alt.png';
 import map from '../../assets/map.png';
-import { models } from '../../fakeDB/cars';
+import { models, kilometers, fuel, transmission } from '../../fakeDB/cars';
 import { texts } from '../../fakeDB/elements';
 import { Modal } from '../../Components';
+import Counter from '../../Components/Counter';
+import { Link } from 'react-router-dom';
 
 const CreateCar = () => {
   const [prograss, setPrograss] = useState(11.11);
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState(1);
   const [value, setValue] = React.useState('fruit');
   const [open, setOpen] = useState(false);
+  const [info, setInfo] = useState('');
+  const [selectedFile, setSelectedFile] = useState();
 
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -34,28 +37,54 @@ const CreateCar = () => {
     heading: 'text-[#838D95] text-[12px] font-[400]',
     semiText: 'text-[24px] font-[600]',
     text_bold: 'text-black text-[30px]',
-    btn: 'flex items-center justify-center mt-10 bg-[#7D7AFF] text-white py-4 px-4 rounded-lg w-full'
+    btn: 'flex items-center justify-center mt-10 bg-[#7D7AFF] text-white py-4 px-4 rounded-lg w-full',
+    input: 'mt-3 bg-white text-black text-sm rounded-lg block w-full p-2.5 border-0'
 
   }
   const Dropdown = ({ value, options, onChange }) => {
     return (
       <div className='absolute right-9'>
-        <select className='flex items-center text-[#636B75] text-[13px] font-[600] border-0 px-6' value={value} onChange={onChange}>
+        <select className='flex items-center text-[#636B75] text-[13px] font-[600] border-0 px-6' value={value.value} onChange={onChange}>
           {options.map((option) => (
-            <option value={option.value}>{option.value}</option>
+            <option key={option.id} value={option}>{option.value}</option>
           ))}
         </select>
       </div>
     );
   };
+  const onFileChange = event => {
 
+    // Update the state
+    setSelectedFile(event.target.files[0])
+  };
+  const onFileUpload = () => {
+
+    // Create an object of formData
+    // Update the formData object
+    const formData = {
+      selectedFile,
+      value
+    };
+
+
+
+    // Details of the uploaded file
+    console.log(formData);
+
+    // Request made to the backend api
+    // Send formData object
+    // axios.post("api/uploadfile", formData);
+  };
   return (
     <div>
       <div className='bg-white px-5 py-7'>
-        <div className='flex justify-end'>
-          <div className='bg-black p-2 rounded-lg'>
-            <img src={filter_alt} />
-          </div>
+        <div className={prograss === 11.11 ? `flex justify-end` : 'flex justify-between'}>
+          <p onClick={() => setPrograss((prevState) => prevState - 11.11)} className={prograss === 11.11 ? 'hidden' : 'text-[#7D7AFF]'}>zurück</p>
+          <Link to='/startsite/mycars'>
+            <div className='bg-black text-white p-2 rounded-lg'>
+              <AiOutlineClose />
+            </div>
+          </Link>
         </div>
         <div className='mt-3'>
           <div className="w-full bg-gray-200 h-1">
@@ -73,7 +102,7 @@ const CreateCar = () => {
                 <Dropdown
                   options={models}
                   value={value}
-                  onChange={handleChange}
+                  onChange={(e) => handleChange(e)}
                 />
               </div>
               <div className={`mt-5 ${style.wrapper}`}>
@@ -81,7 +110,7 @@ const CreateCar = () => {
                 <Dropdown
                   options={models}
                   value={value}
-                  onChange={handleChange}
+                  onChange={(e) => handleChange(e)}
                 />
               </div>
               <div className={style.wrapper_secondary}>
@@ -94,10 +123,13 @@ const CreateCar = () => {
             prograss === 22.22 ? (
               <div>
                 <p className={style.semiText}>Gebe den Kilometerstand ein</p>
-                <div className={`mt-8 ${style.wrapper}`}>
-                  <p className={style.heading}>Kilometerstand</p>
-                  <p className={style.secondary}>15-60.000km <AiOutlineRight className='ml-5 text-black text-[20px]' /></p>
-
+                <div className={`mt-5 ${style.wrapper}`}>
+                  <p className={style.heading}>Marke</p>
+                  <Dropdown
+                    options={kilometers}
+                    value={value}
+                    onChange={handleChange}
+                  />
                 </div>
                 <div className={style.wrapper_secondary}>
                   <p > <AiOutlineInfoCircle className={style.text_bold} /></p>
@@ -109,15 +141,21 @@ const CreateCar = () => {
               prograss === 33.33 ? (
                 <div>
                   <p className={style.semiText}>Details hinzufügen</p>
-                  <div className={`mt-8 ${style.wrapper}`}>
-                    <p className={style.heading}>Kraftstoff</p>
-                    <p className={style.secondary}>Diesel <AiOutlineRight className='ml-5 text-black text-[20px]' /></p>
-
+                  <div className={`mt-5 ${style.wrapper}`}>
+                    <p className={style.heading}>Marke</p>
+                    <Dropdown
+                      options={fuel}
+                      value={value}
+                      onChange={handleChange}
+                    />
                   </div>
-                  <div className='flex justify-between bg-white rounded-lg shadow-xl p-3 mt-5'>
-                    <p className={style.heading}>Getriebe</p>
-                    <p className={style.secondary}>Automatik <AiOutlineRight className='ml-5 text-black text-[20px]' /></p>
-
+                  <div className={`mt-5 ${style.wrapper}`}>
+                    <p className={style.heading}>Marke</p>
+                    <Dropdown
+                      options={transmission}
+                      value={value}
+                      onChange={handleChange}
+                    />
                   </div>
                   <div className={style.wrapper_secondary}>
                     <p > <AiOutlineInfoCircle className={style.text_bold} /></p>
@@ -129,16 +167,8 @@ const CreateCar = () => {
                 prograss === 44.44 ? (
                   <div>
                     <p className={style.semiText}>Details hinzufügen</p>
-                    <div className='flex justify-between p-3 mt-8 border-b border-[gray]'>
-                      <p className={style.heading}>Anzahl der Türen</p>
-                      <p className={style.secondary}><AiOutlineMinus className='mr-5 text-black text-[20px]' /> 4  <AiOutlinePlus className='ml-5 text-black text-[20px]' /></p>
-
-                    </div>
-                    <div className='flex justify-between p-3 mt-5'>
-                      <p className={style.heading}>Anzahl der Sitze</p>
-                      <p className={style.secondary}><AiOutlineMinus className='mr-5 text-black text-[20px]' /> 5 <AiOutlinePlus className='ml-5 text-black text-[20px]' /></p>
-
-                    </div>
+                    <Counter name='Anzahl der Türen' />
+                    <Counter name='Anzahl der Sitze' />
                     <div className={style.wrapper_secondary}>
                       <p > <AiOutlineInfoCircle className={style.text_bold} /></p>
                       <p className={style.primary}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum dictum tortor odio at. Feugiat sapien orci imperdiet nisi, venenatis, tincidunt. Dui semper amet leo, nulla. Bibendum purus,</p>
@@ -184,12 +214,7 @@ const CreateCar = () => {
                       prograss === 77.77 ? (
                         <div>
                           <p className={style.semiText}>Preisangabe</p>
-                          <div className='flex justify-between p-3 mt-8 '>
-                            <p className={style.heading}>Anzahl der Türen</p>
-                            <p className={style.secondary}><AiOutlineMinus className='mr-5 text-black text-[20px]' /> 40 € <AiOutlinePlus className='ml-5 text-black text-[20px]' /></p>
-
-                          </div>
-
+                          <Counter name='Preis für einen Tag' />
                           <div className={style.wrapper_secondary}>
                             <p > <AiOutlineInfoCircle className={style.text_bold} /></p>
                             <p className={style.primary}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum dictum tortor odio at. Feugiat sapien orci imperdiet nisi, venenatis, tincidunt. Dui semper amet leo, nulla. Bibendum purus,</p>
@@ -201,9 +226,7 @@ const CreateCar = () => {
                         prograss === 88.88 ? (
                           <div>
                             <p className={style.semiText}>Gib deine Telefonnummer ein </p>
-                            <div className='text-left bg-white rounded-lg shadow-xl p-3 mt-5'>
-                              <p className={style.heading}>Telefonnummer eingeben</p>
-                            </div>
+                            <input name='password' type='number' className={style.input} placeholder="Telefonnummer eingeben" required />
 
                             <div className={style.wrapper_secondary}>
                               <p > <AiOutlineInfoCircle className={style.text_bold} /></p>
@@ -217,7 +240,19 @@ const CreateCar = () => {
                             <div>
                               <p className={style.semiText}>Lade Bilder von deinem Auto hoch</p>
                               <div className='text-center bg-[#E6E6FF] flex items-center justify-center rounded-lg shadow-xl px-5 py-10 mt-5'>
-                                <p className='text-[#7D7AFF] text-center text-[32px] font-[400]'><BiImages /></p>
+                                <div className="flex w-full items-center justify-center bg-grey-lighter">
+                                  <label className="w-64 flex flex-col items-center px-4 py-6 text-blue rounded-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
+                                    <span className="text-base leading-normal">
+                                      <p className='text-[#7D7AFF] text-[32px] font-[400]'><BiImages /></p>
+                                    </span>
+                                    <input type='file' onChange={onFileChange} className="hidden" />
+                                  </label>
+                                </div>
+                                {/* <button onClick={() => {
+                                  onFileUpload()
+                                }}>
+                                  Upload
+                                </button> */}
                               </div>
 
                               <div className={style.wrapper_secondary}>

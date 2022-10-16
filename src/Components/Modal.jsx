@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
-import { AiOutlineCheck, } from 'react-icons/ai'
+import { AiOutlineCheck, } from 'react-icons/ai';
 import { useState } from 'react';
 import { useRef } from 'react';
 import { GrKey } from 'react-icons/gr';

@@ -1,10 +1,9 @@
-import React from 'react'
-import { GrLocation } from 'react-icons/gr'
-import {Filter,Carousel} from '../../Components'
-import { AiOutlineDown } from 'react-icons/ai'
-import { Link } from 'react-router-dom'
-import map from '../../assets/map.png'
-import useSupplier from '../../Hook/useSupplier'
+import React from 'react';
+import { GrLocation } from 'react-icons/gr';
+import {Filter,Carousel} from '../../Components';
+import { AiOutlineDown } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
+import map from '../../assets/map.png';
 
 const Search = () => {
   return (

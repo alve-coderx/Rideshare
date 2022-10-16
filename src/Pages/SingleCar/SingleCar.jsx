@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Slider from "react-slick";
-import { ImKey } from 'react-icons/im'
-import { AiFillStar, AiOutlineInfoCircle, AiOutlineCheckCircle } from 'react-icons/ai'
-import './style.css'
-import { BottomSheet } from 'react-spring-bottom-sheet'
-import 'react-spring-bottom-sheet/dist/style.css'
+import { ImKey } from 'react-icons/im';
+import { AiFillStar, AiOutlineInfoCircle, AiOutlineCheckCircle } from 'react-icons/ai';
+import './style.css';
+import { BottomSheet } from 'react-spring-bottom-sheet';
+import 'react-spring-bottom-sheet/dist/style.css';
 import { useEffect } from 'react';
 import { useRef } from 'react';
-import avater from '../../assets/avater.png'
+import avater from '../../assets/avater.png';
 import { Link } from 'react-router-dom';
 import { GoLocation } from 'react-icons/go';
 import { GrClose } from 'react-icons/gr';

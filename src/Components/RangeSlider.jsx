@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import Slider from 'react-rangeslider'
-import './style.css'
+import React, { Component } from 'react';
+import Slider from 'react-rangeslider';
+import './style.css';
 class Horizontal extends Component {
     constructor(props, context) {
         super(props, context)

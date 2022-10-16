@@ -1,27 +1,36 @@
-import React from 'react'
-import filter_alt from '../../assets/cross.png'
-import car from '../../assets/car.png'
-import fuel from '../../assets/fuel.png'
-import metar from '../../assets/metar.png'
-import { useState } from 'react'
-import { BiImages } from 'react-icons/bi'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import filter_alt from '../../assets/cross.png';
+import car from '../../assets/car.png';
+import fuel from '../../assets/fuel.png';
+import metar from '../../assets/metar.png';
+import { useState } from 'react';
+import { BiImages } from 'react-icons/bi';
+import { Link, useNavigate } from 'react-router-dom';
+import RentBanner from '../../Components/RentBanner';
 
 
 const CreateRent = () => {
-  const [prograss, setPrograss] = useState(33.33)
-  console.log(prograss)
+  const [prograss, setPrograss] = useState(33.33);
+  const navigate = useNavigate();
+  const handleStepper = () => {
+    setPrograss((prevState) => {
+      if (prograss === 99.99) {
+        navigate('/rental/contract');
+      } else {
+        return prevState + 33.33
+      }
+    })
+  };
   return (
     <div>
       <div className='bg-[#1E2024] '>
         <div className='flex mx-5 pt-5 justify-between ' >
           <div className='bg-white p-2 rounded-lg'>
-            <img src={filter_alt} />
+            <Link to='/rental/documents'>
+              <img src={filter_alt} />
+            </Link>
           </div>
-          {
-            prograss === 99.99 ? (<Link to='/rental/contract'><p className='text-white font-[500] text-[16px]'>zurück</p></Link>)
-            :(<p onClick={() => setPrograss((prevState) => prevState + 33.33)} className='text-white font-[500] text-[16px]'>zurück</p>)
-          }
+          <p onClick={() => handleStepper()} className='text-white font-[500] text-[16px]'>zurück</p>
         </div>
         <div className='mx-5 mt-8 '>
           <div className="w-full  bg-gray-200 h-1">
@@ -30,32 +39,13 @@ const CreateRent = () => {
         </div>
         <div className='mx-5 flex flex-col justify-center items-center text-center pb-3'>
           {
-            prograss === 33.33 ?
-              (
-                <>
-                  <img className='w-full' src={car} />
-                  <p className='text-white font-[400] text-[13px]'>Mache einen <span className='text-[#7D7AFF]'>Rundgang</span> um das Auto</p>
-                </>
-              )
+            prograss === 33.33 ? <RentBanner image={car} />
               :
-              prograss === 66.66 ?
-                (
-                  <>
-                    <img className='w-full w-52 mt-5 mb-5' src={fuel} />
-                    <p className='text-white font-[400] text-[13px]'>Gib den <span className='text-[#7D7AFF]'>Kilometerstand</span> an, der auf deinem Techo angezeigt wird</p>
-                  </>
-                )
+              prograss === 66.66 ? <RentBanner image={fuel} />
                 :
-                prograss === 99.99 ?
-                  (
-                    <>
-                      <img className='w-52 mt-5 mb-5' src={metar} />
-                      <p className='text-white font-[400] text-[13px]'>Gib den<span className='text-[#7D7AFF]'>Tankstand</span>an, der auf deiner Tankanzeige angezeigt wird</p>
-                    </>
-                  )
+                prograss === 99.99 ? <RentBanner image={metar} />
                   :
                   ''
-
           }
         </div>
       </div>

@@ -1,9 +1,9 @@
-import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
-import { AiFillCar, AiOutlineUser } from 'react-icons/ai'
-import { HiOutlineKey } from 'react-icons/hi'
-import { BiSearchAlt2 } from 'react-icons/bi'
-import { useState } from 'react'
+import React from 'react';
+import { Link, Outlet } from 'react-router-dom';
+import { AiFillCar, AiOutlineUser } from 'react-icons/ai';
+import { HiOutlineKey } from 'react-icons/hi';
+import { BiSearchAlt2 } from 'react-icons/bi';
+import { useState } from 'react';
 
 
 

@@ -1,6 +1,5 @@
-import React from 'react'
-import hies from '../assets/hies.png'
-import car1 from '../assets/car1.png'
+import React from 'react';
+import hies from '../assets/hies.png';
 import { useState } from 'react';
 const Card = ({index}) => {
   const [active, setActive] = useState();

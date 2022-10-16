@@ -1,5 +1,4 @@
-import React from 'react'
-import rental_sign from '../../assets/rental_sign.png'
+import React from 'react';
 import CanvasDraw from "react-canvas-draw";
 
 const RentalSign = () => {

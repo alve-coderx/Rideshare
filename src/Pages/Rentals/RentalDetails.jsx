@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import { useState } from 'react';
-import { AiOutlineRight } from 'react-icons/ai';
 import { MdDateRange } from 'react-icons/md';
 import { Link } from 'react-router-dom';
-import avater from '../../assets/avater.png'
-import car from '../../assets/tesla.png'
+import avater from '../../assets/avater.png';
+import car from '../../assets/tesla.png';
+
 const RentalDetails = () => {
     const [active, setActive] = useState(1)
     const clickHandler = (index) => {

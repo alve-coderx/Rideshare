@@ -1,7 +1,6 @@
-import React from 'react'
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { sendPasswordResetEmail, createUserWithEmailAndPassword, FacebookAuthProvider, signOut, onAuthStateChanged, getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword, getIdToken } from 'firebase/auth'
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import {sendEmailVerification, sendPasswordResetEmail, createUserWithEmailAndPassword, FacebookAuthProvider, signOut, onAuthStateChanged, getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword, getIdToken } from 'firebase/auth';
 import initializeAuth from '../Firebase/firebase.init';
 import { useEffect } from 'react';
 
@@ -54,12 +53,21 @@ const useSupplier = () => {
           email: email,
           photo: photoUrl,
           companyname: companyname
-        }
-        setUser(loggerInUser)
+        };
+        setUser(loggerInUser);
+        emailVerification();
       })
       .catch(error => {
         setError(error.message);
       })
+  };
+
+  // verify email
+  const emailVerification = () => {
+    sendEmailVerification(auth.currentUser)
+    .then((res) => {
+      console.log(res);
+    })
   }
 
   // login auth
@@ -77,6 +85,7 @@ const useSupplier = () => {
   const handleForgetPass = (email) => {
     sendPasswordResetEmail(auth,email)
   };
+  // send msg
   const handleMessage = (msg) => {
     console.log(msg);
     setText(msg);
@@ -85,6 +94,7 @@ const useSupplier = () => {
   // signout
   const logout = () => {
     signOut(auth).then(() => {
+      navigate('/login')
     })
       .catch(error => {
         setError(error.message);

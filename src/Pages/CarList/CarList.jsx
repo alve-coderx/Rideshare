@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { GrLocation } from 'react-icons/gr';
 import filter_alt from '../../assets/filter_alt.png';
-import { Filter, FilterDropDown, CarCard } from '../../Components';
+import { Filter, FilterDropDown, CarCard, BaseCard } from '../../Components';
 import {cars} from '../../fakeDB/cars';
 
 
@@ -52,7 +52,7 @@ const CarList = () => {
       <div className='mx-4 h-3/4 pb-16' style={{ overflowY: 'scroll' }}>
         {
           cars.map((car) => (
-            <CarCard key={car.id} car={car} />
+            <BaseCard key={car.id} link={`/car/${car.id}`} image={car.img} primaryTag='20 km' secondaryTag='4.0' title="Tesla" subTitle='Model 3' price='30 €' hours='für 2 std'/>
           ))
         }
       </div>

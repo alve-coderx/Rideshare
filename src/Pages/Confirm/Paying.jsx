@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom'
-import paypal from '../../assets/paypal.png'
+import { Link } from 'react-router-dom';
+import paypal from '../../assets/paypal.png';
 const OrderInfo = () => {
   const [show, setShow] = useState();
 

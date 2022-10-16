@@ -2,7 +2,7 @@ import React from "react";
 import GoogleMapReact from 'google-map-react';
 import { GrLocation } from "react-icons/gr";
 import { AiFillStar } from "react-icons/ai";
-import { Filter } from '../../Components'
+import { Filter } from '../../Components';
 import filter_alt from '../../assets/filter_alt.png';
 import mapcar from '../../assets/mapcar.png';
 import { Link } from "react-router-dom";

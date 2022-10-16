@@ -1,14 +1,35 @@
+import { BsClock } from "react-icons/bs";
+import { AiOutlineClose,AiOutlineCheck } from "react-icons/ai";
+
 export const cars = [
-    { name: 'Tesla', img: 'https://i.ibb.co/S3cY7Ct/tesla.png', id: 1 },
-    { name: 'Tesla', img: 'https://i.ibb.co/xFdLNkM/Image-Placeholder-2.png', id: 2 },
-    { name: 'Tesla', img: 'https://i.ibb.co/VxHD9nJ/Image-Placeholder-3.png', id: 3 },
-    { name: 'Tesla', img: 'https://i.ibb.co/8dn6DTz/Image-Placeholder-1.png', id: 4 },
+    { name: 'Tesla', img: 'https://i.ibb.co/S3cY7Ct/tesla.png', icon : <BsClock /> , id: 1, tagBg : '#FFE58F' },
+    { name: 'Tesla', img: 'https://i.ibb.co/xFdLNkM/Image-Placeholder-2.png', icon : <AiOutlineClose /> , id: 2, tagBg : '#D9F7BE' },
+    { name: 'Tesla', img: 'https://i.ibb.co/VxHD9nJ/Image-Placeholder-3.png', icon : <AiOutlineCheck /> , id: 3, tagBg : '#D9F7BE' },
 ]
 
 
 export const models = [
-    { value: 'Volkswagen' },
-    { value: 'Mercedes' },
-    { value: 'Audi ' },
-    { value: 'Porsche  ' },
+    { value: 'Volkswagen', id : 1 },
+    { value: 'Mercedes', id : 2 },
+    { value: 'Audi ', id : 3 },
+    { value: 'Porsche  ', id : 4 },
   ];
+export const brands = [
+    { value: 'Volkswagen', id : 5 },
+    { value: 'Mercedes', id : 6 },
+    { value: 'Audi ', id : 7 },
+    { value: 'Porsche  ', id : 8 },
+  ];
+
+export const kilometers = [
+    {value : '15-60.000km',id : 1},
+    {value : '70.00-120.000km',id : 2},
+];
+export const fuel = [
+    {value : 'Diesel',id : 1},
+    {value : '70.00-120.000km',id : 2},
+];
+export const transmission = [
+    {value : 'Automatik',id : 1},
+    {value : '70.00-120.000km',id : 2},
+];

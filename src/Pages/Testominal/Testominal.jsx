@@ -1,9 +1,9 @@
-import React from 'react'
-import { AiFillStar } from 'react-icons/ai'
-import avater from '../../assets/avater.png'
-import filter_alt from '../../assets/filter_alt.png'
-import Content from '../../assets/Content.png'
-import { Link, useParams } from 'react-router-dom'
+import React from 'react';
+import { AiFillStar } from 'react-icons/ai';
+import avater from '../../assets/avater.png';
+import filter_alt from '../../assets/filter_alt.png';
+import Content from '../../assets/Content.png';
+import { Link, useParams } from 'react-router-dom';
 
 const Testominal = () => {
     const {id} = useParams();

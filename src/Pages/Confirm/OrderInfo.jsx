@@ -1,7 +1,7 @@
-import React from 'react'
-import { RangeSlider } from '../../Components'
-import drive_eta from '../../assets/drive_eta.png'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { RangeSlider } from '../../Components';
+import drive_eta from '../../assets/drive_eta.png';
+import { Link } from 'react-router-dom';
 const OrderInfo = () => {
     return (
         <div>

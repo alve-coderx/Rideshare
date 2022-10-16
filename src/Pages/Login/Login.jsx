@@ -59,7 +59,9 @@ const Login = () => {
                         <img src={apple} />
                     </button>
                 </div>
-                <p className='mt-10 text-center text-[12px] text-[black] font-[700]'>Du hast keine Account? <span className='text-[#7D7AFF]'>Jetzt Registrieren</span></p>
+                <Link to='/register'>
+                    <p className='mt-10 text-center text-[12px] text-[black] font-[700]'>Du hast keine Account? <span className='text-[#7D7AFF]'>Jetzt Registrieren</span></p>
+                </Link>
             </div>
         </div>
     )

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { CarList, CreateCar, CreateRent, Entry, FinishedPage, Inbox, Login, Main, Map, Message, MyCars, OrderInfo, Paying, Register, RentalContract, RentalDetails, RentalDoc, Rentals, RentalSign, Search, SingleCar, Testominal, UserProfile } from '../Pages';
+import { CarList, CreateCar, CreateRent, Entry, FinishedPage, Inbox, Login, Main, Map, Message, MyCars, OrderInfo, Paying, PrivateRoute, Register, RentalContract, RentalDetails, RentalDoc, Rentals, RentalSign, Search, SingleCar, Testominal, UserProfile } from '../Pages';
 import PasswordReset from '../Pages/PasswordReset/PasswordReset';
 import LandlordOverView from '../Pages/Rentals/RentalOverView/LandlordOverView';
 
@@ -11,7 +11,7 @@ const Layout = () => {
       <Route path='/login' element={<Login />} />
       <Route path='/register' element={<Register />} />
       <Route path='/startsite' element={<Main />}>
-        <Route path='/startsite/search' element={<Search />} />
+        <Route path='/startsite/search' element={<PrivateRoute><Search /></PrivateRoute>} />
         <Route path='/startsite/user/:id' element={<UserProfile />} />
         <Route path='/startsite/map' element={<Map />} />
         <Route path='/startsite/cars' element={<CarList />} />
@@ -29,7 +29,7 @@ const Layout = () => {
       <Route path='/createcar' element={<CreateCar />} />
       <Route path='/rent/:id' element={<RentalDetails />} />
       <Route path='/create/rent' element={<CreateRent />} />
-      <Route path='/rent/finished' element={<FinishedPage />} />
+      <Route path='/rental/start' element={<FinishedPage />} />
       <Route path='/rental/documents' element={<RentalDoc />} />
       <Route path='/rental/contract' element={<RentalContract />} />
       <Route path='/rental/sign' element={<RentalSign />} />

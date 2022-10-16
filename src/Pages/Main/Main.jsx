@@ -1,5 +1,5 @@
-import React from 'react'
-import {Navigator} from '../../Components'
+import React from 'react';
+import {Navigator} from '../../Components';
 const Main = () => {
   return (
     <div>

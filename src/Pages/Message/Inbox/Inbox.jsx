@@ -1,10 +1,10 @@
 import React from 'react';
 import useSupplier from '../../../Hook/useSupplier';
-import avater from '../../../assets/avater.png'
-import { AiOutlineArrowUp, AiOutlineCheckCircle, AiOutlineInfoCircle } from 'react-icons/ai'
+import avater from '../../../assets/avater.png';
+import { AiOutlineArrowUp, AiOutlineCheckCircle, AiOutlineInfoCircle } from 'react-icons/ai';
 import { AiOutlineClockCircle } from 'react-icons/ai';
 import { BsClock } from 'react-icons/bs';
-import './inbox.css'
+import './inbox.css';
 import { useState } from 'react';
 import { useRef } from 'react';
 import { useEffect } from 'react';
@@ -12,17 +12,20 @@ import { MdDateRange } from 'react-icons/md';
 import { BottomSheet } from 'react-spring-bottom-sheet';
 import { Link } from 'react-router-dom';
 import car from '../../../assets/tesla.png';
-import { GrClose } from 'react-icons/gr';
+import { DatePicker } from '../../../Components';
 
 const Inbox = () => {
   const { text } = useSupplier()
   const [messages, setMessages] = useState([])
   const [message, setMessage] = useState('')
   const [orderConfirm, setOrderConfirm] = useState(false)
-  const [toast, setToast] = useState(0)
-  const messagesEndRef = useRef(null)
-  const sheetRef = useRef()
-  const [active, setActive] = useState(1)
+  const [toast, setToast] = useState(0);
+  const messagesEndRef = useRef(null);
+  const sheetRef = useRef();
+  const [active, setActive] = useState(1);
+  const style = {
+    mesage  : 'mt-5 text-white shadow-xl bg-[#7D7AFF] rounded-xl text bubble w-60 py-5  px-2'
+  }
   const clickHandler = (index) => {
     setActive((prev) => {
       return prev === index ? null : index;
@@ -47,20 +50,23 @@ const Inbox = () => {
   useEffect(() => {
     scrollToBottom()
   }, [messages]);
+
+
+
   return (
     <div style={{ overflowY: 'hidden', height: '100vh' }}>
       <div className='bg-white p-9 shadow-sm' >
         <div className='flex items-center '>
-          
+
           <Link to='/user/1/message'>
             <p className='text-[#7D7AFF] text-[500] text-[16px]'>zurück</p>
           </Link>
           <div className='flex items-center ml-16'>
             <img src={avater} />
-            <p className='text-[900] text-[14px] ml-5'>
+            <h1 className='text-[900] text-[14px] ml-5'>
               Thomas
               <p className='text-[#AAAFB6] text-[12px]'>Online</p>
-            </p>
+            </h1>
           </div>
         </div>
         <div className='bg-slate-200 flex justify-evenly mx-5 mt-8 shadow-sm rounded-lg py-1'>
@@ -71,6 +77,9 @@ const Inbox = () => {
       </div>
 
       <div style={{ overflowY: 'scroll' }} className='h-3/4 pb-16'>
+        <div className='mx-5 flex flex-col items-end'>
+          <div className={style.mesage}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+        </div>
         {
           active === 1 ?
             (
@@ -78,7 +87,7 @@ const Inbox = () => {
                 <div className='mx-5 flex flex-col items-end' >
                   {
                     messages.map((element, index) => (
-                      <div ref={messagesEndRef} contentEditable="true" className="mt-5 mr-3 text-white shadow-xl bg-[#7D7AFF] rounded-xl text bubble w-60 py-5  px-2">{element.msg}</div>
+                      <div key={index} ref={messagesEndRef} className={style.mesage}>{element.msg}</div>
                     ))
                   }
                 </div>
@@ -122,7 +131,7 @@ const Inbox = () => {
                     </div>
                     <p className='text-[32px] font-[600]'>30 € </p>
                   </div>
-                  <p className='bg-slate-200 text-[10px] mb-5 w-40 font-[600] flex items-center rounded-lg px-2 py-2  mt-3'><MdDateRange className='mr-1' /> Do. 23. Juni  14:00 - 17:00</p>
+                  <DatePicker color='#E6E5FF'/>
                   <p className='text-[12px] mb-5 w-40 font-[900] flex items-center mt-3'> Kilometer inklusive <AiOutlineInfoCircle className='ml-1' /></p>
                   <p className='text-[10px] mb-5 w-40 font-[600] flex items-center mt-3'><AiOutlineCheckCircle className=' font-[600] text-[#52C41A] mr-1 text-[15px]' /> 40km kostenlos </p>
                 </div>

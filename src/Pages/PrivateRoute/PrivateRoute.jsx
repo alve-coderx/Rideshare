@@ -1,10 +1,10 @@
 import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import useSupplier from '../../Hook/useSupplier';
 
 const PrivateRoute = ({ children,...rest }) => {
-    const { user } = useSupplier();
-    console.log(user)
+    const user = {
+      email : 'dsadsadd'
+    }
     const location = useLocation()
     if(user.email){
       return children

@@ -1,6 +1,6 @@
-import { Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
-import { AiOutlineDown,AiOutlineClockCircle } from 'react-icons/ai'
+import { Fragment } from 'react';
+import { Menu, Transition } from '@headlessui/react';
+import { AiOutlineDown,AiOutlineClockCircle } from 'react-icons/ai';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')

@@ -1,11 +1,12 @@
-import React from 'react'
-import avater from '../../assets/avater.png'
-import './style.css'
-import { MdDateRange } from 'react-icons/md'
-import { useState } from 'react'
-import useSupplier from '../../Hook/useSupplier'
-import { AiOutlineClose } from 'react-icons/ai'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import avater from '../../assets/avater.png';
+import './style.css';
+import { MdDateRange } from 'react-icons/md';
+import { useState } from 'react';
+import useSupplier from '../../Hook/useSupplier';
+import { AiOutlineClose } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
+import { DatePicker } from '../../Components';
 
 const Message = () => {
     const [msg, setMsg] = useState("");
@@ -26,7 +27,7 @@ const Message = () => {
 
             <div className='mx-5 mt-6'>
                 <p className='mt-3 font-black text-sm'>Zeitangaben</p>
-                <p className='bg-[#FFC53D] text-[14px] text-[400] flex items-center rounded-lg px-2 py-2 w-52 mt-3'><MdDateRange className='mr-1' /> Do. 23. Juni  14:00 - 17:00</p>
+                <DatePicker color='#FFC53D'/>
                 <p className='underline text-[10px] mt-3'>ändern</p>
             </div>
             <div className='mx-5 mt-10'>
