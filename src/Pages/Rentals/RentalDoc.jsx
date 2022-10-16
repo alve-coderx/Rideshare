@@ -49,9 +49,9 @@ const RentalDoc = () => {
 
                 </div>
                 <p className='mt-3 text-[10px] text-[#636B75]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, eget quam quis a. Est vivamus semper gravida</p>
-                <TypeWrapper title='Führerscheinnummer' placeholder="J17003WaM41" style={style} />
-                <TypeWrapper title='Datum der Erstausstellung des Führerscheins' placeholder="02.12.2013" style={style} />
-                <TypeWrapper title='Geburtstag' placeholder="27.11.1996" style={style} />
+                <TypeWrapper icon={true} title='Führerscheinnummer' placeholder="J17003WaM41" style={style} />
+                <TypeWrapper icon={true} title='Datum der Erstausstellung des Führerscheins' placeholder="02.12.2013" style={style} />
+                <TypeWrapper icon={true} title='Geburtstag' placeholder="27.11.1996" style={style} />
                 <div className='flex items-center text-left justify-between bg-white rounded-lg shadow-xl py-3 mt-5 px-5'>
                     <p > <AiOutlineInfoCircle className='text-black text-[30px]' /></p>
                     <p className='text-[#838D95] w-60 text-[10px] font-[400]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum dictum tortor odio at. Feugiat sapien orci imperdiet nisi, venenatis, tincidunt. Dui semper amet leo, nulla. Bibendum purus,</p>
