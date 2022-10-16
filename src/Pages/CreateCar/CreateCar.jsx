@@ -9,6 +9,7 @@ import { texts } from '../../fakeDB/elements';
 import { Modal } from '../../Components';
 import Counter from '../../Components/Counter';
 import { Link } from 'react-router-dom';
+import { MdAddPhotoAlternate } from 'react-icons/md';
 
 const CreateCar = () => {
   const [prograss, setPrograss] = useState(11.11);
@@ -243,7 +244,7 @@ const CreateCar = () => {
                                 <div className="flex w-full items-center justify-center bg-grey-lighter">
                                   <label className="w-64 flex flex-col items-center px-4 py-6 text-blue rounded-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
                                     <span className="text-base leading-normal">
-                                      <p className='text-[#7D7AFF] text-[32px] font-[400]'><BiImages /></p>
+                                      <p className='text-[#7D7AFF] text-[40px] font-[400]'><MdAddPhotoAlternate /></p>
                                     </span>
                                     <input type='file' onChange={onFileChange} className="hidden" />
                                   </label>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
 import { BiImages } from 'react-icons/bi';
+import { MdAddPhotoAlternate } from 'react-icons/md';
 import { RiCheckboxBlankCircleLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import rental_sign from '../../assets/rental_sign.png';
@@ -8,7 +9,7 @@ import { RentBanner, TypeWrapper } from '../../Components';
 
 const RentalDoc = () => {
     const style = {
-        boldText: 'text-[#636B75] text-[13px] font-[600] mt-3',
+        bolcdText: 'text-[#636B75] text-[13px] font-[600] mt-3',
         wrapper: 'w-[150px] h-12 text-center bg-[#E6E6FF] flex items-center justify-center rounded-2xl shadow-sm px-2 py-8 mt-2',
         input: 'p-3 bg-white rounded-xl shadow-2xl mt-2 block w-full text-sm rounded-lg dark:placeholder-[#7D7AFF] ',
         primary: 'text-[#7D7AFF] text-center text-[32px] font-[400]',
@@ -35,14 +36,14 @@ const RentalDoc = () => {
                 <div className='flex justify-between'>
                     <div>
                         <div className={style.wrapper}>
-                            <p className={style.primary}><BiImages /></p>
+                            <p className={style.primary}><MdAddPhotoAlternate /></p>
                         </div>
                         <p className='text-[10px] text-[#7D7AFF]'>Vorderseite</p>
                     </div>
 
                     <div>
                         <div className={style.wrapper}>
-                            <p className={style.primary}><BiImages /></p>
+                            <p className={style.primary}><MdAddPhotoAlternate /></p>
                         </div>
                         <p className='text-[10px] text-[#7D7AFF]'>Rückseite</p>
                     </div>

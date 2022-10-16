@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { TypeWrapper } from '../../Components';
 
 const RentalContract = () => {
+  const style = {
+    text: 'absolute text-[#838D95] text-[12px] right-2 top-3',
+    input: 'p-3 bg-white rounded-xl shadow-2xl mt-2 block w-full text-[12px] rounded-lg dark:placeholder-[black] " placeholder="Kraftstofftyp',
+    boldText: 'text-[black] text-[13px] font-[600] mt-3'
+  }
   return (
     <div>
       <div className='mx-5 mt-8 flex items-center'>
@@ -10,54 +16,49 @@ const RentalContract = () => {
           Mietvertrag
         </p>
       </div>
-      <div style={{overflowY : 'scroll',maxHeight : '80vh'}}>
+      <div style={{ overflowY: 'scroll', maxHeight: '80vh' }}>
         <div className='mx-5 mt-5'>
           <div className='relative'>
-            <p className='text-[black] text-[13px] font-[600] mt-3'>Zahlungen</p>
+            <p className={style.boldText}>Zahlungen</p>
             <div className='relative'>
-              <input id="message" rows="4" className="p-3 bg-white rounded-xl shadow-2xl mt-2 block w-full text-[12px] rounded-lg dark:placeholder-[black] " placeholder="Kraftstofftyp" />
-              <p className='absolute text-[#838D95] text-[12px] right-2 top-3'>Diesel</p>
+              <TypeWrapper style={style} placeholder='Kraftstofftyp' text='Diesel' />
             </div>
             <div className='relative'>
-              <input id="message" rows="4" className="p-3 bg-white rounded-xl shadow-2xl mt-2 block w-full text-[12px] rounded-lg dark:placeholder-[black] " placeholder="Tankstand" />
-              <p className='absolute text-[#838D95] text-[12px] right-2 top-3'>75%</p>
+              <TypeWrapper style={style} placeholder='Tankstand' text='75%' />
             </div>
             <div className='relative'>
-              <input id="message" rows="4" className="p-3 bg-white rounded-xl shadow-2xl mt-2 block w-full text-[12px] rounded-lg dark:placeholder-[black] " placeholder="Kilometerstand" />
-              <p className='absolute text-[#838D95] text-[12px] right-2 top-3'>25 000 km</p>
+              <TypeWrapper style={style} placeholder='Kilometerstand' text='25 000 km' />
             </div>
           </div>
         </div>
         <div className='mx-5 mt-5'>
           <div className='relative'>
-            <p className='text-[black] text-[13px] font-[600] mt-3'>Zustand von außen</p>
+            <p className={style.boldText}>Zustand von außen</p>
             <div className='relative'>
-              <input id="message" rows="4" className="p-3 bg-white rounded-xl shadow-2xl mt-2 block w-full text-[12px] rounded-lg dark:placeholder-[black] " placeholder="Bsp" />
+              <TypeWrapper style={style} placeholder='Bsp' />
             </div>
           </div>
         </div>
         <div className='mx-5 mt-5'>
           <div className='relative'>
-            <p className='text-[black] text-[13px] font-[600] mt-3'>Zustand von innen</p>
+            <p className={style.boldText}>Zustand von innen</p>
             <div className='relative'>
-              <input id="message" rows="4" className="p-3 bg-white rounded-xl shadow-2xl mt-2 block w-full text-[12px] rounded-lg dark:placeholder-[black] " placeholder="Bsp" />
+              <TypeWrapper style={style} placeholder='Bsp' />
+
             </div>
           </div>
         </div>
         <div className='mx-5 mt-5'>
           <div className='relative'>
-            <p className='text-[black] text-[13px] font-[600] mt-3'>Anmietung</p>
+            <p className={style.boldText}>Anmietung</p>
             <div className='relative'>
-              <input id="message" rows="4" className="p-3 bg-white rounded-xl shadow-2xl mt-2 block w-full text-[12px] rounded-lg dark:placeholder-[black] " placeholder="Start" />
-              <p className='absolute text-[#838D95] text-[12px] right-2 top-3'>13/10/2022 21:10</p>
+              <TypeWrapper style={style} placeholder='Start' text='13/10/2022 21:10'/>
             </div>
             <div className='relative'>
-              <input id="message" rows="4" className="p-3 bg-white rounded-xl shadow-2xl mt-2 block w-full text-[12px] rounded-lg dark:placeholder-[black] " placeholder="Geschätztes Ende" />
-              <p className='absolute text-[#838D95] text-[12px] right-2 top-3'>21/10/2022 21:10</p>
+              <TypeWrapper style={style} placeholder='Geschätztes Ende' text='21/10/2022 21:10'/>
             </div>
             <div className='relative'>
-              <input id="message" rows="4" className="p-3 bg-white rounded-xl shadow-2xl mt-2 block w-full text-[12px] rounded-lg dark:placeholder-[black] " placeholder="Kilometer inklusive" />
-              <p className='absolute text-[#838D95] text-[12px] right-2 top-3'>200km (danach 0,38 € / km)</p>
+              <TypeWrapper style={style} placeholder='Kilometer inklusive' text='200km (danach 0,38 € / km)'/>
             </div>
           </div>
         </div>
@@ -65,9 +66,9 @@ const RentalContract = () => {
       </div>
       <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%]'>
         <Link to='/rental/sign'>
-        <button className="mt-10 bg-[#1E2024]  text-white py-4 px-4 rounded-lg w-full">
-          Unterschreibe den Mietvertrag
-        </button>
+          <button className="mt-10 bg-[#1E2024]  text-white py-4 px-4 rounded-lg w-full">
+            Unterschreibe den Mietvertrag
+          </button>
         </Link>
       </div>
     </div>

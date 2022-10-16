@@ -4,9 +4,9 @@ import car from '../../assets/car.png';
 import fuel from '../../assets/fuel.png';
 import metar from '../../assets/metar.png';
 import { useState } from 'react';
-import { BiImages } from 'react-icons/bi';
 import { Link, useNavigate } from 'react-router-dom';
 import RentBanner from '../../Components/RentBanner';
+import { MdAddPhotoAlternate } from 'react-icons/md';
 
 
 const CreateRent = () => {
@@ -56,7 +56,7 @@ const CreateRent = () => {
             <div className='mx-5 mt-5 mb-4'>
               <p className='text-[#636B75] text-[13px] font-[600]'>Fotos vom Außenbereich</p>
               <div className='text-center bg-[#E6E6FF] flex items-center justify-center rounded-lg shadow-xl px-4 py-16 mt-2'>
-                <p className='text-[#7D7AFF] text-center text-[32px] font-[400]'><BiImages /></p>
+                <p className='text-[#7D7AFF] text-center text-[32px] font-[400]'><MdAddPhotoAlternate /></p>
               </div>
               <p className='text-[#636B75] text-[13px] font-[600] mt-3'>Fotos vom Außenbereich</p>
               <textarea id="message" rows="4" className="p-3 bg-[#D8DBEC] rounded-xl shadow-2xl mt-2 block w-full text-sm rounded-lg border border-gray-300 dark:placeholder-gray-400 " placeholder="Schaden, Kratzer, Einschlag, etc."></textarea>
