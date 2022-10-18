@@ -19,18 +19,22 @@ const RentalDetails = () => {
     ]
     return (
         <div>
-            <div className='bg-white p-9 '>
-                <div className='flex items-center '>
-                    <p className='text-[#7D7AFF] text-[500] text-[16px]'>zurück</p>
-                    <div className='flex items-center ml-16'>
-                        <img src={avater} />
-                        <h1 className='font-[600] text-[14px] ml-5'>
-                            Thomas
-                            <p className='text-[#AAAFB6] text-[12px]'>Online</p>
-                        </h1>
+            <div className='bg-white px-9 py-5'>
+                <div>
+                    <div className='flex items-center '>
+                        <Link to='/startsite/rentals'>
+                            <p className='text-[#7D7AFF] text-[500] text-[16px]'>zurück</p>
+                        </Link>
+                        <div className='flex items-center ml-16'>
+                            <img src={avater} />
+                            <h1 className='font-[600] text-[14px] ml-5'>
+                                Thomas
+                                <p className='text-[#AAAFB6] text-[12px]'>Online</p>
+                            </h1>
+                        </div>
                     </div>
                 </div>
-                <div className='bg-slate-200 flex justify-evenly mx-5 mt-8 shadow-sm rounded-lg py-1'>
+                <div className='bg-slate-200 flex justify-evenly mx-14 mt-8  shadow-sm rounded-lg py-1'>
                     {
                         navigators.map((element) => <p key={element.id} onClick={() => clickHandler(element.id)} className={active === element.id ? 'font-[600] text-[11.346px] bg-white py-2 px-3 text-[#7D7AFF] rounded-lg' : 'py-2 px-3 text-[11.346px] text-black'}>{element.name}</p>)
                     }

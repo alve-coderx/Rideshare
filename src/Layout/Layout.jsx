@@ -1,17 +1,19 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import useSupplier from '../Hook/useSupplier';
 import { CarList, CreateCar, CreateRent, Entry, FinishedPage, Inbox, Login, Main, Map, Message, MyCars, OrderInfo, Paying, PrivateRoute, Register, RentalContract, RentalDetails, RentalDoc, Rentals, RentalSign, Search, SingleCar, Testominal, UserProfile } from '../Pages';
 import PasswordReset from '../Pages/PasswordReset/PasswordReset';
 import LandlordOverView from '../Pages/Rentals/RentalOverView/LandlordOverView';
 
 const Layout = () => {
+  const { user } = useSupplier();
   return (
     <Routes>
       <Route path='/' element={<Entry />} />
       <Route path='/login' element={<Login />} />
       <Route path='/register' element={<Register />} />
       <Route path='/startsite' element={<Main />}>
-        <Route path='/startsite/search' element={<PrivateRoute><Search /></PrivateRoute>} />
+        <Route path='/startsite/search' element={<Search />} />
         <Route path='/startsite/user/:id' element={<UserProfile />} />
         <Route path='/startsite/map' element={<Map />} />
         <Route path='/startsite/cars' element={<CarList />} />
@@ -38,4 +40,4 @@ const Layout = () => {
   )
 }
 
-export default Layout
+export default Layout;

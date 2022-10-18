@@ -7,10 +7,10 @@ import op2 from '../../assets/op2.png';
 import op3 from '../../assets/op3.png';
 import op4 from '../../assets/op4.png';
 import MenuItem from '../../Components/MenuItem';
-import useSupplier from '../../Hook/useSupplier';
+import useAuth from '../../Hook/useAuth';
 
 const UserProfile = () => {
-    const { logout, user } = useSupplier();
+    const { logout, user } = useAuth();
     const zahlungen = [
         { name: 'zurück', img: op1, icon: <AiOutlineRight />, id: 1 },
         { name: 'Zahlungsbelege', img: op2, icon: <AiOutlineRight />, id: 2 },

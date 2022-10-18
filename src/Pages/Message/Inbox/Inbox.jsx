@@ -1,5 +1,4 @@
 import React from 'react';
-import useSupplier from '../../../Hook/useSupplier';
 import avater from '../../../assets/avater.png';
 import { AiOutlineArrowUp, AiOutlineCheckCircle, AiOutlineInfoCircle } from 'react-icons/ai';
 import { AiOutlineClockCircle } from 'react-icons/ai';
@@ -15,7 +14,6 @@ import car from '../../../assets/tesla.png';
 import { DatePicker } from '../../../Components';
 
 const Inbox = () => {
-  const { text } = useSupplier()
   const [messages, setMessages] = useState([])
   const [message, setMessage] = useState('')
   const [orderConfirm, setOrderConfirm] = useState(false)
@@ -49,7 +47,7 @@ const Inbox = () => {
   ]
   useEffect(() => {
     scrollToBottom()
-  }, [messages]);
+  }, []);
 
 
 

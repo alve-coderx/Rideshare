@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import { AiOutlineMail } from 'react-icons/ai'
-import useSupplier from '../../Hook/useSupplier';
+import React, { useState } from 'react';
+import { AiOutlineMail } from 'react-icons/ai';
 import {refs,checkbox} from '../../fakeDB/elements';
+import useAuth from '../../Hook/useAuth';
 
 const style = {
-  input : 'mt-3 bg-white text-black text-sm rounded-lg block w-full p-2.5 border-0',
+  input : 'mt-3 bg-white text-black text-sm rounded-lg block w-full p-2.5 border-0 m-1',
   boldText : 'text-sm '
 }
 
@@ -12,7 +12,7 @@ const Register = () => {
   const [loginData, setLogindata] = useState({});
   const [toggle, setToggle] = useState(2);
   const [show, setShow] = useState();
-  const { registerUser,error } = useSupplier();
+  const { registerUser,error } = useAuth();
   const handleOnChage = (e) => {
     const field = e.target.name;
     const value = e.target.value;
@@ -58,9 +58,9 @@ const Register = () => {
       </div>
       <div className='mt-3'>
         <form onSubmit={handleSubmit}>
-          <div className='flex justify-between'>
-            <input name='lastname' onChange={(e) => handleOnChage(e)} type="text" className={`w-[133px] ${style.input}`} placeholder="Nachname" required />
-            <input name='firstname' onChange={(e) => handleOnChage(e)} type="text" className={`w-[133px] ${style.input}`} placeholder="Vorname" required />
+          <div className='flex justify-around'>
+            <input name='lastname' onChange={(e) => handleOnChage(e)} type="text" className={`${style.input}`} placeholder="Nachname" required />
+            <input name='firstname' onChange={(e) => handleOnChage(e)} type="text" className={`${style.input}`} placeholder="Vorname" required />
           </div>
           {
             toggle === 1 && <input name='company' onChange={(e) => handleOnChage(e)} type="text" className={`${style.input}`} placeholder="firmenname" required />
@@ -71,10 +71,10 @@ const Register = () => {
           </div>
           <input name='password' onChange={(e) => handleOnChage(e)} type="password" className={style.input} placeholder="Passwort" required />
           <input name='password2' onChange={(e) => handleOnChage(e)} type="password" className={style.input} placeholder="Passwort wiederholen" required />
-          <div className='flex justify-around mt-5'>
+          <div className='flex justify-between mt-5'>
             {
               checkbox.map((item) => (
-                <div key={item.id} className={show === item.id ? 'w-[150px] border-2 border-[#7D7AFF] text-left bg-white rounded-lg p-3' : 'w-[150px] text-left bg-white rounded-lg p-3'}>
+                <div key={item.id} className={show === item.id ? 'border-2 border-[#7D7AFF] text-left bg-white rounded-lg p-3 m-1' : 'text-left bg-white rounded-lg p-3 m-1'}>
                   <span className='font-[600] text-[#0E0F11] text-[14px]'>{item.name}</span>
                   <p className='font-[400] text-[#636B75] text-[14px]'>{item.details}</p>
                   <div className="flex items-center mt-4">

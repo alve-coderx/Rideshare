@@ -198,7 +198,7 @@ const CreateCar = () => {
                       <div>
                         <p className={style.semiText}>Treffpunkt einstellen</p>
                         <div className='flex justify-center'>
-                          <img className='rounded-3xl w-72 h-36 my-3' src={map} />
+                          <img className='rounded-3xl my-3' src={map} />
                         </div>
                         <div className='bg-white rounded-lg shadow-xl p-3 mt-8'>
                           <p className='flex justify-start items-center text-[#838D95] text-[12px] font-[400]'><GoLocation />Standord eingeben</p>

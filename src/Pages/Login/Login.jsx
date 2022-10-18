@@ -2,7 +2,7 @@ import React from 'react';
 import facebook from '../../assets/facebook.png';
 import google from '../../assets/google.png';
 import apple from '../../assets/apple.png';
-import useSupplier from '../../Hook/useSupplier';
+import useAuth from '../../Hook/useAuth';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ const style = {
 
 const Login = () => {
     const [loginData, setLogindata] = useState({});
-    const { signInWithGoogle, signInWithFb, loginUser } = useSupplier();
+    const { signInWithGoogle, signInWithFb, loginUser } = useAuth();
 
     const handleOnChage = (e) => {
         const field = e.target.name;

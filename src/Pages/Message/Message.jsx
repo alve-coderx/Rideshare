@@ -9,8 +9,8 @@ import { DatePicker } from '../../Components';
 
 const Message = () => {
     const [msg, setMsg] = useState("");
-    const { handleMessage } = useSupplier();
-   
+    // const { handleMessage } = useSupplier();
+
     return (
         <div>
             <div className='flex flex-col items-center justify-center mt-3 mx-5'>
@@ -21,12 +21,13 @@ const Message = () => {
                 </p>
                 <img className='mt-3' src={avater} />
                 <p className='mt-3 font-black text-sm text-center'>Schreibe <span className='text-[#7D7AFF]'>Thomas</span>  eine <br /> Nachricht</p>
-                <div onBlur={(e) => setMsg(e.target.innerHTML)} contentEditable="true" className="mt-5 shadow-xl rounded-xl speech bubble w-full pt-3 pb-24 px-2">Hey...</div>
+                {/* <div onBlur={(e) => setMsg(e.target.innerHTML)} contentEditable="true" className="mt-5 shadow-xl rounded-xl speech bubble w-full pt-3 pb-24 px-2">Hey...</div> */}
+                <input placeholder='Hey...' className="mt-5 shadow-xl rounded-xl speech bubble w-full pt-3 pb-24 px-2" />
             </div>
 
             <div className='mx-5 mt-6'>
                 <p className='mt-3 font-black text-sm'>Zeitangaben</p>
-                <DatePicker color='#FFC53D'/>
+                <DatePicker color='#FFC53D' />
                 <p className='underline text-[10px] mt-3'>ändern</p>
             </div>
             <div className='mx-5 mt-10'>
@@ -34,11 +35,13 @@ const Message = () => {
                 <textarea id="message" rows="4" className="p-3 bg-[#D8DBEC] rounded-xl shadow-2xl mt-5 block w-full text-sm rounded-lg border border-gray-300 dark:placeholder-gray-400 " placeholder="Wie flexibel bist du? Mögliche Einschränkungen (Optional)"></textarea>
             </div>
             <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%]'>
-                <button onClick={() => handleMessage(msg)} type='submit' className="mt-10 bg-[#7D7AFF] text-white py-4 px-4 rounded-lg w-full">
-                    Nachricht senden
-                </button>
+                <Link to='/user/1/inbox'>
+                    <button type='submit' className="mt-10 bg-[#7D7AFF] text-white py-4 px-4 rounded-lg w-full">
+                        Nachricht senden
+                    </button>
+                </Link>
             </div>
-            
+
         </div>
     )
 }

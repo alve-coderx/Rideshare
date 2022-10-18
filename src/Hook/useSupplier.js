@@ -87,7 +87,7 @@ const useSupplier = () => {
   };
   // send msg
   const handleMessage = (msg) => {
-    console.log(msg);
+    
     setText(msg);
     navigate('/user/1/inbox');
   }
@@ -111,7 +111,7 @@ const useSupplier = () => {
       }
     })
     return () => unsubscribe;
-  }, [])
+  }, [user])
   return {
     text,
     handleMessage,

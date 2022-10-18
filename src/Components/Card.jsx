@@ -10,7 +10,7 @@ const Card = ({index}) => {
 
   };
   return (
-    <div onClick={() => clickHandler(index)} className={active === index ? 'bg-[white] w-20 rounded-xl shadow-xl' : 'bg-[#7D7AFF] w-20 rounded-xl'}>
+    <div onClick={() => clickHandler(index)} className={active === index ? 'bg-[white] w-20 rounded-xl shadow-2xl' : 'bg-[#7D7AFF] w-20 rounded-xl'}>
       <img src={hies}/>
     </div>
   )

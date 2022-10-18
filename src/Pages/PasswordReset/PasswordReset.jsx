@@ -1,11 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import useSupplier from '../../Hook/useSupplier';
+import useAuth from '../../Hook/useAuth';
 
 const PasswordReset = () => {
     const [email, setEmail] = useState('');
-    const {handleForgetPass} = useSupplier();
+    const {handleForgetPass} = useAuth();
     const style = {
         authIcons: 'mt-10 shadow-lg bg-[white] font-bold py-3 px-8 rounded-xl',
         input: 'mt-3 bg-white text-black text-sm rounded-lg   block w-full p-2.5 border-0 shadow-sm',

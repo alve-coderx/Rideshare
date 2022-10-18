@@ -8,7 +8,7 @@ const LandlordRole = ({ active }) => {
             {
                 active === 1 ?
                     (
-                        <div>
+                        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
                             {
                                 [1, 2, 3].map((index) => (
                                     <BaseCard key={index} image={avater} title='Thomas' datePicker={true} subLink='Antworten' link={`/rent/${index}`} rentPrice='20 €'/>

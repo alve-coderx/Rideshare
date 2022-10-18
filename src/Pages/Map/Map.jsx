@@ -56,7 +56,7 @@ export default function SimpleMap() {
                     />
                 </GoogleMapReact>
             </div>
-            <div className="absolute bottom-[2rem] rounded-xl right-12">
+            <div className="absolute bottom-[2rem] rounded-xl right-24 ml-16">
                 <Link to='/startsite/cars'>
                     <div className="bg-white p-1 rounded-xl shadow-xl ">
                         <img src={mapcar} />

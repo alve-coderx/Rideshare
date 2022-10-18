@@ -6,8 +6,8 @@ import {landLordNav,rentarNav} from '../../fakeDB/elements';
 
 const Rentals = () => {
     const [active, setActive] = useState(1)
-    const landlord = false;
-    const renter = true;
+    const landlord = true;
+    const renter = false;
     const clickHandler = (index) => {
         setActive((prev) => {
             return prev === index ? null : index;

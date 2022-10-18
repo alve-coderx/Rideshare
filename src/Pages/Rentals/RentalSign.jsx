@@ -17,13 +17,12 @@ const RentalSign = () => {
             <div className='mx-5 mt-5 font-[400]'>
                 <p className='text-[12px]'>Ich, Max Mustermann, akzeptiere den <span className='text-[#7D7AFF]'>Mietvertrag</span> und die <span className='text-[#7D7AFF]'>Mietbedingungen</span>, und ich verstehe, dass Cardome mein Konto dementsprechend belasten kann</p>
             </div>
-            <div className='mx-5 shadow-xl mt-5'>
+            <div className='mt-5 w-100 flex flex-col items-center'>
                 <CanvasDraw
-                    canvasWidth={330}
                     hideGrid={true}
                     brushRadius={2}
                     brushColor='black'
-                    canvasHeight={400}
+                    className='shadow-xl'
                 />
             </div>
             <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%]'>

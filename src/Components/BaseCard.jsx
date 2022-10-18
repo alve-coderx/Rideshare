@@ -25,7 +25,7 @@ const BaseCard = ({edit,arrow,color,bg, link, image, primaryTag, secondaryTag, t
                     <div className='ml-4'>
                         <p className={`mt-1 text-[${(color)}] flex items-center text-[16] font-[600]`}>{title} {arrow && <span className='ml-32'>{arrow}</span>}</p>
                         <p className='mt-1 text-[#838D95] text-[12px]'>{subTitle}</p>
-                        <p className='mt-1 font-black text-sm'>{price}<span className='text-[#838D95] text-[10px]'>{hours}</span>  </p>
+                        <p className='mt-1 font-black text-sm'>{price}<span className='text-[#838D95] text-[10px] ml-2'>{hours}</span>  </p>
                         {datePicker && <DatePicker color='#E6E5FF' />}
                         {edit && <p className='flex mt-1 text-[#7D7AFF] text-[9px] border border-[#7D7AFF] rounded-lg p-2'>informationen bearbeiten <AiOutlineEdit className='ml-3' /></p>}
                         <p className='mt-1 text-[#7D7AFF] text-[12px]'>{rentPrice}</p>

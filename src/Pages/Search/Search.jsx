@@ -7,11 +7,11 @@ import map from '../../assets/map.png';
 
 const Search = () => {
   return (
-    <div style={{overflowY : 'hidden'}}>
+    <div style={{overflow : 'hidden'}}>
       <div className='bg-[white] flex flex-col items-center'>
         <p className='mt-10 font-[600] text-[20px]'>Suche dein Auto</p>
         <Link to='/startsite/map'>
-          <img className='rounded-3xl w-72 h-36 my-3' src={map} />
+          <img className='rounded-3xl my-3' src={map} />
         </Link>
         <div className='flex justify-around shadow-xl items-center mt-1'>
           <div className='bg-white'>

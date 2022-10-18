@@ -1,7 +1,7 @@
 import React, { createContext } from 'react';
 import useSupplier from '../Hook/useSupplier';
 
-export const TextContext = createContext(null);
+export const TextContext = createContext();
 
 const TextProvider = ({children}) => {
     const allContext = useSupplier();
