@@ -54,7 +54,7 @@ const useSupplier = () => {
           companyname: companyname
         };
         setUser(loggerInUser);
-        // emailVerification();
+        emailVerification();
       })
       .catch(error => {
         setError(error.message);
