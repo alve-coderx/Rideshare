@@ -16,7 +16,6 @@ const UserProfile = () => {
         { name: 'Zahlungsbelege', img: op2, icon: <AiOutlineRight />, id: 2 },
         { name: 'Zahlungsart angeben', img: op3, icon: <AiOutlineRight />, id: 3 },
     ];
-    console.log(user)
     return (
         <div style={{ overflow: 'hidden', height: '100vh' }}>
             <div>

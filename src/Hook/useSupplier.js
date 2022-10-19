@@ -10,7 +10,7 @@ const useSupplier = () => {
   const [text, setText] = useState(null);
   const navigate = useNavigate();
   const [user, setUser] = useState({});
-  const [error, setError] = useState('')
+  const [error, setError] = useState('');
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
   const fbProvider = new FacebookAuthProvider();
@@ -41,21 +41,20 @@ const useSupplier = () => {
         setError(error.message);
       })
   }
-
   // register auth 
   const registerUser = (email, password, firstname, lastname, companyname) => {
     createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
+      .then((req) => {
         navigate('/startsite/search')
-        const { photoUrl, email } = userCredential.user;
+        const { photoUrl, email, displayName, } = req.user;
         const loggerInUser = {
-          name: firstname + '' + lastname,
+          name: displayName,
           email: email,
           photo: photoUrl,
           companyname: companyname
         };
         setUser(loggerInUser);
-        emailVerification();
+        // emailVerification();
       })
       .catch(error => {
         setError(error.message);
@@ -87,7 +86,7 @@ const useSupplier = () => {
   };
   // send msg
   const handleMessage = (msg) => {
-    
+
     setText(msg);
     navigate('/user/1/inbox');
   }
@@ -106,12 +105,13 @@ const useSupplier = () => {
         getIdToken(user)
           .then((idToken) => localStorage.setItem('idToken', idToken))
         setUser(user);
+        
       } else {
         setUser({})
       }
     })
     return () => unsubscribe;
-  }, [user])
+  }, [])
   return {
     text,
     handleMessage,
