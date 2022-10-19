@@ -1,33 +1,34 @@
 import React, { useState } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
-import {refs,checkbox} from '../../fakeDB/elements';
+import { refs, checkbox } from '../../fakeDB/elements';
 import useAuth from '../../Hook/useAuth';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const style = {
-  input : 'mt-3 bg-white text-black text-sm rounded-lg block w-full p-2.5 border-0 m-1',
-  boldText : 'text-sm '
+  input: 'mt-3 bg-white text-black text-sm rounded-lg block w-full p-2.5 border-0 m-1',
+  boldText: 'text-sm '
 }
 
 const Register = () => {
   const [loginData, setLogindata] = useState({});
   const [toggle, setToggle] = useState(2);
   const [show, setShow] = useState();
-  const { registerUser,error } = useAuth();
+  const { registerUser, confirm } = useAuth();
   const handleOnChage = (e) => {
     const field = e.target.name;
     const value = e.target.value;
     const newLoginData = { ...loginData };
     newLoginData[field] = value;
     setLogindata(newLoginData);
-  }
-
+  } 
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     if (loginData.password !== loginData.password2) {
       alert("Password Not Matched")
       return;
     }
-    registerUser(loginData.email, loginData.password,loginData.firstname,loginData.lastname,loginData.company);
+    registerUser(loginData.email, loginData.password, loginData.firstname, loginData.lastname, loginData.company);
   }
   const clickCheckbox = (index) => {
     setShow((prev) => {
@@ -45,6 +46,8 @@ const Register = () => {
   return (
     <div className='text-center mx-8'>
       <div className='mt-16'>
+        <ToastContainer autoClose={1000}/>
+
         <p className="text-[28px] font-[600]">Registriere dich!</p>
         <div className='mt-4'>
           {

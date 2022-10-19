@@ -1,13 +1,13 @@
 import React from 'react';
 import { GrLocation } from 'react-icons/gr';
-import {Filter,Carousel} from '../../Components';
+import { Filter, Carousel } from '../../Components';
 import { AiOutlineDown } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import map from '../../assets/map.png';
 
 const Search = () => {
   return (
-    <div style={{overflow : 'hidden'}}>
+    <div style={{ overflow: 'hidden' }}>
       <div className='bg-[white] flex flex-col items-center'>
         <p className='mt-10 font-[600] text-[20px]'>Suche dein Auto</p>
         <Link to='/startsite/map'>

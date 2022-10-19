@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { sendEmailVerification, sendPasswordResetEmail, createUserWithEmailAndPassword, FacebookAuthProvider, signOut, onAuthStateChanged, getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword, getIdToken } from 'firebase/auth';
 import initializeAuth from '../Firebase/firebase.init';
 import { useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 initializeAuth();
 
@@ -12,6 +13,7 @@ const useSupplier = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState('');
   const auth = getAuth();
+  const [confirm, setConfirm] = useState('Überprüfen Sie Ihre E-Mail zur Bestätigung');
   const googleProvider = new GoogleAuthProvider();
   const fbProvider = new FacebookAuthProvider();
   // google auth
@@ -41,20 +43,24 @@ const useSupplier = () => {
         setError(error.message);
       })
   }
+  const notify = () => toast(confirm, {
+    toastId: 'success1',
+  });
   // register auth 
   const registerUser = (email, password, firstname, lastname, companyname) => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((req) => {
-        navigate('/startsite/search')
         const { photoUrl, email, displayName, } = req.user;
         const loggerInUser = {
           name: displayName,
           email: email,
           photo: photoUrl,
           companyname: companyname
-        };
+        };  
         setUser(loggerInUser);
+        notify();
         emailVerification();
+        setTimeout(() => navigate('/startsite/search'),2000)
       })
       .catch(error => {
         setError(error.message);
@@ -65,7 +71,7 @@ const useSupplier = () => {
   const emailVerification = () => {
     sendEmailVerification(auth.currentUser)
       .then((res) => {
-        console.log(res);
+        setConfirm("Cheak your email for varification")
       })
   }
 
@@ -105,7 +111,7 @@ const useSupplier = () => {
         getIdToken(user)
           .then((idToken) => localStorage.setItem('idToken', idToken))
         setUser(user);
-        
+
       } else {
         setUser({})
       }
@@ -122,7 +128,8 @@ const useSupplier = () => {
     signInWithFb,
     registerUser,
     loginUser,
-    handleForgetPass
+    handleForgetPass,
+    confirm
   }
 }
 
