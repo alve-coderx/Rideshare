@@ -45,7 +45,7 @@ const Register = () => {
   
   return (
     <div className='text-center mx-8'>
-      <div className='mt-16'>
+      <div className='mt-10'>
         <ToastContainer autoClose={1000}/>
 
         <p className="text-[28px] font-[600]">Registriere dich!</p>
@@ -88,7 +88,7 @@ const Register = () => {
               ))
             }
           </div>
-          <button type='submit' className="mt-10 bg-[#7D7AFF] hover:bg-blue-700 text-white font-[500] py-3 px-4 rounded-lg text-[14px] w-full">
+          <button type='submit' className="my-10 bg-[#7D7AFF] hover:bg-blue-700 text-white font-[500] py-3 px-4 rounded-lg text-[14px] w-full">
             Jetzt registrieren
           </button>
         </form>
