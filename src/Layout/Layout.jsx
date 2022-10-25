@@ -14,20 +14,20 @@ const Layout = () => {
       <Route path='/register' element={<Register />} />
       <Route path='/startsite' element={<Main />}>
         <Route path='/startsite/search' element={<Search />} />
-        <Route path='/startsite/user/:id' element={<UserProfile />} />
-        <Route path='/startsite/map' element={<Map />} />
         <Route path='/startsite/cars' element={<CarList />} />
         <Route path='/startsite/mycars' element={<MyCars />} />
         <Route path='/startsite/rentals' element={<Rentals />} />
       </Route>
+      <Route path='/user/:id' element={<UserProfile />} />
+      <Route path='/map' element={<Map />} />
       <Route path='/car/:id' element={<SingleCar />} />
       <Route path='/user/:id/testominal' element={<Testominal />} />
       <Route path='/rental/overview' element={<LandlordOverView />} />
       <Route path='/passwordreset' element={<PasswordReset />} />
       <Route path='/user/:id/message' element={<Message />} />
+      <Route path='/user/:id/inbox' element={<Inbox />} />
       <Route path='/order/info' element={<OrderInfo />} />
       <Route path='/order/payment' element={<Paying />} />
-      <Route path='/user/:id/inbox' element={<Inbox />} />
       <Route path='/createcar' element={<CreateCar />} />
       <Route path='/rent/:id' element={<RentalDetails />} />
       <Route path='/create/rent' element={<CreateRent />} />

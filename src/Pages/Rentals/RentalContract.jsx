@@ -10,7 +10,7 @@ const RentalContract = () => {
   }
   return (
     <div>
-      <div className='mx-5 mt-8 flex items-center'>
+      <div className='mt-8 mx-5 lg:mx-10 flex items-center'>
         <Link to='/create/rent'>
           <p className='text-[#7D7AFF] text-[500] text-[16px]'>zurück</p>
         </Link> 
@@ -18,8 +18,8 @@ const RentalContract = () => {
           Mietvertrag
         </p>
       </div>
-      <div style={{ overflowY: 'scroll', maxHeight: '80vh' }}>
-        <div className='mx-5 mt-5'>
+      <div style={{ overflowY: 'scroll', maxHeight: '80vh' }} className='mx-5 lg:mx-10'>
+        <div className=' mt-5'>
           <div className='relative'>
             <p className={style.boldText}>Zahlungen</p>
             <div className='relative'>
@@ -33,7 +33,7 @@ const RentalContract = () => {
             </div>
           </div>
         </div>
-        <div className='mx-5 mt-5'>
+        <div className='mt-5'>
           <div className='relative'>
             <p className={style.boldText}>Zustand von außen</p>
             <div className='relative'>
@@ -41,7 +41,7 @@ const RentalContract = () => {
             </div>
           </div>
         </div>
-        <div className='mx-5 mt-5'>
+        <div className='mt-5'>
           <div className='relative'>
             <p className={style.boldText}>Zustand von innen</p>
             <div className='relative'>
@@ -50,7 +50,7 @@ const RentalContract = () => {
             </div>
           </div>
         </div>
-        <div className='mx-5 mt-5'>
+        <div className='mt-5'>
           <div className='relative'>
             <p className={style.boldText}>Anmietung</p>
             <div className='relative'>

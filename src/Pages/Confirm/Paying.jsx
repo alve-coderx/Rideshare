@@ -17,8 +17,8 @@ const OrderInfo = () => {
         { header: 'Premium', span: 'Reduzierte SB von 0€ Kaution von 50€ ggfs. Ersatzauto inklsive / 22€ am Tag<', id: 3 },
     ]
     return (
-        <div>
-            <div className='flex items-center p-9 '>
+        <div className='lg:mx-20 mx-5'>
+            <div className='flex items-center py-9 justify-between'>
                 <Link to={`/order/info`}>
                     <p className='text-[#7D7AFF] text-[500] text-[16px]'>zurück</p>
                 </Link>
@@ -27,20 +27,21 @@ const OrderInfo = () => {
                         Bestätigen und bezahlen
                     </p>
                 </div>
+                <p className='text-white'>.</p>
             </div>
-            <div className='mx-5 ' >
+            <div>
                 <p className='text-[18px] font-[600]'>
                     Versicherungsschutz <br /> auswählen
                 </p>
             </div>
             {
                 plans.map((plan) => (
-                    <div onClick={() => clickHandler(plan.id)}  key={plan.id} className={show === plan.id ? `mt-3 mx-8 py-5 px-4 shadow-xl rounded-xl bg-[#7D7AFF]` : `mt-3 mx-8 py-5 px-4 shadow-xl rounded-xl bg-[white]`} >
+                    <div onClick={() => clickHandler(plan.id)}  key={plan.id} className={show === plan.id ? `mt-3 py-5 px-4 shadow-xl rounded-xl bg-[#7D7AFF]` : `mt-3 py-5 px-4 shadow-xl rounded-xl bg-[white]`} >
                         <p className={show === plan.id ? ' text-[14px] text-[white] font-[600]' : ' text-[14px] text-[black] font-[600]'}>{plan.header} <br /> <span className='text-[10px] font-[400]'>{plan.span}</span></p>
                     </div>
                 ))
             }
-            <div className='mx-5 mt-5 '>
+            <div className='mt-5 '>
                 <p className=' font-[600] text-[18px]'>
                     Zahlungsmethode
                 </p>
@@ -49,7 +50,7 @@ const OrderInfo = () => {
                     Preis
                 </p>
             </div>
-            <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%]'>
+            <div className='mx-auto right-0 left-0 bottom-2 absolute lg:w-[50%] w-[92%]'>
                 <button className="mt-10 bg-[#1E2024] text-white py-4 px-4 rounded-lg w-full">
                     Anmietung anschauen
                 </button>

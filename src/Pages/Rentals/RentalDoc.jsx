@@ -18,7 +18,7 @@ const RentalDoc = () => {
     return (
         <div>
             <div className='bg-[#1E2024] '>
-                <div className='flex mx-5 pt-5 justify-between ' >
+                <div className='flex mx-5 lg:mx-32 pt-5 justify-between ' >
                     <Link to='/startsite/rentals'>
                         <p className={style.secondary}>schließen</p>
                     </Link>
@@ -31,7 +31,7 @@ const RentalDoc = () => {
                     <p className='text-white mt-3 font-[400] text-[13px]'>Mache Fotos des  <span className='text-[#7D7AFF]'>Führerscheins</span>des Mieters und überprüfe die unten stehenden Kästchen </p>
                 </div>
             </div>
-            <div className='mx-5 mt-5 mb-4'>
+            <div className='mx-5 lg:mx-32 mt-5 mb-4'>
                 <p className='text-[#636B75] text-[13px] font-[600]'>Bilder des Führerscheins</p>
                 <div className='flex justify-between'>
                     <div>

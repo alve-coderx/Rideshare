@@ -24,7 +24,7 @@ const CreateRent = () => {
   return (
     <div>
       <div className='bg-[#1E2024] '>
-        <div className='flex mx-5 pt-5 justify-between ' >
+        <div className='flex mx-5 lg:mx-32 pt-5 justify-between ' >
           <div className='bg-white p-2 rounded-lg'>
             <Link to='/rental/documents'>
               <img src={filter_alt} />
@@ -32,7 +32,7 @@ const CreateRent = () => {
           </div>
           <p onClick={() => handleStepper()} className='text-white font-[500] text-[16px]'>zurück</p>
         </div>
-        <div className='mx-5 mt-8 '>
+        <div className='mx-5 lg:mx-32 mt-8 '>
           <div className="w-full  bg-gray-200 h-1">
             <div className="bg-[#7D7AFF] h-1" style={{ maxWidth: '100%', width: `${prograss}%` }}></div>
           </div>
@@ -53,7 +53,7 @@ const CreateRent = () => {
       {
         prograss === 33.33 ?
           (
-            <div className='mx-5 mt-5 mb-4'>
+            <div className='mx-5 lg:mx-32 mt-5 mb-4'>
               <p className='text-[#636B75] text-[13px] font-[600]'>Fotos vom Außenbereich</p>
               <div className='text-center bg-[#E6E6FF] flex items-center justify-center rounded-lg shadow-xl px-4 py-16 mt-2'>
                 <p className='text-[#7D7AFF] text-center text-[32px] font-[400]'><MdAddPhotoAlternate /></p>
@@ -65,7 +65,7 @@ const CreateRent = () => {
           :
           prograss === 66.66 ?
             (
-              <div className='mx-5 mt-5 mb-4 relative'>
+              <div className='mx-5 lg:mx-32 mt-5 mb-4 relative'>
                 <p className='text-[#636B75] text-[13px] font-[600] mt-3'>Kilometerstand</p>
                 <span className='absolute right-5 top-9 font-[900]'>Km</span>
                 <input id="message" rows="4" className="p-3 bg-[white] rounded-xl shadow-2xl mt-2 block w-full text-sm rounded-lg dark:placeholder-gray-400 " placeholder="1000" />
@@ -74,7 +74,7 @@ const CreateRent = () => {
             :
             prograss === 99.99 ?
               (
-                <div className='mx-5 mt-5 mb-4 relative'>
+                <div className='mx-5 lg:mx-32 mt-5 mb-4 relative'>
                   <p className='text-[#636B75] text-[13px] font-[600] mt-3'>Kilometerstand</p>
                   <span className='absolute right-5 top-9 font-[900]'>%</span>
                   <input id="message" rows="4" className="p-3 bg-[white] rounded-xl shadow-2xl mt-2 block w-full text-sm rounded-lg dark:placeholder-gray-400 " placeholder="20" />

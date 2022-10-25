@@ -24,7 +24,7 @@ export const texts = [
     { name: 'Navi', id: 3 },
     { name: 'Kindersitz', id: 4 },
     { name: 'Dachbox', id: 5 },
-    { name: 'Fahrradträger', id: 6 },
+    { name: 'Fahrrad', id: 6 },
     { name: 'Winterreifen', id: 7 },
     { name: 'Schneeketten', id: 8 },
     { name: 'Skibox', id: 9 }

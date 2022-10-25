@@ -8,24 +8,24 @@ export default class Responsive extends Component {
       dots: false,
       infinite: false,
       speed: 500,
-      slidesToShow: 4,
-      slidesToScroll: 4,
+      slidesToShow: 6,
+      slidesToScroll: 2,
       initialSlide: 0,
       responsive: [
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 5,
+            slidesToScroll: 1,
             infinite: true,
-            dots: true
+            dots: false
           }
         },
         {
           breakpoint: 600,
           settings: {
             slidesToShow: 5,
-            slidesToScroll: 5,
+            slidesToScroll: 1,
             initialSlide: 2
           }
         },
@@ -43,7 +43,7 @@ export default class Responsive extends Component {
         <h2 className="text-[14.35px] font-[600] mb-3"> Fahrzeugtyp wählen </h2>
         <Slider {...settings}>
           {
-            [1,2,3,4,5,6].map((index) => (
+            [1,2,3,4,5,6,7,8,9,10].map((index) => (
                 <Card key={index} index={index}/>
             ))
           }

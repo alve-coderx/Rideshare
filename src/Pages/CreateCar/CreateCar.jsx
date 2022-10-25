@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { AiOutlineInfoCircle, AiOutlineRight, AiOutlineClose } from 'react-icons/ai';
 import { GoLocation } from 'react-icons/go';
-import map from '../../assets/map.png';
+import map from '../../assets/map2.png';
 import { models, kilometers, fuel, transmission } from '../../fakeDB/cars';
 import { texts } from '../../fakeDB/elements';
 import { Modal } from '../../Components';
@@ -31,8 +31,8 @@ const CreateCar = () => {
 
   const style = {
     wrapper: 'flex justify-between bg-white rounded-lg shadow-xl p-3 ',
-    wrapper_secondary: 'flex items-center text-left justify-between bg-white rounded-lg shadow-xl py-3 mt-10 px-5',
-    primary: 'text-[#838D95] w-60 text-[10px] font-[400]',
+    wrapper_secondary: 'flex items-center text-left justify-around bg-white rounded-lg shadow-xl py-3 mt-10 px-10  ',
+    primary: 'text-[#838D95] w-96 text-[10px] font-[400] ml-1',
     secondary: 'flex items-center text-[#636B75] text-[13px] font-[600]',
     heading: 'text-[#838D95] text-[12px] font-[400]',
     semiText: 'text-[24px] font-[600]',
@@ -43,7 +43,7 @@ const CreateCar = () => {
   }
   const Dropdown = ({ value, options, onChange }) => {
     return (
-      <div className='absolute right-9'>
+      <div className='absolute right-20'>
         <select className='flex items-center text-[#636B75] text-[13px] font-[600] border-0 px-6' value={value.value} onChange={onChange}>
           {options.map((option) => (
             <option key={option.id} value={option}>{option.value}</option>
@@ -77,7 +77,7 @@ const CreateCar = () => {
   };
   return (
     <div>
-      <div className='bg-white px-5 py-7'>
+      <div className='bg-white lg:px-20 px-5 py-7'>
         <div className={prograss === 11.11 ? `flex justify-end` : 'flex justify-between'}>
           <p onClick={() => setPrograss((prevState) => prevState - 11.11)} className={prograss === 11.11 ? 'hidden' : 'text-[#7D7AFF]'}>zurück</p>
           <Link to='/startsite/mycars'>
@@ -95,7 +95,7 @@ const CreateCar = () => {
       <div className='text-center mx-5 mt-8'>
         {
           prograss === 11.11 ? (
-            <div>
+            <div className='lg:mx-10 mx-5'>
               <p className='text-[24px] font-[600]'>Modell deines Fahrzeugs</p>
               <div className={`mt-8 ${style.wrapper}`}>
                 <p className={style.heading}>Marke</p>
@@ -121,7 +121,7 @@ const CreateCar = () => {
           )
             :
             prograss === 22.22 ? (
-              <div>
+              <div className='lg:mx-10 mx-5'>
                 <p className={style.semiText}>Gebe den Kilometerstand ein</p>
                 <div className={`mt-5 ${style.wrapper}`}>
                   <p className={style.heading}>Marke</p>
@@ -139,7 +139,7 @@ const CreateCar = () => {
             )
               :
               prograss === 33.33 ? (
-                <div>
+                <div className='lg:mx-10 mx-5'>
                   <p className={style.semiText}>Details hinzufügen</p>
                   <div className={`mt-5 ${style.wrapper}`}>
                     <p className={style.heading}>Marke</p>
@@ -165,7 +165,7 @@ const CreateCar = () => {
               )
                 :
                 prograss === 44.44 ? (
-                  <div>
+                  <div className='lg:mx-10 mx-5'>
                     <p className={style.semiText}>Details hinzufügen</p>
                     <Counter name='Anzahl der Türen' />
                     <Counter name='Anzahl der Sitze' />
@@ -178,9 +178,9 @@ const CreateCar = () => {
                 )
                   :
                   prograss === 55.55 ? (
-                    <div>
+                    <div className='lg:mx-10 mx-5'>
                       <p className={style.semiText}>Weitere Merkmale</p>
-                      <div className='flex flex-wrap p-3 mt-8 '>
+                      <div className='grid grid-cols-3 gap-16 mt-8 '>
                         {
                           texts.map((text) => <p key={text.id} onClick={() => clickHandler(text.id)} className={active === text.id ? 'text-[white] m-1 p-2 rounded-lg text-[12px] bg-[#7D7AFF] font-[400]' : 'text-[black] border border-black m-1 p-2 rounded-lg text-[12px] bg-[transparent] font-[400]'}>{text.name}</p>)
                         }
@@ -195,10 +195,10 @@ const CreateCar = () => {
                   )
                     :
                     prograss === 66.66 ? (
-                      <div>
+                      <div className='lg:mx-36 mx-5' >
                         <p className={style.semiText}>Treffpunkt einstellen</p>
                         <div className='flex justify-center'>
-                          <img className='rounded-3xl my-3' src={map} />
+                          <img className='rounded-3xl my-3 h-52' src={map} />
                         </div>
                         <div className='bg-white rounded-lg shadow-xl p-3 mt-8'>
                           <p className='flex justify-start items-center text-[#838D95] text-[12px] font-[400]'><GoLocation />Standord eingeben</p>
@@ -212,7 +212,7 @@ const CreateCar = () => {
                     )
                       :
                       prograss === 77.77 ? (
-                        <div>
+                        <div className='lg:mx-10 mx-5'>
                           <p className={style.semiText}>Preisangabe</p>
                           <Counter name='Preis für einen Tag' />
                           <div className={style.wrapper_secondary}>
@@ -224,7 +224,7 @@ const CreateCar = () => {
                       )
                         :
                         prograss === 88.88 ? (
-                          <div>
+                          <div className='lg:mx-10 mx-5'>
                             <p className={style.semiText}>Gib deine Telefonnummer ein </p>
                             <input name='password' type='number' className={style.input} placeholder="Telefonnummer eingeben" required />
 
@@ -237,9 +237,9 @@ const CreateCar = () => {
                         )
                           :
                           prograss === 99.99 ? (
-                            <div>
+                            <div className='lg:mx-10 mx-5'>
                               <p className={style.semiText}>Lade Bilder von deinem Auto hoch</p>
-                              <div className='text-center bg-[#E6E6FF] flex items-center justify-center rounded-lg shadow-xl px-5 py-10 mt-5'>
+                              <div className='text-center bg-[#E6E6FF] flex items-center justify-center rounded-lg py-10 mt-5'>
                                 <div className="flex w-full items-center justify-center bg-grey-lighter">
                                   <label className="w-64 flex flex-col items-center px-4 py-6 text-blue rounded-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
                                     <span className="text-base leading-normal">
@@ -266,7 +266,7 @@ const CreateCar = () => {
                             ''
         }
       </div>
-      <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%]'>
+      <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%] lg:w-[50%]'>
         <button onClick={() => setPrograss((prevState) => prevState + 11.11)} className={prograss === 99.99 ? "hidden" : style.btn}>
           Nächster Schritt
           <AiOutlineRight className='ml-5 text-[20px]' />

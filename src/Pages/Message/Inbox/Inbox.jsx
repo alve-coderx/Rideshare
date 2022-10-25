@@ -54,8 +54,7 @@ const Inbox = () => {
   return (
     <div style={{ overflowY: 'hidden', height: '100vh' }}>
       <div className='bg-white p-9 shadow-sm' >
-        <div className='flex items-center '>
-
+        <div className='flex items-center justify-between'>
           <Link to='/user/1/message'>
             <p className='text-[#7D7AFF] text-[500] text-[16px]'>zurück</p>
           </Link>
@@ -66,8 +65,9 @@ const Inbox = () => {
               <p className='text-[#AAAFB6] text-[12px]'>Online</p>
             </h1>
           </div>
+            <p className='text-[white] text-[500] text-[16px]'>zurück</p>
         </div>
-        <div className='bg-slate-200 flex justify-evenly mx-5 mt-8 shadow-sm rounded-lg py-1'>
+        <div className='bg-slate-200 flex justify-evenly lg:w-[20%] md:w-[30%] w-[50%] lg:mx-[42%] md:mx-80 mx-36 mt-8 shadow-sm rounded-lg py-1'>
           {
             navigators.map((element) => <p key={element.id} onClick={() => clickHandler(element.id)} className={active === element.id ? 'font-[600] text-[11.346px] bg-white py-2 px-3 text-[#7D7AFF] rounded-lg' : 'py-2 px-3 text-[11.346px] text-black'}>{element.name}</p>)
           }
@@ -93,7 +93,7 @@ const Inbox = () => {
                 {
                   messages?.[0] && (
                     <Link to='/order/info'>
-                      <div className="mx-6 bg-white  pt-3 rounded-xl relative shadow-xl mt-3">
+                      <div className="mx-6 bg-white w-96  pt-3 rounded-xl relative shadow-xl mt-3">
                         <div className='flex items-top px-3'>
                           <div className='relative'>
                             <img src={'https://i.ibb.co/S3cY7Ct/tesla.png'} />
@@ -117,12 +117,12 @@ const Inbox = () => {
             :
             (
               <>
-                <div className='mx-5 mt-2 flex flex-col items-center ' style={{ overflowY: 'scroll' }}>
+                <div className='mx-5 lg:mx-10 mt-2 flex flex-col items-center ' >
                   <p className='p-2 rounded-xl bg-[#FFE58F] font-[900] text-[20px]'><BsClock /></p>
                   <p className='text-[20px] text-center font-[600]'>Warte auf <br /> Bestätigung</p>
                   <img src={car} className='w-[302px] h-[208px] mt-3' />
                 </div>
-                <div className='mx-5 '>
+                <div className='mx-5 lg:mx-10 '>
                   <div className='flex justify-between' >
                     <div>
                       <p className='text-[32px] font-[600]'>Tesla </p>
@@ -165,17 +165,16 @@ const Inbox = () => {
       {
         active === 1 ?
           (
-            <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%] flex items-center'>
+            <div className='mx-auto right-0 left-0 bottom-5 absolute w-[92%] flex items-center'>
               <button onClick={() => setMessages(current => [...current, { msg: message, author: 'me' }])} className='absolute right-5 bg-[#7D7AFF] p-1 rounded-lg shadow-xl text-white' >
-                <AiOutlineArrowUp className='text-[25px] '/>
-
+                <AiOutlineArrowUp className='text-[25px] ' />
               </button>
               <input onChange={(e) => handleSubmitMsg(e)} step={{ outline: 'none' }} className="shadow-lg rounded w-full py-2 px-3 text-gray-700  border-0" type="text" placeholder="Nachricht senden..." />
             </div>
           )
           :
           (
-            <div className='mx-auto right-0 left-0 bottom-2 absolute  flex justify-around'>
+            <div className='right-0 left-0 bottom-5 absolute  flex justify-around '>
               <Link to='/create/rent'>
                 <button type='submit' className="bg-[#7D7AFF] text-[14px] font-[500] text-white px-10 py-3 rounded-lg w-full">
                   Anpassen oder Stornieren

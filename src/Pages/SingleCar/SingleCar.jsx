@@ -34,8 +34,8 @@ const SingleCar = () => {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     initialSlide: 0,
     arrows: false,
     responsive: [
@@ -45,7 +45,6 @@ const SingleCar = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
         }
       },
       {
@@ -72,8 +71,13 @@ const SingleCar = () => {
           {
             [1, 2, 3].map((index) => (
               <div key={index} className='relative'>
-
-                <img className='w-screen' src='https://i.ibb.co/vkjDgxN/Frame-31-1.png' />
+                <div className='lg:hidden md:hidden block'>
+                  <img className='w-screen lg:w-auto' src='https://i.ibb.co/vkjDgxN/Frame-31-1.png' />
+                </div>
+                <div className='lg:block md:block hidden'>
+                  <img className='w-screen lg:w-auto' src='https://i.ibb.co/zVCvfqj/Frame-161.png' />
+                </div>
+                {/* <img className='w-screen ' src='https://i.ibb.co/zVCvfqj/Frame-161.png' /> */}
                 <span className='z-10 absolute bottom-10 right-4 bg-[#FFC53D] text-white text-sm flex items-center rounded-lg px-3 py-1'><AiFillStar /> 5.0</span>
               </div>
             ))
@@ -81,7 +85,7 @@ const SingleCar = () => {
 
         </Slider>
       </div>
-      <h1 className='absolute flex justify-between top-5 right-4 left-4 z-10	'>
+      <h1 className='absolute flex justify-between top-5 right-4 left-4 z-10 lg:mx-5'>
         <p className='bg-[#7D7AFF] text-white font-[500] text-[11px] flex items-center justify-between rounded-lg px-2'><GoLocation className='mr-1' /> 20 km</p>
         <Link to={`/startsite/cars`}>
           <div className='bg-[black]  p-3 rounded-xl '>
@@ -97,12 +101,12 @@ const SingleCar = () => {
       >
 
         <div className='w-[100%] rounded-t-xl	shadow-xl pt-10' >
-          <div style={{ overflowY: 'scroll', maxHeight: 'auto' }}>
-            <div className='mx-5 border-b-2 '>
+          <div className='mx-5 lg:mx-10 ' style={{  maxHeight: 'auto' }}>
+            <div className='border-b-2 '>
               <p className="text-[32px] font-[600] flex justify-between"><span>Tesla</span> <span>30 €</span></p>
               <p className="text-[12px] font-[400] text-slate-500 flex justify-between">  <span>Model 3</span> <span>für 2 std</span></p>
             </div>
-            <div className='flex justify-between mx-5 my-4'>
+            <div className='flex justify-between my-4'>
               <p className={style.span}>
                 <span className={style.spanVal}>Sitzanzahl</span>
                 <span className='bg-[#7D7AFF] text-white text-[10px] rounded-lg px-3 py-1'> 4</span>
@@ -112,7 +116,7 @@ const SingleCar = () => {
                 <span className='bg-[#7D7AFF] text-white text-[10px] rounded-lg px-2 py-1'> Elektro</span>
               </p>
             </div>
-            <div className='mx-5 p-3 bg-[#F0F0FF] rounded-xl flex items-center'>
+            <div className='p-3 bg-[#F0F0FF] rounded-xl flex items-center'>
               <div className='ml-4'>
                 <ImKey />
               </div>
@@ -121,7 +125,7 @@ const SingleCar = () => {
                 <p className='ml-5 font-black font-[400] text-[10px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis lectus in tellus luctus quis massa.</p>
               </div>
             </div>
-            <div className='mx-5 mt-4 flex items-center justify-between'>
+            <div className='mt-4 flex items-center justify-between'>
               <Link to='/user/1/testominal'>
                 <div className='flex items-center'>
                   <img src={avater} />
@@ -135,7 +139,7 @@ const SingleCar = () => {
                 <p className='ml-1 text-[11px] text-[#838D95] font-[500]'>25 Bewertungen</p>
               </div>
             </div>
-            <div className='mx-5 mt-4'>
+            <div className='mt-4'>
               <p className='flex items-center text-[14px] font-[600]'>
                 Kilometer inklusive
                 <span className='ml-1 text-[21px] text-[#838D95] font-[500]'><AiOutlineInfoCircle /></span>
@@ -145,7 +149,7 @@ const SingleCar = () => {
                 40km kostenlos
               </p>
             </div>
-            <div className='mx-5 ' >
+            <div>
               <p className='text-[14px] font-[600] mt-1'>
                 Technische Daten
               </p>
@@ -170,7 +174,7 @@ const SingleCar = () => {
               </p>
             </div>
           </div>
-          <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%]'>
+          <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%] lg:w-[48%]'>
             <Link to={'/user/1/message'}>
               <button className="mt-10 bg-[#1E2024] text-white text-[14px] py-4 px-4 rounded-lg w-full">
                 Buchung anfragen

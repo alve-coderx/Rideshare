@@ -19,12 +19,11 @@ const Navigator = () => {
     { icons: <BiSearchAlt2 />, href: '/startsite/search', id : 1 },
     { icons: <HiOutlineKey />, href: '/startsite/rentals', id : 2 },
     { icons: <AiFillCar />, href: '/startsite/mycars', id : 3 },
-    { icons: <AiOutlineUser />, href: '/startsite/user/1', id : 4 },
+    { icons: <AiOutlineUser />, href: '/user/1', id : 4 },
   ]
   return (
     <div>
-      <Outlet />
-      <div className='flex justify-around bg-white p-5 absolute bottom-0 w-full shadow-2xl	'>
+      <div className='flex justify-around bg-white p-5 absolute bottom-0 lg:static w-full z-10'>
         {
           navigations.map((nav) => (
             <Link key={nav.id} to={nav.href}>

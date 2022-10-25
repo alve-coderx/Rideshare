@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useRef } from 'react';
 import { GrKey } from 'react-icons/gr';
 
-const Modal = ({ open,setOpen }) => {
+const Modal = ({ open, setOpen }) => {
     const [show, setShow] = useState(1);
     const cancelButtonRef = useRef(null);
 
@@ -63,7 +63,7 @@ const Modal = ({ open,setOpen }) => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6 text-center mt-4">
+                                <div className="bg-gray-50 px-4 py-3 sm:px-6 text-center mt-4">
                                     <button onClick={() => setOpen(false)} type='submit' className="bg-[#1E2024] text-[15px] font-[500] text-white p-4 rounded-lg w-full">
                                         Weitere Fahrzeuge hinzufügen
                                     </button>

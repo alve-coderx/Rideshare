@@ -15,13 +15,13 @@ const Testominal = () => {
 
     }   
     return (
-        <div>
-            <div className='mx-5'>
+        <div  className='lg:mx-14'>
+            <div>
                 <Link to={`/car/${id}`}>
-                    <p className='z-10 absolute top-10 left-5 text-[#7D7AFF]'>zurück</p>
+                    <p className='z-10 absolute top-10 left-16 text-[#7D7AFF]'>zurück</p>
                 </Link>
 
-                <div className='z-10 absolute top-10 right-5  bg-black p-2 rounded-lg'>
+                <div className='z-10 absolute top-10 right-16  bg-black p-2 rounded-lg'>
                     <img src={filter_alt} />
                 </div>
 
@@ -32,12 +32,12 @@ const Testominal = () => {
                 <p className='ml-1 mt-2 text-[#FAAD14] text-[20px] flex font-[600]'>
                     {[1, 2, 3, 4, 5].map((index) => <AiFillStar index={index}/>)}
                 </p>
-                <div className='flex justify-around w-full mt-3'>
-                    <div className='text-center'>
+                <div className='flex justify-center w-full mt-3'>
+                    <div className='text-center ml-5'>
                         <p className='mt-3 font-black text-4xl'>30</p>
                         <p className={style.text_sm}>Anmietungen</p>
                     </div>
-                    <div className='text-center'>
+                    <div className='text-center ml-5'>
                         <p className='mt-3 font-black text-4xl'>20</p>
                         <p className={style.text_sm}>Bewertungen</p>
                     </div>
