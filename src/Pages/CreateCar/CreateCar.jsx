@@ -95,7 +95,7 @@ const CreateCar = () => {
       <div className='text-center mx-5 mt-8'>
         {
           prograss === 11.11 ? (
-            <div className='lg:mx-10 mx-5'>
+            <div className='lg:mx-20 mx-5'>
               <p className='text-[24px] font-[600]'>Modell deines Fahrzeugs</p>
               <div className='grid lg:grid-cols-2 gap-2 grid-cols-1 justify-items-center'>
                 <div className={`mt-5 ${style.wrapper} lg:py-6`}>
@@ -141,7 +141,7 @@ const CreateCar = () => {
             )
               :
               prograss === 33.33 ? (
-                <div className='lg:mx-10 mx-5'>
+                <div className='lg:mx-20 mx-5'>
                   <p className={style.semiText}>Details hinzufügen</p>
                   <div className='grid lg:grid-cols-2 gap-2 grid-cols-1 justify-items-center'>
                     <div className={`mt-5 ${style.wrapper} lg:py-6`}>
@@ -169,7 +169,7 @@ const CreateCar = () => {
               )
                 :
                 prograss === 44.44 ? (
-                  <div className='lg:mx-10 mx-5'>
+                  <div className='lg:mx-20 mx-5'>
                     <p className={style.semiText}>Details hinzufügen</p>
                     <Counter name='Anzahl der Türen' />
                     <Counter name='Anzahl der Sitze' />
@@ -182,7 +182,7 @@ const CreateCar = () => {
                 )
                   :
                   prograss === 55.55 ? (
-                    <div className='lg:mx-10 mx-5'>
+                    <div className='lg:mx-20 mx-5'>
                       <p className={style.semiText}>Weitere Merkmale</p>
                       <div className='grid grid-cols-3 gap-4 mt-8 justify-items-center'>
                         {
@@ -202,7 +202,7 @@ const CreateCar = () => {
                       <div className='lg:mx-36 mx-5' >
                         <p className={style.semiText}>Treffpunkt einstellen</p>
                         <div className='flex justify-center'>
-                          <img className='rounded-3xl my-3 h-52' src={map} />
+                          <img className='rounded-3xl my-3 h-52 ' src={map} />
                         </div>
                         <div className='bg-white rounded-lg shadow-xl p-3 mt-8 lg:py-6 lg:w-[50%] lg:absolute right-0 left-0 mx-auto'>
                           <p className='flex justify-start items-center text-[#838D95] text-[12px] font-[400]'><GoLocation />Standord eingeben</p>
@@ -216,7 +216,7 @@ const CreateCar = () => {
                     )
                       :
                       prograss === 77.77 ? (
-                        <div className='lg:mx-10 mx-5'>
+                        <div className='lg:mx-20 mx-5'>
                           <p className={style.semiText}>Preisangabe</p>
                           <Counter name='Preis für einen Tag' />
                           <div className={style.wrapper_secondary}>
@@ -230,7 +230,7 @@ const CreateCar = () => {
                         prograss === 88.88 ? (
                           <div className='lg:mx-10 mx-5'>
                             <p className={style.semiText}>Gib deine Telefonnummer ein </p>
-                            <input type='number' className={`style.input lg:py-6 lg:w-[50%] lg:absolute right-0 left-0 mx-auto border-0`} placeholder="Telefonnummer eingeben" required />
+                            <input type='number' className={`style.input lg:py-6 lg:w-[50%] lg:absolute right-0 left-0 mt-5 mx-auto border-0`} placeholder="Telefonnummer eingeben" required />
 
                             <div className={style.wrapper_secondary}>
                               <p > <AiOutlineInfoCircle className={style.text_bold} /></p>
@@ -270,7 +270,7 @@ const CreateCar = () => {
                             ''
         }
       </div>
-      <div className='mx-auto right-0 left-0 bottom-2 lg:bottom-10 absolute w-[92%] lg:w-[50%]'>
+      <div className='mx-auto right-0 left-0 bottom-2 lg:bottom-10 absolute w-[92%] lg:w-[32%]'>
         <button onClick={() => setPrograss((prevState) => prevState + 11.11)} className={prograss === 99.99 ? "hidden" : style.btn}>
           Nächster Schritt
           <AiOutlineRight className='ml-5 text-[20px]' />

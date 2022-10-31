@@ -14,16 +14,16 @@ const Search = () => {
           <img className='rounded-3xl my-3 px-20' src={map} />
         </Link>
         <div className='flex justify-around shadow-xl items-center mt-1 '>
-          <div className='bg-white lg:w-[50rem]'>
+          <div className='bg-white lg:w-[70rem]'>
             <p className='text-[14px] font-[600] text-[#1E2024]  flex items-center rounded-l-lg shadow-lg p-2'><GrLocation /> Aktueller Standort</p>
           </div>
           <Filter />
         </div>
       </div>
-      <div className='mt-8 lg:mt-1 lg:mx-20'>
+      <div className='mt-8 lg:mt-1 lg:mx-[5rem]'>
         <Carousel />
       </div>
-      <div className='flex items-center justify-between mx-[18px] mt-4 lg:mx-20'>
+      <div className='flex items-center justify-between mx-[18px] mt-4 lg:mx-[6rem]'>
         <p className='font-black text-[14px] font-[600]'>
           Sofortbuchung<br />
           <span className='text-[#838D95] text-[10px]'>Vermieter akzeptiert alle Anfragen</span>
@@ -35,14 +35,14 @@ const Search = () => {
           </label>
         </div>
       </div>
-      <div className='flex justify-between items-end lg:mx-20'>
+      <div className='flex justify-between items-end lg:mx-[6rem]'>
         <p className='border-b border-black text-white w-[40%]'>.</p>
         <p className='flex items-center text-[14px] font-[400]'>mehr filtern
           <AiOutlineDown aria-hidden="true" />
         </p>
         <p className='border-b border-black text-white w-[40%]'>.</p>
       </div>
-      <div className='mx-8 lg:mx-96 my-5'>
+      <div className='mx-8 lg:mx-[25rem] my-5'>
         <Link to='/map'>
           <button className="bg-[#1E2024]  text-white font-[500] text-[14px] py-4 rounded-lg w-full">
             Auto suchen

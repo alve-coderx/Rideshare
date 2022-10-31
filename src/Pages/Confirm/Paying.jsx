@@ -17,7 +17,7 @@ const OrderInfo = () => {
         { header: 'Premium', span: 'Reduzierte SB von 0€ Kaution von 50€ ggfs. Ersatzauto inklsive / 22€ am Tag<', id: 3 },
     ]
     return (
-        <div className='lg:mx-20 mx-5'>
+        <div className='lg:mx-36 mx-5'>
             <div className='flex items-center py-9 justify-between'>
                 <Link to={`/order/info`}>
                     <p className='text-[#7D7AFF] text-[500] text-[16px]'>zurück</p>

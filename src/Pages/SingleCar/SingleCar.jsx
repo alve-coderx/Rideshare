@@ -10,14 +10,19 @@ import { useRef } from 'react';
 import avater from '../../assets/avater.png';
 import { Link } from 'react-router-dom';
 import { GoLocation } from 'react-icons/go';
-import { GrClose } from 'react-icons/gr';
+import map from '../../assets/map3.png'
+import { MdAddPhotoAlternate } from 'react-icons/md';
 
 const style = {
   li: 'ml-1 text-[13px] text-[#838D95] font-[600]',
   smText: 'mt-3 flex items-center text-[12px] font-[600]',
   liWrapper: 'mt-4 flex items-center justify-between',
   span: 'flex items-center justify-around text-[32px] font-[600]',
-  spanVal: 'text-[12px] font-[400] text-slate-500 mr-5'
+  spanVal: 'text-[12px] font-[400] text-slate-500 mr-5',
+  wrapper: 'w-[70px] h-12 text-center bg-[#7D7AFF] flex items-center justify-center rounded-2xl shadow-sm px-2 py-8 mt-2',
+  primary: 'text-[white] text-center text-[32px] font-[400]',
+
+
 }
 
 const SingleCar = () => {
@@ -78,14 +83,14 @@ const SingleCar = () => {
                   <img className='w-screen lg:w-auto' src='https://i.ibb.co/zVCvfqj/Frame-161.png' />
                 </div>
                 {/* <img className='w-screen ' src='https://i.ibb.co/zVCvfqj/Frame-161.png' /> */}
-                <span className='z-10 absolute bottom-10 right-4 bg-[#FFC53D] text-white text-sm flex items-center rounded-lg px-3 py-1'><AiFillStar /> 5.0</span>
+                <span className='z-10 absolute bottom-10 right-32 bg-[#FFC53D] text-white text-sm flex items-center rounded-lg px-3 py-1'><AiFillStar /> 5.0</span>
               </div>
             ))
           }
 
         </Slider>
       </div>
-      <h1 className='absolute flex justify-between top-5 right-4 left-4 z-10 lg:mx-5'>
+      <h1 className='absolute flex justify-between top-5 right-4 left-4 z-10 lg:mx-[7rem]'>
         <p className='bg-[#7D7AFF] text-white font-[500] text-[11px] flex items-center justify-between rounded-lg px-2'><GoLocation className='mr-1' /> 20 km</p>
         <Link to={`/startsite/cars`}>
           <div className='bg-[black]  p-3 rounded-xl '>
@@ -101,17 +106,17 @@ const SingleCar = () => {
       >
 
         <div className='w-[100%] rounded-t-xl	shadow-xl pt-10' >
-          <div className='mx-5 lg:mx-10 ' style={{  maxHeight: 'auto' }}>
+          <div className='mx-5 lg:mx-[8rem] pb-16 h-5/6' >
             <div className='border-b-2 '>
               <p className="text-[32px] font-[600] flex justify-between"><span>Tesla</span> <span>30 €</span></p>
               <p className="text-[12px] font-[400] text-slate-500 flex justify-between">  <span>Model 3</span> <span>für 2 std</span></p>
             </div>
-            <div className='flex justify-between my-4'>
+            <div className='flex justify-left my-4'>
               <p className={style.span}>
                 <span className={style.spanVal}>Sitzanzahl</span>
                 <span className='bg-[#7D7AFF] text-white text-[10px] rounded-lg px-3 py-1'> 4</span>
               </p>
-              <p className={style.span}>
+              <p className={`${style.span} ml-2`}>
                 <span className={style.spanVal}>Kraftstoff</span>
                 <span className='bg-[#7D7AFF] text-white text-[10px] rounded-lg px-2 py-1'> Elektro</span>
               </p>
@@ -172,9 +177,30 @@ const SingleCar = () => {
               <p className={style.smText}>
                 Übergabe- & Rückgabeort
               </p>
+              <p className={style.li}>Musterstraße, 53474 Ahrweiler</p>
+
+            </div>
+            <div>
+              <img src={map} className='w-full my-2' />
+            </div>
+            <div>
+              <p className='text-[14px] font-[600] mt-1'>
+                Versicherung und Pannendienst
+              </p>
+              <div className={style.wrapper}>
+                <p className={style.primary}><MdAddPhotoAlternate /></p>
+              </div>
+            </div>
+            <div>
+              <p className='text-[14px] font-[600] mt-1'>
+                Bedingungen
+              </p>
+              <p className={`flex ${style.li}`}> <span className='mr-3 text-[21px] text-[#52C41A] font-[500] my-2'><AiOutlineCheckCircle /></span>
+                Über 18 Jahre alt und 2 Jahre Fahrzeugerfahrung</p>
+
             </div>
           </div>
-          <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%] lg:w-[48%]'>
+          <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%] lg:w-[36%]  '>
             <Link to={'/user/1/message'}>
               <button className="mt-10 bg-[#1E2024] text-white text-[14px] py-4 px-4 rounded-lg w-full">
                 Buchung anfragen

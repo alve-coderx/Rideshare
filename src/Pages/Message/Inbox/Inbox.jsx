@@ -93,7 +93,7 @@ const Inbox = () => {
                 {
                   messages?.[0] && (
                     <Link to='/order/info'>
-                      <div className="mx-6 bg-white w-96  pt-3 rounded-xl relative shadow-xl mt-3">
+                      <div className="mx-20 bg-white w-96  pt-3 rounded-xl relative shadow-xl mt-3">
                         <div className='flex items-top px-3'>
                           <div className='relative'>
                             <img src={'https://i.ibb.co/S3cY7Ct/tesla.png'} />

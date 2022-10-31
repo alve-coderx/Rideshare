@@ -25,7 +25,7 @@ const RentalSign = () => {
                     className='shadow-xl'
                 />
             </div>
-            <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%] lg:w-[50%]'>
+            <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%] lg:w-[32%]'>
                 <button className="mt-10 bg-[#1E2024] text-white py-4 px-4 rounded-lg w-full">
                     Unterschrift bestätigen
                 </button>

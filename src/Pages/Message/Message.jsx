@@ -12,7 +12,7 @@ const Message = () => {
     // const { handleMessage } = useSupplier();
 
     return (
-        <div className='lg:mx-36 mx-5'>
+        <div className='lg:mx-52 mx-5'>
             <div className='flex flex-col items-center justify-center mt-3 '>
                 <p className='bg-black p-2 rounded-xl absolute top-2 right-2'>
                     <Link to={`/car/1`}>
@@ -34,7 +34,7 @@ const Message = () => {
                 <p className='font-black text-sm'>Ergänzungen zu Zeit und Ortt</p>
                 <textarea id="message" rows="4" className="p-3 bg-[#D8DBEC] rounded-xl shadow-2xl mt-5 block w-full text-sm rounded-lg border border-gray-300 dark:placeholder-gray-400 " placeholder="Wie flexibel bist du? Mögliche Einschränkungen (Optional)"></textarea>
             </div>
-            <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%] lg:w-[52%] md:w-[52%]'>
+            <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%] lg:w-[32%] md:w-[52%]'>
                 <Link to='/user/1/inbox'>
                     <button type='submit' className="mt-10 bg-[#7D7AFF] text-white py-4 px-4 rounded-lg w-full">
                         Nachricht senden

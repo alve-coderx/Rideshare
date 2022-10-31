@@ -44,7 +44,7 @@ const Register = () => {
   };
   
   return (
-    <div className='text-center mx-8 lg:mx-96'>
+    <div className='text-center mx-8 lg:mx-[33rem]'>
       <div className='mt-10'>
         <ToastContainer autoClose={1000}/>
 

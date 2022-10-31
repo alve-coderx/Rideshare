@@ -4,7 +4,7 @@ import drive_eta from '../../assets/drive_eta.png';
 import { Link } from 'react-router-dom';
 const OrderInfo = () => {
     return (
-        <div className='lg:mx-20 mx-5'>
+        <div className='lg:mx-32 mx-5'>
             <div className='flex items-center justify-between py-9 '>
                 <Link to='/user/1/inbox'>
                     <p className='text-[#7D7AFF] text-[500] text-[16px]'>zurück</p>
@@ -42,7 +42,7 @@ const OrderInfo = () => {
                     <p className='bg-[#7D7AFF] text-white text-sm flex items-center rounded-lg px-3 py-1'>inklusive</p>
                 </div>
             </div>
-            <div className='mx-auto right-0 left-0 bottom-5 absolute lg:w-[50%] w-[92%]'>
+            <div className='mx-auto right-0 left-0 bottom-5 absolute lg:w-[32%] w-[92%]'>
                 <Link to={`/order/payment`}>
                     <button className="mt-10 bg-[#1E2024] hover:bg-blue-700 text-white py-4 px-4 rounded-lg w-full">
                         Bestätigen

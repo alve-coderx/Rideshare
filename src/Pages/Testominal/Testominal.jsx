@@ -15,13 +15,13 @@ const Testominal = () => {
 
     }   
     return (
-        <div  className='lg:mx-14'>
+        <div  className='lg:mx-24'>
             <div>
                 <Link to={`/car/${id}`}>
-                    <p className='z-10 absolute top-10 left-16 text-[#7D7AFF]'>zurück</p>
+                    <p className='z-10 absolute top-10 left-32 text-[#7D7AFF]'>zurück</p>
                 </Link>
 
-                <div className='z-10 absolute top-10 right-16  bg-black p-2 rounded-lg'>
+                <div className='z-10 absolute top-10 right-32  bg-black p-2 rounded-lg'>
                     <img src={filter_alt} />
                 </div>
 

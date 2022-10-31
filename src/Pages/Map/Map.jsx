@@ -53,7 +53,7 @@ export default function SimpleMap() {
                     />
                 </GoogleMapReact>
             </div>
-            <div className="absolute bottom-[2rem] rounded-xl right-5 lg:right-96  flex">
+            <div className="absolute bottom-[2rem] rounded-xl right-5 lg:left-24  flex">
                 {
                     [1, 2].map((index) => (
                         <MapCard />

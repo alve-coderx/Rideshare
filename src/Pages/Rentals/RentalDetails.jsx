@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { MdDateRange } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import avater from '../../assets/avater.png';
-import car from '../../assets/tesla.png';
+import car from '../../assets/tesla2.png';
 
 const RentalDetails = () => {
     const [active, setActive] = useState(1)
@@ -44,7 +44,7 @@ const RentalDetails = () => {
             <div className='mx-5 lg:mx-28' >
                 <div className='mt-5 flex flex-col items-center' >
                     <p className='text-[24px] text-center font-[600]'>Anfrage von <span className='text-[#7D7AFF]'>Thomas</span></p>
-                    <img src={car} className='w-[302px] h-[208px] mt-3' />
+                    <img src={car} className='h-[500px] mt-3' />
                 </div>
                 <div className='mt-5'>
                     <div className='flex justify-between' >
@@ -54,9 +54,9 @@ const RentalDetails = () => {
                         </div>
                         <p className='text-[32px] font-[600]'>30 € </p>
                     </div>
-                    <p className='bg-slate-200 text-[10px] mb-5 w-40 font-[600] flex items-center rounded-lg px-2 py-2  mt-3'><MdDateRange className='mr-1' /> Do. 23. Juni  14:00 - 17:00</p>
+                    <p className='bg-slate-200 text-[10px]  w-40 font-[600] flex items-center rounded-lg px-2 py-2  mt-3'><MdDateRange className='mr-1' /> Do. 23. Juni  14:00 - 17:00</p>
                 </div>
-                <div className='mx-auto right-0 left-0 bottom-5 absolute w-[92%] flex justify-center'>
+                <div className='mx-auto mb-5   w-[92%] flex justify-center'>
                     <Link to='/rental/overview'>
                         <button className="mt-10 mx-2 bg-[#7D7AFF] text-[14px] font-[500] text-white py-3 px-6 rounded-lg">
                             Akzeptieren
