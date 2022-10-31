@@ -33,19 +33,21 @@ const UserProfile = () => {
                 </button>
             </div>
             <div className='pb-16 h-4/6 mx-5 lg:mx-20'>
-                <div className='' >
-                    <p className='mt-3 font-black text-sm'>Zahlungen</p>
+                <p className='mt-3 font-black text-sm'>Zahlungen</p>
+                <div className='grid lg:grid-cols-2 grid-cols-1  gap-4' >
                     {
                         zahlungen.map((option) => (
                             <MenuItem key={option.id} image={option.img} text={option.name} icon={option.icon} />
                         ))
                     }
                 </div>
-                <div className=' '>
+                <div>
                     <p className='mt-3 font-black text-sm'>Einstellungen</p>
-                    <MenuItem image={op4} text='Sprache' icon={<AiOutlineRight />} />
-                    <MenuItem text='Impressum' icon={<AiOutlineRight />} />
-                    <MenuItem text='Rechtliches' icon={<AiOutlineRight />} />
+                    <div className='grid lg:grid-cols-2 grid-cols-1  gap-4'>
+                        <MenuItem image={op4} text='Sprache' icon={<AiOutlineRight />} />
+                        <MenuItem text='Impressum' icon={<AiOutlineRight />} />
+                        <MenuItem text='Rechtliches' icon={<AiOutlineRight />} />
+                    </div>
                 </div>
                 {user.email && (
                     <div className=' '>

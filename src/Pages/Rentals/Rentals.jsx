@@ -20,7 +20,7 @@ const Rentals = () => {
     }
     return (
         <div style={{overflow : 'hidden', height : '100vh'}}>
-            <div className='bg-slate-200 flex justify-between lg:w-[20%] md:w-[30%] w-[40%] lg:mx-[40%] md:mx-80 mx-36 mt-8 shadow-sm rounded-lg px-2 py-1'>
+            <div className='bg-slate-200 flex justify-between lg:w-[20%] md:w-[30%] w-[80%] lg:mx-[40%] md:mx-80 mx-10 mt-8 shadow-sm rounded-lg px-2 py-1'>
                 {
                     landlord &&
                     landLordNav.map((element) => <p key={element.id} onClick={() => clickHandler(element.id)} className={active === element.id ? style.nav : style.nav_active}>{element.name}</p>)

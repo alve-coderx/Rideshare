@@ -5,7 +5,7 @@ import avater from '../../assets/avater.png';
 import { BaseCard, MenuItem } from '../../Components';
 const FinishedPage = () => {
   return (
-    <div className='mx-20 lg:mx-36'>
+    <div className='mx-6 lg:mx-36'>
       <div className='mt-5'>
 
         <p className='flex justify-between text-[14px] font-[600]'><span className='text-[#7D7AFF]'>fertig</span><span>Anmietung #2395753</span><span className='text-[#7D7AFF]'>hilfe</span></p>

@@ -12,12 +12,12 @@ const Entry = () => {
       </div>
       <div className='absolute bottom-14'>
             <Link to='/register'>
-              <button className={`${style.btn} bg-[white] text-[#0E0F11] rounded-l-xl`}>
+              <button className={`${style.btn} bg-[white] text-[#0E0F11] rounded-l-xl font-[700]`}>
                 Register
               </button>
             </Link>
             <Link to='/login'>
-              <button className={`${style.btn} bg-slate-700 text-white rounded-r-xl`}>
+              <button className={`${style.btn} bg-slate-700 text-white rounded-r-xl font-[700]`}>
                 Login
               </button>
             </Link>

@@ -83,7 +83,7 @@ const SingleCar = () => {
                   <img className='w-screen lg:w-auto' src='https://i.ibb.co/zVCvfqj/Frame-161.png' />
                 </div>
                 {/* <img className='w-screen ' src='https://i.ibb.co/zVCvfqj/Frame-161.png' /> */}
-                <span className='z-10 absolute bottom-10 right-32 bg-[#FFC53D] text-white text-sm flex items-center rounded-lg px-3 py-1'><AiFillStar /> 5.0</span>
+                <span className='z-10 absolute bottom-10 lg:right-32 right-6 bg-[#FFC53D] text-white text-sm flex items-center rounded-lg px-3 py-1'><AiFillStar /> 5.0</span>
               </div>
             ))
           }
@@ -195,7 +195,7 @@ const SingleCar = () => {
               <p className='text-[14px] font-[600] mt-1'>
                 Bedingungen
               </p>
-              <p className={`flex ${style.li}`}> <span className='mr-3 text-[21px] text-[#52C41A] font-[500] my-2'><AiOutlineCheckCircle /></span>
+              <p className={`flex items-center ${style.li}`}> <span className='mr-3 text-[21px] text-[#52C41A] font-[500] my-2'><AiOutlineCheckCircle /></span>
                 Über 18 Jahre alt und 2 Jahre Fahrzeugerfahrung</p>
 
             </div>

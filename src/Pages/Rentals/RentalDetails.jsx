@@ -4,6 +4,7 @@ import { MdDateRange } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import avater from '../../assets/avater.png';
 import car from '../../assets/tesla2.png';
+import car2 from '../../assets/tesla.png';
 
 const RentalDetails = () => {
     const [active, setActive] = useState(1)
@@ -35,7 +36,7 @@ const RentalDetails = () => {
                         <p className='text-white'>.</p>
                     </div>
                 </div>
-                <div className='bg-slate-200 flex justify-evenly lg:w-[20%] md:w-[30%] w-[40%] lg:mx-[42%] md:mx-80 mx-36 mt-8  shadow-sm rounded-lg py-1'>
+                <div className='bg-slate-200 flex justify-evenly lg:w-[20%] md:w-[30%] w-[60%] lg:mx-[42%] md:mx-80 mx-20 mt-8  shadow-sm rounded-lg py-1'>
                     {
                         navigators.map((element) => <p key={element.id} onClick={() => clickHandler(element.id)} className={active === element.id ? 'font-[600] text-[11.346px] bg-white py-2 px-3 text-[#7D7AFF] rounded-lg' : 'py-2 px-3 text-[11.346px] text-black'}>{element.name}</p>)
                     }
@@ -44,7 +45,8 @@ const RentalDetails = () => {
             <div className='mx-5 lg:mx-28' >
                 <div className='mt-5 flex flex-col items-center' >
                     <p className='text-[24px] text-center font-[600]'>Anfrage von <span className='text-[#7D7AFF]'>Thomas</span></p>
-                    <img src={car} className='h-[500px] mt-3' />
+                    <img src={car} className='h-[500px] mt-3 lg:block md:block hidden' />
+                    <img src={car2} className='w-64 mt-3' />
                 </div>
                 <div className='mt-5'>
                     <div className='flex justify-between' >

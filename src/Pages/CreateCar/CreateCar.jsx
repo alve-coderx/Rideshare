@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { AiOutlineInfoCircle, AiOutlineRight, AiOutlineClose } from 'react-icons/ai';
 import { GoLocation } from 'react-icons/go';
 import map from '../../assets/map2.png';
+import map2 from '../../assets/map.png';
 import { models, kilometers, fuel, transmission } from '../../fakeDB/cars';
 import { texts } from '../../fakeDB/elements';
 import { Modal } from '../../Components';
@@ -202,7 +203,8 @@ const CreateCar = () => {
                       <div className='lg:mx-36 mx-5' >
                         <p className={style.semiText}>Treffpunkt einstellen</p>
                         <div className='flex justify-center'>
-                          <img className='rounded-3xl my-3 h-52 ' src={map} />
+                          <img className='rounded-3xl my-3 h-52 lg:block md:block hidden' src={map} />
+                          <img className='rounded-3xl my-3 h-32 lg:hidden md:hidden block' src={map2} />
                         </div>
                         <div className='bg-white rounded-lg shadow-xl p-3 mt-8 lg:py-6 lg:w-[50%] lg:absolute right-0 left-0 mx-auto'>
                           <p className='flex justify-start items-center text-[#838D95] text-[12px] font-[400]'><GoLocation />Standord eingeben</p>

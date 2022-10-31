@@ -11,11 +11,11 @@ const Search = () => {
       <div className='bg-[white] flex flex-col items-center'>
         <p className='mt-10 lg:mt-0 font-[600] text-[20px]'>Suche dein Auto</p>
         <Link to='/map'>
-          <img className='rounded-3xl my-3 px-20' src={map} />
+          <img className='rounded-3xl my-3 lg:px-20 px-4' src={map} />
         </Link>
-        <div className='flex justify-around shadow-xl items-center mt-1 '>
-          <div className='bg-white lg:w-[70rem]'>
-            <p className='text-[14px] font-[600] text-[#1E2024]  flex items-center rounded-l-lg shadow-lg p-2'><GrLocation /> Aktueller Standort</p>
+        <div className='flex justify-around items-center mt-1 '>
+          <div className='bg-white lg:w-[70rem] shadow-2xl'>
+            <p className='text-[14px] font-[600] text-[#1E2024]  flex items-center rounded-l-lg shadow-lg px-2 py-4'><GrLocation /> Aktueller Standort</p>
           </div>
           <Filter />
         </div>
@@ -23,7 +23,7 @@ const Search = () => {
       <div className='mt-8 lg:mt-1 lg:mx-[5rem]'>
         <Carousel />
       </div>
-      <div className='flex items-center justify-between mx-[18px] mt-4 lg:mx-[6rem]'>
+      <div className='flex items-center justify-between mx-[18px] my-6 lg:mx-[6rem]'>
         <p className='font-black text-[14px] font-[600]'>
           Sofortbuchung<br />
           <span className='text-[#838D95] text-[10px]'>Vermieter akzeptiert alle Anfragen</span>
@@ -36,11 +36,11 @@ const Search = () => {
         </div>
       </div>
       <div className='flex justify-between items-end lg:mx-[6rem]'>
-        <p className='border-b border-black text-white w-[40%]'>.</p>
-        <p className='flex items-center text-[14px] font-[400]'>mehr filtern
+        <p className='border-b border-black text-white w-[35%]'>.</p>
+        <p className='flex items-center text-[15px] font-[400]'>mehr filtern
           <AiOutlineDown aria-hidden="true" />
         </p>
-        <p className='border-b border-black text-white w-[40%]'>.</p>
+        <p className='border-b border-black text-white w-[35%]'>.</p>
       </div>
       <div className='mx-8 lg:mx-[25rem] my-5'>
         <Link to='/map'>

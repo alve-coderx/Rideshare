@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const style = {
     authIcons: 'mt-10 shadow-lg bg-[white] font-bold py-3 px-8 rounded-xl',
-    input: 'mt-3 bg-white text-black text-sm rounded-lg   block w-full p-2.5 border-0 shadow-sm'
+    input: 'mt-3 bg-white text-black text-sm rounded-lg   block w-full p-4 border-0 shadow-sm'
 }
 
 const Login = () => {
@@ -41,7 +41,7 @@ const Login = () => {
                     <Link to={'/passwordreset'}>
                         <p className='text-right text-[13px] text-[#1E2024] font-[600]'>Passwort vergessen?</p>
                     </Link>
-                    <button type='submit' className="mt-10 text-[14px] bg-[#7D7AFF] text-white font-[500] py-2 px-4 rounded-lg w-full">
+                    <button type='submit' className="mt-10 text-[14px] bg-[#7D7AFF] text-white font-[500] p-4 rounded-lg w-full">
                         Login
                     </button>
                 </form>
@@ -60,7 +60,7 @@ const Login = () => {
                     </button>
                 </div>
                 <Link to='/register'>
-                    <p className='mt-10 text-center text-[12px] text-[black] font-[700]'>Du hast keine Account? <span className='text-[#7D7AFF]'>Jetzt Registrieren</span></p>
+                    <p className='mt-10 text-center text-[12px] text-[black] '>Du hast keine Account? <span className='text-[#7D7AFF] font-[700]'>Jetzt Registrieren</span></p>
                 </Link>
             </div>
         </div>

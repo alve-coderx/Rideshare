@@ -5,7 +5,7 @@ import useAuth from '../../Hook/useAuth';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const style = {
-  input: 'mt-3 bg-white text-black text-sm rounded-lg block w-full p-2.5 border-0 m-1',
+  input: 'mt-3 bg-white text-black text-sm rounded-lg block w-full py-4 border-0 m-1',
   boldText: 'text-sm '
 }
 
@@ -88,7 +88,7 @@ const Register = () => {
               ))
             }
           </div>
-          <button type='submit' className="my-10 bg-[#7D7AFF] hover:bg-blue-700 text-white font-[500] py-3 px-4 rounded-lg text-[14px] w-full">
+          <button type='submit' className="my-10 bg-[#7D7AFF] hover:bg-blue-700 text-white font-[500] p-4 rounded-lg text-[14px] w-full">
             Jetzt registrieren
           </button>
         </form>

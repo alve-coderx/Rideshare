@@ -25,11 +25,11 @@ const CarList = () => {
 
 
   return (
-    <div style={{ overflowY: 'hidden', height: '100vh' }}>
+    <div style={{ overflow: 'scroll', height: '100vh' }}>
       <div className='flex justify-around items-center mt-5 '>
         <div className='flex justify-center items-center mt-1 '>
           <div className='rounded-l-xl bg-white lg:w-[56rem] '>
-            <p className='text-[14px] rounded-l-xl font-[500] text-black flex items-center p-2'><GrLocation /> Aktueller Standort</p>
+            <p className='text-[14px] rounded-l-xl font-[500] text-black flex items-center p-4'><GrLocation /> Aktueller Standort</p>
           </div>
           <Filter />
         </div>
@@ -51,8 +51,8 @@ const CarList = () => {
             </div>
           </div>
         </div>
-        <div className='mx-4 h-3/4 pb-16 ' style={{ overflowY: 'scroll' }}>
-          <div className='grid grid-cols-1 sm:grid-cols-2 gap-6'>
+        <div className='' >
+          <div className='grid grid-cols-1 pb-20 lg:grid-cols-2 gap-6 ' >
 
             {
               cars.map((car) => (

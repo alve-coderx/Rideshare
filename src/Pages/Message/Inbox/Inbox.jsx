@@ -11,6 +11,7 @@ import { MdDateRange } from 'react-icons/md';
 import { BottomSheet } from 'react-spring-bottom-sheet';
 import { Link } from 'react-router-dom';
 import car from '../../../assets/tesla.png';
+import car2 from '../../../assets/tesla2.png';
 import { DatePicker } from '../../../Components';
 
 const Inbox = () => {
@@ -67,7 +68,7 @@ const Inbox = () => {
           </div>
             <p className='text-[white] text-[500] text-[16px]'>zurück</p>
         </div>
-        <div className='bg-slate-200 flex justify-evenly lg:w-[20%] md:w-[30%] w-[50%] lg:mx-[42%] md:mx-80 mx-36 mt-8 shadow-sm rounded-lg py-1'>
+        <div className='bg-slate-200 flex justify-evenly lg:w-[20%] md:w-[30%] w-[70%] lg:mx-[42%] md:mx-80 mx-16 mt-8 shadow-sm rounded-lg py-1'>
           {
             navigators.map((element) => <p key={element.id} onClick={() => clickHandler(element.id)} className={active === element.id ? 'font-[600] text-[11.346px] bg-white py-2 px-3 text-[#7D7AFF] rounded-lg' : 'py-2 px-3 text-[11.346px] text-black'}>{element.name}</p>)
           }
@@ -93,7 +94,7 @@ const Inbox = () => {
                 {
                   messages?.[0] && (
                     <Link to='/order/info'>
-                      <div className="mx-20 bg-white w-96  pt-3 rounded-xl relative shadow-xl mt-3">
+                      <div className="lg:mx-20 mx-5 bg-white lg:w-96 w-80  pt-3 rounded-xl relative shadow-xl mt-3">
                         <div className='flex items-top px-3'>
                           <div className='relative'>
                             <img src={'https://i.ibb.co/S3cY7Ct/tesla.png'} />
@@ -120,7 +121,8 @@ const Inbox = () => {
                 <div className='mx-5 lg:mx-10 mt-2 flex flex-col items-center ' >
                   <p className='p-2 rounded-xl bg-[#FFE58F] font-[900] text-[20px]'><BsClock /></p>
                   <p className='text-[20px] text-center font-[600]'>Warte auf <br /> Bestätigung</p>
-                  <img src={car} className='w-[302px] h-[208px] mt-3' />
+                  <img src={car} className='w-[302px] h-[208px] mt-3 lg:hidden md:hidden block' />
+                  <img src={car2} className='w-[888px] mt-3 lg:block md:block hidden' />
                 </div>
                 <div className='mx-5 lg:mx-10 '>
                   <div className='flex justify-between' >
