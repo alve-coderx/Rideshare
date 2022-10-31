@@ -30,8 +30,8 @@ const CreateCar = () => {
 
 
   const style = {
-    wrapper: 'flex justify-between bg-white rounded-lg shadow-xl p-3 ',
-    wrapper_secondary: 'flex items-center text-left justify-around bg-white rounded-lg shadow-xl py-3 mt-10 px-10  ',
+    wrapper: 'flex justify-between bg-white rounded-lg shadow-xl p-3 relative w-full',
+    wrapper_secondary: 'lg:absolute md:absolute lg:lg:bottom-36 right-0 left-0 mx-auto lg:w-[60%] md:w-[80%] flex items-center text-left justify-around bg-white rounded-lg shadow-xl py-3 mt-10 px-2 ',
     primary: 'text-[#838D95] w-96 text-[10px] font-[400] ml-1',
     secondary: 'flex items-center text-[#636B75] text-[13px] font-[600]',
     heading: 'text-[#838D95] text-[12px] font-[400]',
@@ -43,7 +43,7 @@ const CreateCar = () => {
   }
   const Dropdown = ({ value, options, onChange }) => {
     return (
-      <div className='absolute right-20'>
+      <div className='absolute right-14'>
         <select className='flex items-center text-[#636B75] text-[13px] font-[600] border-0 px-6' value={value.value} onChange={onChange}>
           {options.map((option) => (
             <option key={option.id} value={option}>{option.value}</option>
@@ -79,7 +79,7 @@ const CreateCar = () => {
     <div>
       <div className='bg-white lg:px-20 px-5 py-7'>
         <div className={prograss === 11.11 ? `flex justify-end` : 'flex justify-between'}>
-          <p onClick={() => setPrograss((prevState) => prevState - 11.11)} className={prograss === 11.11 ? 'hidden' : 'text-[#7D7AFF]'}>zurück</p>
+          <p onClick={() => setPrograss((prevState) => prevState - 11.11)} className={prograss === 11.11 ? 'hidden' : 'text-[#7D7AFF]' }  style={{ cursor :"pointer"}}>zurück</p>
           <Link to='/startsite/mycars'>
             <div className='bg-black text-white p-2 rounded-lg'>
               <AiOutlineClose />
@@ -97,21 +97,23 @@ const CreateCar = () => {
           prograss === 11.11 ? (
             <div className='lg:mx-10 mx-5'>
               <p className='text-[24px] font-[600]'>Modell deines Fahrzeugs</p>
-              <div className={`mt-8 ${style.wrapper}`}>
-                <p className={style.heading}>Marke</p>
-                <Dropdown
-                  options={models}
-                  value={value}
-                  onChange={(e) => handleChange(e)}
-                />
-              </div>
-              <div className={`mt-5 ${style.wrapper}`}>
-                <p className={style.heading}>Marke</p>
-                <Dropdown
-                  options={models}
-                  value={value}
-                  onChange={(e) => handleChange(e)}
-                />
+              <div className='grid lg:grid-cols-2 gap-2 grid-cols-1 justify-items-center'>
+                <div className={`mt-5 ${style.wrapper} lg:py-6`}>
+                  <p className={style.heading}>Marke</p>
+                  <Dropdown
+                    options={models}
+                    value={value}
+                    onChange={(e) => handleChange(e)}
+                  />
+                </div>
+                <div className={`mt-5 ${style.wrapper} lg:py-6`}>
+                  <p className={style.heading}>Marke</p>
+                  <Dropdown
+                    options={models}
+                    value={value}
+                    onChange={(e) => handleChange(e)}
+                  />
+                </div>
               </div>
               <div className={style.wrapper_secondary}>
                 <p > <AiOutlineInfoCircle className={style.text_bold} /></p>
@@ -123,7 +125,7 @@ const CreateCar = () => {
             prograss === 22.22 ? (
               <div className='lg:mx-10 mx-5'>
                 <p className={style.semiText}>Gebe den Kilometerstand ein</p>
-                <div className={`mt-5 ${style.wrapper}`}>
+                <div className={`mt-5 ${style.wrapper} lg:py-6 lg:w-[50%] lg:absolute right-0 left-0 mx-auto`}>
                   <p className={style.heading}>Marke</p>
                   <Dropdown
                     options={kilometers}
@@ -141,21 +143,23 @@ const CreateCar = () => {
               prograss === 33.33 ? (
                 <div className='lg:mx-10 mx-5'>
                   <p className={style.semiText}>Details hinzufügen</p>
-                  <div className={`mt-5 ${style.wrapper}`}>
-                    <p className={style.heading}>Marke</p>
-                    <Dropdown
-                      options={fuel}
-                      value={value}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className={`mt-5 ${style.wrapper}`}>
-                    <p className={style.heading}>Marke</p>
-                    <Dropdown
-                      options={transmission}
-                      value={value}
-                      onChange={handleChange}
-                    />
+                  <div className='grid lg:grid-cols-2 gap-2 grid-cols-1 justify-items-center'>
+                    <div className={`mt-5 ${style.wrapper} lg:py-6`}>
+                      <p className={style.heading}>Marke</p>
+                      <Dropdown
+                        options={fuel}
+                        value={value}
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div className={`mt-5 ${style.wrapper} lg:py-6`}>
+                      <p className={style.heading}>Marke</p>
+                      <Dropdown
+                        options={transmission}
+                        value={value}
+                        onChange={handleChange}
+                      />
+                    </div>
                   </div>
                   <div className={style.wrapper_secondary}>
                     <p > <AiOutlineInfoCircle className={style.text_bold} /></p>
@@ -180,9 +184,9 @@ const CreateCar = () => {
                   prograss === 55.55 ? (
                     <div className='lg:mx-10 mx-5'>
                       <p className={style.semiText}>Weitere Merkmale</p>
-                      <div className='grid grid-cols-3 gap-16 mt-8 '>
+                      <div className='grid grid-cols-3 gap-4 mt-8 justify-items-center'>
                         {
-                          texts.map((text) => <p key={text.id} onClick={() => clickHandler(text.id)} className={active === text.id ? 'text-[white] m-1 p-2 rounded-lg text-[12px] bg-[#7D7AFF] font-[400]' : 'text-[black] border border-black m-1 p-2 rounded-lg text-[12px] bg-[transparent] font-[400]'}>{text.name}</p>)
+                          texts.map((text) => <p key={text.id} onClick={() => clickHandler(text.id)} className={active === text.id ? 'text-[white] m-1 p-2 rounded-xl text-[12px] bg-[#7D7AFF] font-[400]' : 'text-[black] border border-black m-1 p-2 rounded-xl text-[12px] bg-[transparent] font-[400]'}>{text.name}</p>)
                         }
                       </div>
 
@@ -200,7 +204,7 @@ const CreateCar = () => {
                         <div className='flex justify-center'>
                           <img className='rounded-3xl my-3 h-52' src={map} />
                         </div>
-                        <div className='bg-white rounded-lg shadow-xl p-3 mt-8'>
+                        <div className='bg-white rounded-lg shadow-xl p-3 mt-8 lg:py-6 lg:w-[50%] lg:absolute right-0 left-0 mx-auto'>
                           <p className='flex justify-start items-center text-[#838D95] text-[12px] font-[400]'><GoLocation />Standord eingeben</p>
                         </div>
                         <div className={style.wrapper_secondary}>
@@ -226,7 +230,7 @@ const CreateCar = () => {
                         prograss === 88.88 ? (
                           <div className='lg:mx-10 mx-5'>
                             <p className={style.semiText}>Gib deine Telefonnummer ein </p>
-                            <input name='password' type='number' className={style.input} placeholder="Telefonnummer eingeben" required />
+                            <input type='number' className={`style.input lg:py-6 lg:w-[50%] lg:absolute right-0 left-0 mx-auto border-0`} placeholder="Telefonnummer eingeben" required />
 
                             <div className={style.wrapper_secondary}>
                               <p > <AiOutlineInfoCircle className={style.text_bold} /></p>
@@ -239,7 +243,7 @@ const CreateCar = () => {
                           prograss === 99.99 ? (
                             <div className='lg:mx-10 mx-5'>
                               <p className={style.semiText}>Lade Bilder von deinem Auto hoch</p>
-                              <div className='text-center bg-[#E6E6FF] flex items-center justify-center rounded-lg py-10 mt-5'>
+                              <div className='text-center bg-[#E6E6FF] flex items-center justify-center rounded-lg py-10 mt-5 lg:py-6 lg:w-[50%] lg:absolute right-0 left-0 mx-auto'>
                                 <div className="flex w-full items-center justify-center bg-grey-lighter">
                                   <label className="w-64 flex flex-col items-center px-4 py-6 text-blue rounded-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-white">
                                     <span className="text-base leading-normal">
@@ -266,7 +270,7 @@ const CreateCar = () => {
                             ''
         }
       </div>
-      <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%] lg:w-[50%]'>
+      <div className='mx-auto right-0 left-0 bottom-2 lg:bottom-10 absolute w-[92%] lg:w-[50%]'>
         <button onClick={() => setPrograss((prevState) => prevState + 11.11)} className={prograss === 99.99 ? "hidden" : style.btn}>
           Nächster Schritt
           <AiOutlineRight className='ml-5 text-[20px]' />
