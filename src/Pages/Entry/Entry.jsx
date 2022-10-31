@@ -8,7 +8,7 @@ const Entry = () => {
   return (
     <div className='text-center flex flex-col items-center lg_bg ' style={{height : '100vh',backgroundRepeat : 'no-repeat',backgroundSize : 'cover',backgroundPosition : "center"}} >
       <div className='pt-12 w-[306px] lg:w-[600px]'>
-        <p className="text-[50px] font-[600] leading-[45px]	">Search, Book and Rent Your Vehincle Easily</p>
+        <p className="lg:text-[50px] text-[40px] font-[600] leading-[45px]	">Search, Book and Rent Your Vehincle Easily</p>
       </div>
       <div className='absolute bottom-14'>
             <Link to='/register'>
