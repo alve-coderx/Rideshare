@@ -37,7 +37,7 @@ const CarList = () => {
           <img src={filter_alt} />
         </div>
       </div>
-      <div className='lg:mx-[5rem]'>
+      <div className='lg:mx-[10rem]'>
 
         <div className='mx-4 my-5 flex justify-between'>
           <FilterDropDown />

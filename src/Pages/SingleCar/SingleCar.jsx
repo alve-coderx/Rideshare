@@ -200,9 +200,9 @@ const SingleCar = () => {
 
             </div>
           </div>
-          <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%] lg:w-[36%]  '>
+          <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%] lg:w-[30%]  '>
             <Link to={'/user/1/message'}>
-              <button className="mt-10 bg-[#1E2024] text-white text-[14px] py-4 px-4 rounded-lg w-full">
+              <button className="mt-10 bg-[#1E2024] text-white text-[14px] py-6 px-4 rounded-lg w-full">
                 Buchung anfragen
               </button>
             </Link>

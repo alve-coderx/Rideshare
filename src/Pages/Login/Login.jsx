@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const style = {
     authIcons: 'mt-10 shadow-lg bg-[white] font-bold py-3 px-8 rounded-xl',
-    input: 'mt-3 bg-white text-black text-sm rounded-lg   block w-full p-4 border-0 shadow-sm'
+    input: 'mt-10 bg-white text-black text-sm rounded-lg   block w-full p-4 border-0 shadow-sm'
 }
 
 const Login = () => {
@@ -29,19 +29,19 @@ const Login = () => {
     };
 
     return (
-        <div className='text-center mx-8 lg:mx-[33rem]'>
-            <div className='mt-16'>
+        <div className='text-center mx-8 lg:mx-[35rem]'>
+            <div className='mt-16 text-center'>
                 <p className="text-[28px] font-[600]">Hello Again</p>
-                <p className="text-[14px] text-[#636B75] mt-2 font-[400]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, urna, a, fusce</p>
+                <p className="text-[14px] text-[#636B75] mt-2 font-[400] ">Lorem ipsum dolor sit amet, consectetur <br/> adipiscing elit. Amet, urna, a, fusce</p>
             </div>
             <div className='mt-8'>
                 <form onSubmit={handleSubmit}>
                     <input name='email' onChange={(e) => handleOnChage(e)} type="text" className={style.input} placeholder="Dein Username" required />
                     <input name='password' onChange={(e) => handleOnChage(e)} type="password" className={style.input} placeholder="Dein Password" required />
                     <Link to={'/passwordreset'}>
-                        <p className='text-right text-[13px] text-[#1E2024] font-[600]'>Passwort vergessen?</p>
+                        <p className='text-right text-[13px] text-[#1E2024] font-[600] mt-3'>Passwort vergessen?</p>
                     </Link>
-                    <button type='submit' className="mt-10 text-[14px] bg-[#7D7AFF] text-white font-[500] p-4 rounded-lg w-full">
+                    <button type='submit' className="mt-10 text-[14px] bg-[#7D7AFF] text-white font-[500] px-4 py-5 rounded-lg w-full">
                         Login
                     </button>
                 </form>

@@ -5,14 +5,14 @@ import useAuth from '../../Hook/useAuth';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const style = {
-  input: 'mt-3 bg-white text-black text-sm rounded-lg block w-full py-4 border-0 m-1',
+  input: 'mt-8 bg-white text-black text-sm rounded-lg block w-full py-4 border-0 m-1',
   boldText: 'text-sm '
 }
 
 const Register = () => {
   const [loginData, setLogindata] = useState({});
   const [toggle, setToggle] = useState(2);
-  const [show, setShow] = useState();
+  const [show, setShow] = useState(1);
   const { registerUser, confirm } = useAuth();
   const handleOnChage = (e) => {
     const field = e.target.name;
@@ -44,7 +44,7 @@ const Register = () => {
   };
   
   return (
-    <div className='text-center mx-8 lg:mx-[33rem]'>
+    <div className='text-center mx-8 lg:mx-[35rem]'>
       <div className='mt-10'>
         <ToastContainer autoClose={1000}/>
 
@@ -69,7 +69,7 @@ const Register = () => {
             toggle === 1 && <input name='company' onChange={(e) => handleOnChage(e)} type="text" className={`${style.input}`} placeholder="firmenname" required />
           }
           <div className='relative'>
-            <AiOutlineMail className='absolute top-3 left-4 text-[#636B75]' />
+            <AiOutlineMail className='absolute top-4 left-4 text-[#636B75]' />
             <input name='email' onChange={(e) => handleOnChage(e)} type="text" className={`pl-10 ${style.input}`} placeholder="E-Mail" required />
           </div>
           <input name='password' onChange={(e) => handleOnChage(e)} type="password" className={style.input} placeholder="Passwort" required />
@@ -88,7 +88,7 @@ const Register = () => {
               ))
             }
           </div>
-          <button type='submit' className="my-10 bg-[#7D7AFF] hover:bg-blue-700 text-white font-[500] p-4 rounded-lg text-[14px] w-full">
+          <button type='submit' className="my-10 bg-[#7D7AFF] hover:bg-blue-700 text-white font-[500] px-4 py-5 rounded-lg text-[14px] w-full">
             Jetzt registrieren
           </button>
         </form>
