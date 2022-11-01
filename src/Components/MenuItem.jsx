@@ -2,7 +2,7 @@ import React from 'react'
 
 const MenuItem = ({ image, text, icon }) => {
     const style = {
-        zahlungen: 'flex items-center justify-between bg-white px-2 py-3 rounded-xl shadow-lg mt-2',
+        zahlungen: 'flex items-center justify-between bg-white px-2 py-5 rounded-xl shadow-lg mt-2',
         einstellungen: 'flex items-center justify-between bg-white px-2 py-4 rounded-xl shadow-lg mt-2',
         fonts: 'text-black text-[12px]'
     };

@@ -32,7 +32,7 @@ const UserProfile = () => {
                     Profil bearbeiten
                 </button>
             </div>
-            <div className='pb-16 h-4/6 mx-5 lg:mx-20'>
+            <div className='pb-16 h-4/6 mx-5 lg:mx-32'>
                 <p className='mt-3 font-black text-sm'>Zahlungen</p>
                 <div className='grid lg:grid-cols-2 grid-cols-1  gap-4' >
                     {
