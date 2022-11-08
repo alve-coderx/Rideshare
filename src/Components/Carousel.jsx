@@ -13,9 +13,18 @@ export default class Responsive extends Component {
       initialSlide: 0,
       responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 1600,
           settings: {
             slidesToShow: 5,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 1000,
+          settings: {
+            slidesToShow: 7,
             slidesToScroll: 1,
             infinite: true,
             dots: false

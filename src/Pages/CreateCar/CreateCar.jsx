@@ -98,7 +98,7 @@ const CreateCar = () => {
           prograss === 11.11 ? (
             <div className='lg:mx-20 mx-5'>
               <p className='text-[24px] font-[600]'>Modell deines Fahrzeugs</p>
-              <div className='grid lg:grid-cols-2 gap-2 grid-cols-1 justify-items-center'>
+              <div className='grid lg:grid-cols-1 gap-2 grid-cols-1 justify-items-center'>
                 <div className={`mt-5 ${style.wrapper} lg:py-6`}>
                   <p className={style.heading}>Marke</p>
                   <Dropdown
@@ -144,7 +144,7 @@ const CreateCar = () => {
               prograss === 33.33 ? (
                 <div className='lg:mx-20 mx-5'>
                   <p className={style.semiText}>Details hinzufügen</p>
-                  <div className='grid lg:grid-cols-2 gap-2 grid-cols-1 justify-items-center'>
+                  <div className='grid lg:grid-cols-1 gap-2 grid-cols-1 justify-items-center'>
                     <div className={`mt-5 ${style.wrapper} lg:py-6`}>
                       <p className={style.heading}>Marke</p>
                       <Dropdown

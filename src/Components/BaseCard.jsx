@@ -6,7 +6,7 @@ import DatePicker from './DatePicker'
 
 const BaseCard = ({edit,arrow,color,bg, link, image, primaryTag, secondaryTag, title, subTitle, price, hours, iconTag, tagBg, datePicker, subLink, rentPrice, lfTag }) => {
     return (
-        <div className={`w-full flex items-top bg-[white] p-3 rounded-xl relative shadow-xl mt-2 `}>
+        <div className={`w-full flex items-top bg-[white] p-5 rounded-xl relative shadow-xl mt-2 `}>
             <Link to={link}>
                 <div className='flex items-center'>
                     {

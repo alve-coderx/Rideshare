@@ -2,6 +2,9 @@
     background: white!important;
     position: relative;
     outline: none;
+    position: absolute;
+    right: 10%;
+    top : 15%;
 }
 
 /* Creates triangular tip on the
@@ -15,7 +18,7 @@
     border-top: 20px solid white!important;
     border-bottom: 20px solid transparent;
     right: 0;
-    bottom: 10px;
+    bottom: 20px;
     outline: none;
 
 }

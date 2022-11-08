@@ -12,7 +12,7 @@ const FinishedPage = () => {
         <li className='text-[#636B75] text-[12px] font-[400] mt-5 mx-1 w-92'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum, tincidunt quisque mattis risus.</li>
         <li className='text-[#636B75] text-[12px] font-[400] mt-5 mx-1 w-92'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum, tincidunt quisque mattis risus.</li>
         <Link to='/rental/documents'>
-          <button className="mt-10 bg-[#1E2024] hover:bg-blue-700 text-white py-4 px-4 rounded-lg w-full">
+          <button className="mt-10 bg-[#1E2024] text-white py-4 px-4 rounded-lg w-full">
             Beginne die Anmietung
           </button>
         </Link>

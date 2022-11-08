@@ -44,7 +44,6 @@ export default function SimpleMap() {
                     defaultCenter={defaultProps.center}
                     defaultZoom={defaultProps.zoom}
                     options={{ disableDefaultUI: true, zoomControl: false }}
-
                 >
                     <AnyReactComponent
                         lat={59.955413}
@@ -53,7 +52,7 @@ export default function SimpleMap() {
                     />
                 </GoogleMapReact>
             </div>
-            <div className="absolute bottom-[2rem] rounded-xl right-0 left-0 mx-auto flex">
+            <div className="absolute bottom-[2rem] rounded-xl lg:left-44 mx-auto flex">
                 <div className="hidden lg:block md:block">
                     <MapCard />
                 </div>

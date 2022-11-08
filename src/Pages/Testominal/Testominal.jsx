@@ -6,16 +6,16 @@ import Content from '../../assets/Content.png';
 import { Link, useParams } from 'react-router-dom';
 
 const Testominal = () => {
-    const {id} = useParams();
+    const { id } = useParams();
     const style = {
-        primary : 'font-[#838D95] text-[12px] font-[400]',
-        secondary : 'text-[13px] text-[#7D7AFF] ml-2 font-[600]',
-        wrapper : 'rounded-[24px] bg-white shadow-xl py-[24px] px-[12px] mt-3',
-        text_sm : 'font-[#838D95] text-[#838D95] text-[10.6px]'
+        primary: 'font-[#838D95] text-[12px] font-[400]',
+        secondary: 'text-[13px] text-[#7D7AFF] ml-2 font-[600]',
+        wrapper: 'rounded-[24px] bg-white shadow-xl py-[24px] px-[12px] mt-5',
+        text_sm: 'font-[#838D95] text-[#838D95] text-[10.6px]'
 
-    }   
+    }
     return (
-        <div  className='lg:mx-24'>
+        <div className='lg:mx-32'>
             <div>
                 <Link to={`/car/${id}`}>
                     <p className='z-10 absolute top-10 lg:left-32 left-10 text-[#7D7AFF]'>zurück</p>
@@ -30,7 +30,7 @@ const Testominal = () => {
                 <img className='mt-3' src={avater} />
                 <p className='mt-3 font-black text-sm'>Thomas</p>
                 <p className='ml-1 mt-2 text-[#FAAD14] text-[20px] flex font-[600]'>
-                    {[1, 2, 3, 4, 5].map((index) => <AiFillStar index={index}/>)}
+                    {[1, 2, 3, 4, 5].map((index) => <AiFillStar index={index} />)}
                 </p>
                 <div className='flex justify-center w-full mt-3'>
                     <div className='text-center ml-5'>
@@ -44,27 +44,19 @@ const Testominal = () => {
                 </div>
             </div>
             <div className='mx-5 my-5'>
-                <div className={style.wrapper}>
-                    <p className='font-[#636B75] text-[12px] font-[400]'>Take as many pixel-perfect UI elements as you want and style them the way you need in a fraction of the time.</p>
-                    <div className='flex items-center mt-4'>
-                        <img src={Content} />
-                        <p className={style.secondary}>Jackie Forman</p>
-                    </div>
-                </div>
-                <div className={style.wrapper}>
-                    <p className={style.primary}>Take as many pixel-perfect UI elements as you want and style them the way you need in a fraction of the time.</p>
-                    <div className='flex items-center mt-4'>
-                        <img src={Content} />
-                        <p className={style.secondary}>Jackie Forman</p>
-                    </div>
-                </div>
-                <div className={style.wrapper}>
-                    <p className={style.primary}>Take as many pixel-perfect UI elements as you want and style them the way you need in a fraction of the time.</p>
-                    <div className='flex items-center mt-4'>
-                        <img src={Content} />
-                        <p className={style.secondary}>Jackie Forman</p>
-                    </div>
-                </div>
+                {
+                    [1, 2, 3, 4].map((index) => (
+                        <div key={index} className={style.wrapper}>
+                            <p className='font-[#636B75] text-[12px] font-[400]'>Take as many pixel-perfect UI elements as you want and style them the way you need in a fraction of the time.</p>
+                            <div className='flex items-center mt-4'>
+                                <img src={Content} />
+                                <p className={style.secondary}>Jackie Forman</p>
+                            </div>
+                        </div>
+                    ))
+                }
+
+
             </div>
         </div>
     )

@@ -42,9 +42,9 @@ const OrderInfo = () => {
                     <p className='bg-[#7D7AFF] text-white text-sm flex items-center rounded-lg px-3 py-1'>inklusive</p>
                 </div>
             </div>
-            <div className='mx-auto right-0 left-0 bottom-5 absolute lg:w-[32%] w-[92%]'>
+            <div className='mx-auto right-0 left-0 absolute lg:w-[32%] w-[92%]'>
                 <Link to={`/order/payment`}>
-                    <button className="mt-10 bg-[#1E2024] hover:bg-blue-700 text-white py-4 px-4 rounded-lg w-full">
+                    <button className="my-10 bg-[#1E2024] text-white py-4 px-4 rounded-lg w-full">
                         Bestätigen
                     </button>
                 </Link>

@@ -80,7 +80,7 @@ const SingleCar = () => {
                   <img className='w-screen lg:w-auto' src='https://i.ibb.co/vkjDgxN/Frame-31-1.png' />
                 </div>
                 <div className='lg:block md:block hidden'>
-                  <img className='w-screen lg:w-auto' src='https://i.ibb.co/zVCvfqj/Frame-161.png' />
+                  <img className='w-screen lg:w-full' src='https://i.ibb.co/zVCvfqj/Frame-161.png' />
                 </div>
                 {/* <img className='w-screen ' src='https://i.ibb.co/zVCvfqj/Frame-161.png' /> */}
                 <span className='z-10 absolute bottom-10 lg:right-32 right-6 bg-[#FFC53D] text-white text-sm flex items-center rounded-lg px-3 py-1'><AiFillStar /> 5.0</span>

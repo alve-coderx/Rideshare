@@ -28,7 +28,7 @@ const CarList = () => {
     <div style={{ overflow: 'scroll', height: '100vh' }}>
       <div className='flex justify-around items-center mt-5 '>
         <div className='flex justify-center items-center mt-1 '>
-          <div className='rounded-l-xl bg-white lg:w-[56rem] '>
+          <div className='rounded-l-xl bg-white lg:w-[56rem] shadow-lg'>
             <p className='text-[14px] rounded-l-xl font-[500] text-black flex items-center p-4'><GrLocation /> Aktueller Standort</p>
           </div>
           <Filter />
@@ -51,7 +51,7 @@ const CarList = () => {
             </div>
           </div>
         </div>
-        <div className='' >
+        <div className='mx-4' >
           <div className='grid grid-cols-1 pb-20 lg:grid-cols-2 gap-6 ' >
 
             {

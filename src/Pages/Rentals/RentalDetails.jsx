@@ -46,7 +46,7 @@ const RentalDetails = () => {
                 <div className='mt-5 flex flex-col items-center' >
                     <p className='text-[24px] text-center font-[600]'>Anfrage von <span className='text-[#7D7AFF]'>Thomas</span></p>
                     <img src={car} className='h-[500px] mt-3 lg:block md:block hidden' />
-                    <img src={car2} className='w-64 mt-3' />
+                    <img src={car2} className='w-64 mt-3 lg:hidden md:hidden block' />
                 </div>
                 <div className='mt-5'>
                     <div className='flex justify-between' >

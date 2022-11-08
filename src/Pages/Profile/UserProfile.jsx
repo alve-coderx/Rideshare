@@ -51,7 +51,7 @@ const UserProfile = () => {
                 </div>
                 {user.email && (
                     <div className=' '>
-                        <p className='mt-3 font-black text-sm'>Logout</p>
+                        <p className='mt-8 font-black text-sm'>Logout</p>
                         {
                             <button onClick={logout} className='w-full'>
                                 <MenuItem logout={logout} text='Logout' icon={<BiLogOut />} />
