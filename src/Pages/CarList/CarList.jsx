@@ -26,10 +26,10 @@ const CarList = () => {
 
   return (
     <div style={{ overflow: 'scroll', height: '100vh' }}>
-      <div className='flex justify-around items-center mt-5 '>
-        <div className='flex justify-center items-center mt-1 '>
-          <div className='rounded-l-xl bg-white lg:w-[56rem] shadow-lg'>
-            <p className='text-[14px] rounded-l-xl font-[500] text-black flex items-center p-4'><GrLocation /> Aktueller Standort</p>
+      <div className='flex justify-around items-center mt-5 relative'>
+        <div className='flex justify-around items-center w-full lg:px-44 md:px-10 px-8 rounded-l-2xl absolute '>
+          <div className='bg-white bg-[white] rounded-l-xl w-full shadow-2xl '>
+            <p className='text-[14px] font-[600] text-[#1E2024] rounded-l-xl shadow-2xl flex items-center shadow-lg px-2 py-4'><GrLocation /> Aktueller Standort</p>
           </div>
           <Filter />
         </div>
@@ -37,9 +37,8 @@ const CarList = () => {
           <img src={filter_alt} />
         </div>
       </div>
-      <div className='lg:mx-[10rem]'>
-
-        <div className='mx-4 my-5 flex justify-between'>
+      <div className='lg:px-44 md:px-10 px-8'>
+        <div className=' my-5 flex justify-between'>
           <FilterDropDown />
           <div className='flex items-center justify-between	'>
             <p className='mr-1'>Sofortbuchung</p>
@@ -51,7 +50,7 @@ const CarList = () => {
             </div>
           </div>
         </div>
-        <div className='mx-4' >
+        <div className='' >
           <div className='grid grid-cols-1 pb-20 lg:grid-cols-2 gap-6 ' >
 
             {

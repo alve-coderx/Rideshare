@@ -6,8 +6,8 @@ import {landLordNav,rentarNav} from '../../fakeDB/elements';
 
 const Rentals = () => {
     const [active, setActive] = useState(1)
-    const landlord = true;
-    const renter = false;
+    const landlord = false;
+    const renter = true;
     const clickHandler = (index) => {
         setActive((prev) => {
             return prev === index ? null : index;
@@ -15,12 +15,12 @@ const Rentals = () => {
     };
    
     const style = {
-        nav : 'font-[600] text-[11.346px] bg-white py-1 px-2 text-[#7D7AFF] rounded-lg',
-        nav_active : 'py-1 px-2 text-[11.346px] text-black'
+        nav : 'font-[600] text-[11.346px] bg-white py-1  text-[#7D7AFF] rounded-lg ',
+        nav_active : 'py-1 text-[11.346px] text-black '
     }
     return (
-        <div style={{overflow : 'hidden', height : '100vh'}}>
-            <div className='bg-slate-200 flex justify-between lg:w-[20%] md:w-[30%] w-[80%] lg:mx-[40%] md:mx-80 mx-10 mt-8 shadow-sm rounded-lg px-2 py-1'>
+        <div style={{overflow : 'hidden', height : '100vh'}} className="lg:px-44 md:px-20 px-10">
+            <div className='bg-slate-200 flex justify-between mt-8 shadow-sm rounded-lg px-2 py-1 lg:mx-52 md:mx-32'>
                 {
                     landlord &&
                     landLordNav.map((element) => <p key={element.id} style={{cursor : 'pointer'}}  onClick={() => clickHandler(element.id)} className={active === element.id ? style.nav : style.nav_active}>{element.name}</p>)

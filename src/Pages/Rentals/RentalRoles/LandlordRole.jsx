@@ -4,7 +4,7 @@ import { BaseCard } from '../../../Components';
 
 const LandlordRole = ({ active }) => {
     return (
-        <div className='mx-10 lg:mx-20 mt-5 pb-16 h-5/6' style={{ overflowY: 'scroll' }}>
+        <div className='mt-5 pb-16 h-5/6' style={{ overflowY: 'scroll' }}>
             {
                 active === 1 ?
                     (
