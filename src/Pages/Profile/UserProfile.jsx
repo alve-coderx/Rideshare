@@ -11,7 +11,7 @@ import MenuItem from '../../Components/MenuItem';
 import useAuth from '../../Hook/useAuth';
 
 const UserProfile = () => {
-    const { logout, user } = useAuth();
+    const { logout, user} = useAuth();
     const zahlungen = [
         { name: 'zurück', img: op1, icon: <AiOutlineRight />, id: 1 },
         { name: 'Zahlungsbelege', img: op2, icon: <AiOutlineRight />, id: 2 },
@@ -34,7 +34,7 @@ const UserProfile = () => {
             </div>
             <div className='pb-16 h-4/6 mx-5 lg:mx-32'>
                 <p className='mt-3 font-black text-sm'>Zahlungen</p>
-                <div className='grid lg:grid-cols-2 grid-cols-1  gap-4' >
+                <div className='grid grid-cols-1  gap-4' >
                     {
                         zahlungen.map((option) => (
                             <MenuItem key={option.id} image={option.img} text={option.name} icon={option.icon} />
@@ -43,22 +43,23 @@ const UserProfile = () => {
                 </div>
                 <div>
                     <p className='mt-3 font-black text-sm'>Einstellungen</p>
-                    <div className='grid lg:grid-cols-2 grid-cols-1  gap-4'>
+                    <div className='grid grid-cols-1  gap-4'>
                         <MenuItem image={op4} text='Sprache' icon={<AiOutlineRight />} />
                         <MenuItem text='Impressum' icon={<AiOutlineRight />} />
                         <MenuItem text='Rechtliches' icon={<AiOutlineRight />} />
+                        {user.email && (
+                            <div className=' '>
+                                <p className='mt-8 font-black text-sm'>Logout</p>
+                                {
+                                    <button onClick={logout} className='w-full'>
+                                        <MenuItem logout={logout} text='Logout' icon={<BiLogOut />} />
+                                    </button>
+                                }
+                            </div>
+                        )}
                     </div>
                 </div>
-                {user.email && (
-                    <div className=' '>
-                        <p className='mt-8 font-black text-sm'>Logout</p>
-                        {
-                            <button onClick={logout} className='w-full'>
-                                <MenuItem logout={logout} text='Logout' icon={<BiLogOut />} />
-                            </button>
-                        }
-                    </div>
-                )}
+
             </div>
         </div>
     )

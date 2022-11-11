@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const style = {
     authIcons: 'mt-10 shadow-lg bg-[white] font-bold py-3 px-8 rounded-xl',
-    input: 'mt-10 bg-white text-black text-sm rounded-lg   block w-full p-4 border-0 shadow-sm'
+    input: 'mt-10 bg-white text-black text-sm rounded-xl   block w-full py-5 px-4 border-0 shadow-sm'
 }
 
 const Login = () => {
@@ -29,10 +29,10 @@ const Login = () => {
     };
 
     return (
-        <div className='text-center mx-8 lg:mx-[35rem]'>
+        <div className='text-center w-full px-8 md:px-64 lg:px-96'>
             <div className='mt-16 text-center'>
                 <p className="text-[28px] font-[600]">Hello Again</p>
-                <p className="text-[14px] text-[#636B75] mt-2 font-[400] ">Lorem ipsum dolor sit amet, consectetur <br/> adipiscing elit. Amet, urna, a, fusce</p>
+                <p className="text-[15px] text-[#636B75] mt-2 font-[400] ">Lorem ipsum dolor sit amet, consectetur <br/> adipiscing elit. Amet, urna, a, fusce</p>
             </div>
             <div className='mt-8'>
                 <form onSubmit={handleSubmit}>

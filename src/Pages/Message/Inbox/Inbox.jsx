@@ -171,7 +171,7 @@ const Inbox = () => {
               <button onClick={() => setMessages(current => [...current, { msg: message, author: 'me' }])} className='absolute right-5 bg-[#7D7AFF] p-1 rounded-lg shadow-xl text-white' >
                 <AiOutlineArrowUp className='text-[25px] ' />
               </button>
-              <input onChange={(e) => handleSubmitMsg(e)} step={{ outline: 'none' }} className="shadow-lg rounded w-full py-2 px-3 text-gray-700  border-0" type="text" placeholder="Nachricht senden..." />
+              <input onChange={(e) => handleSubmitMsg(e)} step={{ outline: 'none' }} className="shadow-lg rounded w-full py-4 px-3 text-gray-700  border-0" type="text" placeholder="Nachricht senden..." />
             </div>
           )
           :

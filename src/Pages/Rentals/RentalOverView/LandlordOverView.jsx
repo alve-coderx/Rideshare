@@ -11,12 +11,12 @@ const LandlordOverView = () => {
         absolute : 'flex items-center text-[10px] font-[600]'
     }
     return (
-        <div>
+        <div className='lg:mx-20 mx-5'>
             <div>
                 <div className='text-center pt-5 ' >
                     <p className='text-black font-[600] text-[16px]'>Anmietung #2395753</p>
                 </div>
-                <div className='bg-white rounded-lg shadow-lg mt-2 mx-5 p-4 flex items-center relative'>
+                <div className='bg-white rounded-lg shadow-lg mt-2  p-4 flex items-center relative'>
                     <img className='w-[50px] h-[50px]' src={avater} />
                     <div className='ml-5'>
                         <p className='font-[900] '>Auto Name</p>
@@ -25,7 +25,7 @@ const LandlordOverView = () => {
                     </div>
                 </div>
             </div>
-            <div className='mx-5 mt-5 mb-4'>
+            <div className=' mt-5 mb-4'>
                 <p className={style.secondary}>Preis</p>
                 <div className='relative'>
                     <input id="message" rows="4" className={style.inputNm} placeholder="1 Tage (incl. 200km)" />
@@ -40,11 +40,11 @@ const LandlordOverView = () => {
                     <span className='absolute right-2 top-3 text-[#7D7AFF]'>11,25 €</span>
                 </div>
             </div>
-            <div className='mx-5'>
+            <div className=''>
                 <p className={style.secondary}>Abgeschlossene Anmietung</p>
                 <p className={style.primary}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, eget quam quis a. Est vivamus semper gravida</p>
             </div>
-            <div className='mx-5 mt-5'>
+            <div className=' mt-5'>
                 <p className={style.secondary}>Oft genutzte Funktionen</p>
                 <div className='relative'>
                     <input id="message" rows="4" className={style.inputNm} placeholder="1 Tage (incl. 200km)" />
@@ -55,9 +55,9 @@ const LandlordOverView = () => {
                     <AiOutlineArrowRight className={style.span} />
                 </div>
             </div>
-            <div className='mx-5 mt-5'>
+            <div className=' mt-5'>
                 <p className={style.secondary}>Nachrichten</p>
-                <div className='bg-white rounded-lg shadow-lg mt-2 mx-5 p-4 flex items-center relative'>
+                <div className='bg-white rounded-lg shadow-lg mt-2 p-4 flex items-center relative'>
                     <img className='w-[50px] h-[50px]' src={avater} />
                     <div className='ml-5'>
                         <p className='font-[900] '>Auto Name</p>
@@ -67,9 +67,9 @@ const LandlordOverView = () => {
                     </div>
                 </div>
             </div>
-            <div className='mx-5 my-5'>
+            <div className=' my-5'>
                 <p className={style.secondary}>Mieter</p>
-                <div className='bg-[#7D7AFF] rounded-lg shadow-lg mt-2 mx-5 p-4 flex items-center relative'>
+                <div className='bg-[#7D7AFF] rounded-lg shadow-lg mt-2 p-4 flex items-center relative'>
                     <img className='w-[50px] h-[50px]' src={avater} />
                     <div className='ml-5'>
                         <p className='font-[600] text-white'>Max</p>

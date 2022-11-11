@@ -6,6 +6,8 @@ export const cars = [
     { name: 'Tesla', img: 'https://i.ibb.co/xFdLNkM/Image-Placeholder-2.png', icon : <AiOutlineClose /> , id: 2, tagBg : '#FFCCC7' },
     { name: 'Tesla', img: 'https://i.ibb.co/VxHD9nJ/Image-Placeholder-3.png', icon : <AiOutlineCheckCircle /> , id: 3, tagBg : '#D9F7BE' },
     { name: 'Tesla', img: 'https://i.ibb.co/0rMgGtf/Image-Placeholder-5.png', icon : <AiOutlineCheckCircle /> , id: 4, tagBg : '#D9F7BE' },
+    { name: 'Tesla', img: 'https://i.ibb.co/0rMgGtf/Image-Placeholder-5.png', icon : <AiOutlineCheckCircle /> , id: 5, tagBg : '#D9F7BE' },
+    { name: 'Tesla', img: 'https://i.ibb.co/0rMgGtf/Image-Placeholder-5.png', icon : <AiOutlineCheckCircle /> , id: 6, tagBg : '#D9F7BE' },
 ]
 
 

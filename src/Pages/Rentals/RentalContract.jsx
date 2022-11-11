@@ -18,7 +18,7 @@ const RentalContract = () => {
           Mietvertrag
         </p>
       </div>
-      <div style={{ overflowY: 'scroll', maxHeight: '80vh' }} className='mx-5 lg:mx-20'>
+      <div style={{ overflowY: 'auto', maxHeight: '80vh' }} className='mx-5 lg:mx-20'>
         <div className=' mt-5'>
           <div className='relative'>
             <p className={style.boldText}>Zahlungen</p>

@@ -106,7 +106,7 @@ const SingleCar = () => {
       >
 
         <div className='w-[100%] rounded-t-xl	shadow-xl pt-10' >
-          <div className='mx-5 lg:mx-[8rem] pb-16 h-5/6' >
+          <div className='mx-5 lg:mx-[8rem] pb-24 h-5/6' >
             <div className='border-b-2 '>
               <p className="text-[32px] font-[600] flex justify-between"><span>Tesla</span> <span>30 €</span></p>
               <p className="text-[12px] font-[400] text-slate-500 flex justify-between">  <span>Model 3</span> <span>für 2 std</span></p>
@@ -200,9 +200,9 @@ const SingleCar = () => {
 
             </div>
           </div>
-          <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%] lg:w-[30%]  '>
+          <div className='mx-auto right-0 left-0 w-full bg-white bottom-0 absolute text-center'>
             <Link to={'/user/1/message'}>
-              <button className="mt-10 bg-[#1E2024] text-white text-[14px] py-6 px-4 rounded-lg w-full">
+              <button className="mb-4 mt-1 bg-[#1E2024] text-white text-[14px] py-6 px-4 rounded-lg lg:w-[30%] md:w-[60%] w-[80%]">
                 Buchung anfragen
               </button>
             </Link>

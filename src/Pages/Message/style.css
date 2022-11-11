@@ -1,10 +1,11 @@
 .speech {
-    background: white!important;
-    position: relative;
-    outline: none;
     position: absolute;
-    right: 10%;
-    top : 15%;
+    right: 15%;
+    top: 15%;
+    outline: none;
+    height: auto;
+    background-color: white;
+    font-size: 13px;
 }
 
 /* Creates triangular tip on the
@@ -18,7 +19,7 @@
     border-top: 20px solid white!important;
     border-bottom: 20px solid transparent;
     right: 0;
-    bottom: 20px;
+    bottom: -30px;
     outline: none;
 
 }

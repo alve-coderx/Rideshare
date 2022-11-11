@@ -5,7 +5,7 @@ import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 
 const style = {
     secondary: 'flex items-center text-[#636B75] text-[13px] font-[600] rounded-lg bg-white',
-    heading: 'text-[#838D95] text-[12px] font-[400]',
+    heading: 'text-[#838D95] text-[15px] font-[800]',
 
   }
 

@@ -44,7 +44,7 @@ const Register = () => {
   };
   
   return (
-    <div className='text-center mx-8 lg:mx-[35rem]'>
+    <div className='text-center w-full px-8 md:px-64 lg:px-96'>
       <div className='mt-10'>
         <ToastContainer autoClose={1000}/>
 
@@ -77,9 +77,9 @@ const Register = () => {
           <div className='flex justify-between mt-5'>
             {
               checkbox.map((item) => (
-                <div key={item.id} className={show === item.id ? 'border-2 border-[#7D7AFF] text-left bg-white rounded-lg p-3 m-1' : 'text-left bg-white rounded-lg p-3 m-1'}>
+                <div key={item.id} className={show === item.id ? 'border-2 border-[#7D7AFF] text-left bg-white rounded-lg p-3 m-1 w-full' : 'w-full text-left bg-white rounded-lg p-3 m-1'}>
                   <span className='font-[600] text-[#0E0F11] text-[14px]'>{item.name}</span>
-                  <p className='font-[400] text-[#636B75] text-[14px]'>{item.details}</p>
+                  <p className='font-[400] text-[#636B75] text-[14px] py-4'>{item.details}</p>
                   <div className="flex items-center mt-4">
                     <input onClick={() => clickCheckbox(item.id)} type="checkbox" defaultChecked={show === item.id} className="w-4 h-4 text-blue-600 rounded " />
                     <label className="ml-2 text-[14px] font-[400] text-[#636B75]">Checkbox</label>

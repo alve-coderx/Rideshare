@@ -2,20 +2,28 @@ import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import paypal from '../../assets/paypal.png';
+import { AiOutlineInfoCircle } from 'react-icons/ai';
+
 const OrderInfo = () => {
-  const [show, setShow] = useState(1);
+    const [show, setShow] = useState(1);
 
     const clickHandler = (index) => {
         setShow((prev) => {
-          return prev === index ? null : index;
+            return prev === index ? null : index;
         });
-    
-      };
+
+    };
     const plans = [
         { header: 'Standart', span: 'Normale SB von 1000€ , Kaution 150€ inklusive', id: 1 },
         { header: 'Plus', span: 'Reduzierte SB von 350€ Kaution 100€ / 14€ am Tag', id: 2 },
         { header: 'Premium', span: 'Reduzierte SB von 0€ Kaution von 50€ ggfs. Ersatzauto inklsive / 22€ am Tag<', id: 3 },
     ]
+    const style = {
+        wrapper_secondary: 'flex items-center text-left bg-[#FFFBE6] rounded-lg shadow-xl py-3 mt-10 px-20 ',
+        primary: 'text-[#838D95] w-96 text-[10px] font-[400] ',
+        secondary: 'flex items-center text-[#636B75] text-[13px] font-[600]',
+        text_bold: 'text-black text-[30px]',
+    }
     return (
         <div className='lg:mx-36 mx-5'>
             <div className='flex items-center py-9 justify-between'>
@@ -36,11 +44,18 @@ const OrderInfo = () => {
             </div>
             {
                 plans.map((plan) => (
-                    <div onClick={() => clickHandler(plan.id)}  key={plan.id} className={show === plan.id ? `mt-3 py-5 px-4 shadow-xl rounded-xl bg-[#7D7AFF]` : `mt-3 py-5 px-4 shadow-xl rounded-xl bg-[white]`} >
+                    <div onClick={() => clickHandler(plan.id)} key={plan.id} className={show === plan.id ? `mt-3 py-5 px-4 shadow-xl rounded-xl bg-[#7D7AFF]` : `mt-3 py-5 px-4 shadow-xl rounded-xl bg-[white]`} >
                         <p className={show === plan.id ? ' text-[14px] text-[white] font-[600]' : ' text-[14px] text-[black] font-[600]'}>{plan.header} <br /> <span className='text-[10px] font-[400]'>{plan.span}</span></p>
                     </div>
                 ))
             }
+            <div className={style.wrapper_secondary}>
+                <p > <AiOutlineInfoCircle className={style.text_bold} /></p>
+                <p className='ml-1'>
+                    <p className='text-sm font-[900]'>Versicherungsschutz</p>
+                    <p className={style.primary}>Lorem ipsum dolor sit amet, .</p>
+                </p>
+            </div>
             <div className='mt-5 '>
                 <p className=' font-[600] text-[18px]'>
                     Zahlungsmethode
@@ -59,4 +74,4 @@ const OrderInfo = () => {
     )
 }
 
-export default OrderInfo
+export default OrderInfo        

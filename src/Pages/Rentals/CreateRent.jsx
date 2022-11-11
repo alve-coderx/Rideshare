@@ -30,7 +30,7 @@ const CreateRent = () => {
               <img src={filter_alt} />
             </Link>
           </div>
-          <p onClick={() => handleStepper()} className='text-white font-[500] text-[16px]'>zurück</p>
+          <p onClick={() => handleStepper()} className='text-white font-[500] text-[16px]' style={{cursor : 'pointer'}}>zurück</p>
         </div>
         <div className='mx-5 lg:mx-32 mt-8 '>
           <div className="w-full  bg-gray-200 h-1">

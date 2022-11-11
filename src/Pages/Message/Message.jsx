@@ -10,7 +10,9 @@ import { DatePicker } from '../../Components';
 const Message = () => {
     const [msg, setMsg] = useState("");
     // const { handleMessage } = useSupplier();
-
+    const style = {
+        mesage: 'mt-5 shadow-xl rounded-xl speech bubble pt-3 pb-24 px-2 w-64 lg:w-96 md:w-96'
+    }
     return (
         <div className='lg:mx-52 mx-5'>
             <div className='flex flex-col items-center justify-center mt-3 '>
@@ -22,7 +24,9 @@ const Message = () => {
                 <img className='mt-3' src={avater} />
                 <p className='mt-3 font-black text-sm text-center'>Schreibe <span className='text-[#7D7AFF]'>Thomas</span>  eine <br /> Nachricht</p>
                 {/* <div onBlur={(e) => setMsg(e.target.innerHTML)} contentEditable="true" className="mt-5 shadow-xl rounded-xl speech bubble w-full pt-3 pb-24 px-2">Hey...</div> */}
-                <input placeholder='Hey...' className="mt-5 shadow-xl rounded-xl speech bubble w-full pt-3 pb-24 px-2 w-96 " />
+                {/* <input placeholder='Hey...' className="mt-5 shadow-xl rounded-xl speech bubble w-full pt-3 pb-24 px-2 w-96 " /> */}
+                <div contentEditable='true' className={style.mesage}></div>
+
             </div>
             <div className='absolute top-64 mt-6'>
                 <p className='mt-3 font-black text-sm'>Zeitangaben</p>

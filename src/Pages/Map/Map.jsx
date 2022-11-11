@@ -28,7 +28,7 @@ export default function SimpleMap() {
         <div className="relative " style={{ overflowX: 'hidden' }}>
             <div className='absolute z-10 top-5 w-full left-2 mt-1'>
                 <div className='flex justify-around items-center mt-5 '>
-                    <div className='bg-white flex justify-between lg:w-[60rem] md:w-[30rem] rounded-lg '>
+                    <div className='bg-white flex justify-between lg:w-[60rem] md:w-[40rem] rounded-lg '>
                         <p className='text-[14px] font-[600] text-[#636B75] flex items-center bg-white p-2 rounded-lg'><GrLocation /> Aktueller Standort</p>
                         <Filter />
                     </div>

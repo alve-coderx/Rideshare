@@ -56,7 +56,7 @@ const RentalDetails = () => {
                         </div>
                         <p className='text-[32px] font-[600]'>30 € </p>
                     </div>
-                    <p className='bg-slate-200 text-[10px]  w-40 font-[600] flex items-center rounded-lg px-2 py-2  mt-3'><MdDateRange className='mr-1' /> Do. 23. Juni  14:00 - 17:00</p>
+                    <p className='bg-slate-200 text-[11px]  w-40 font-[600] flex items-center rounded-lg px-2 py-4 mt-3'><MdDateRange className='mr-1' /> Do. 23. Juni  14:00 - 17:00</p>
                 </div>
                 <div className='mx-auto mb-5   w-[92%] flex justify-center'>
                     <Link to='/rental/overview'>
