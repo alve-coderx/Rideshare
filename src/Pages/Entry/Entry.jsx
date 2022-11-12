@@ -6,7 +6,7 @@ const Entry = () => {
     btn : 'border-t border-r border-b border-[white] text-[19px] font-[500] py-4 px-4 shadow w-[150px] font-[700]'
   }
   return (
-    <div className='text-center flex flex-col items-center lg_bg ' style={{height : '100vh',backgroundRepeat : 'no-repeat',backgroundSize : 'cover',backgroundPosition : "center"}} >
+    <div className='text-center flex flex-col items-center lg_bg sm_bg md_bg' style={{height : '100vh'}} >
       <div className='pt-12 w-[306px] lg:w-[600px]'>
         <p className="lg:text-[50px] text-[40px] font-[600] leading-[60px]	">Search, Book and Rent Your Vehincle Easily</p>
       </div>

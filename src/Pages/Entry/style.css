@@ -1,11 +1,26 @@
-.sm_bg { 
-    background-image: url('https://i.ibb.co/Hhfj0Z6/main.png');
-}
-.md_bg { 
-    background-image: url('https://i.ibb.co/c2Fw4Wd/Login.png');
+@media only screen and (max-width: 700px) and (min-width: 100px) {
+    .sm_bg {
+        background-image: url('https://i.ibb.co/Hhfj0Z6/main.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 }
 
-.lg_bg {
-    background-image: url('https://i.ibb.co/zSQtB1y/Registration-and-Login.png');
+@media only screen and (max-width: 900px) and (min-width: 701px) {
+    .md_bg {
+        background-image: url('https://i.ibb.co/c2Fw4Wd/Login.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
 
+@media only screen and (max-width: 2000px) and (min-width: 901px) {
+    .lg_bg {
+        background-image: url('https://i.ibb.co/y56kzxV/Registration-and-Login-1.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 }
