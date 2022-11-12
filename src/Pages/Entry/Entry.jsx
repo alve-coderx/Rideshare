@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './style.css';
 const Entry = () => {
   const style = {
-    btn : 'border-t border-r border-b border-[white] text-[19px] font-[500] py-4 px-4 shadow w-[150px] font-[700]'
+    btn : 'border-t border-r border-b border-[white] text-[16px] font-[500] py-4 px-4 shadow w-[150px] font-[700]'
   }
   return (
     <div className='text-center flex flex-col items-center lg_bg sm_bg md_bg' style={{height : '100vh'}} >
