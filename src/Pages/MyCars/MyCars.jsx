@@ -14,7 +14,7 @@ const MyCars = () => {
                     <p className='flex items-center border-[2px] border-[#52C41A] px-5 justify-center rounded-lg py-3'><AiOutlinePlusCircle className='mr-5 text-[#52C41A] text-lg' /> Fahrzeug hinzufügen</p>
                 </Link>
             </div>
-            <div className='mt-5 pb-20 h-5/6' style={{ overflowY: 'auto' }}>
+            <div className='mt-5 lg:pb-0 md:pb-0 pb-28 h-5/6' style={{ overflowY: 'auto' }}>
                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-6' >
                     {
                         [1, 2, 3, 4].map((index) => (

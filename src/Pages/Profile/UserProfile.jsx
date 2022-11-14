@@ -18,7 +18,7 @@ const UserProfile = () => {
         { name: 'Zahlungsart angeben', img: op3, icon: <AiOutlineRight />, id: 3 },
     ];
     return (
-        <div style={{ overflow: 'hidden', height: '100vh' }}>
+        <div style={{ overflow: 'auto', height: '100vh' }}>
             <div>
                 <Link to='/startsite/search'>
                     <p className='z-10 absolute top-10 left-5 lg:left-96 text-[#7D7AFF] font-[600]'>zurück</p>
@@ -32,7 +32,7 @@ const UserProfile = () => {
                     Profil bearbeiten
                 </button>
             </div>
-            <div className='pb-16 h-4/6 mx-5 lg:mx-96'>
+            <div className='pb-10 mx-5 lg:mx-96' >
                 <p className='mt-3 font-black text-sm'>Zahlungen</p>
                 <div className='grid grid-cols-1  gap-4' >
                     {
