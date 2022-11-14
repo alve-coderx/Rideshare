@@ -11,7 +11,7 @@ import MenuItem from '../../Components/MenuItem';
 import useAuth from '../../Hook/useAuth';
 
 const UserProfile = () => {
-    const { logout, user} = useAuth();
+    const { logout, user } = useAuth();
     const zahlungen = [
         { name: 'zurück', img: op1, icon: <AiOutlineRight />, id: 1 },
         { name: 'Zahlungsbelege', img: op2, icon: <AiOutlineRight />, id: 2 },
@@ -19,13 +19,15 @@ const UserProfile = () => {
     ];
     return (
         <div style={{ overflow: 'auto', height: '100vh' }}>
-            <div>
-                <Link to='/startsite/search'>
-                    <p className='z-10 absolute top-10 left-5 lg:left-96 text-[#7D7AFF] font-[600]'>zurück</p>
-                </Link>
-                <span className='z-10 absolute top-10 right-5 lg:right-96 bg-[#FFC53D] text-white text-sm flex items-center rounded-lg px-3 py-1'><AiFillStar /> 5.0</span>
+            <div className='my-5 mx-5 lg:mx-96' >
+                <p className='flex justify-between text-[14px] font-[600] my-2'>
+                    <Link to='/startsite/search'>
+                        <span className='text-[#7D7AFF]'>zurück</span>
+                    </Link>
+                    <span className='bg-[#FFC53D] text-white text-sm flex items-center rounded-lg px-3 py-1'><AiFillStar /> 5.0</span>
+                </p>
             </div>
-            <div className='flex flex-col items-center justify-center mt-10 '>
+            <div className='flex flex-col items-center justify-center mt-1 '>
                 <img className='mt-3 rounded-[100px]' src={user?.photoURL || avater} />
                 <p className='mt-3 font-black text-sm'>{user.displayName || 'Vorname Nachname'}</p>
                 <button className="mt-3 bg-[#7D7AFF] w-32 hover:bg-blue-700 text-white text-[11px] font-bold py-2 px-4 rounded-lg w-full">
