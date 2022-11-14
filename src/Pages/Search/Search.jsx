@@ -49,11 +49,11 @@ const Search = () => {
         </div>
       </div>
       <div className='flex justify-between items-end lg:px-[18rem] md:px-10 px-8 mt-2'>
-        <p className='border-b border-[gray] text-white w-[40%]'>.</p>
+        <p className='border-b border-[gray] text-white w-[30%] lg:w-[40%] md:w-[40%]'>.</p>
         <p className='flex items-center text-[14px] font-[600] cursor-pointer' onClick={() => setToggle((prev) => !prev)}>mehr filtern
           <AiOutlineDown aria-hidden="true" />
         </p>
-        <p className='border-b border-[gray] text-white w-[40%]'>.</p>
+        <p className='border-b border-[gray] text-white w-[30%] lg:w-[40%] md:w-[40%]'>.</p>
       </div>
       {toggle &&
         <div className='lg:px-[18rem] md:px-10 px-8 '>
