@@ -19,7 +19,7 @@ export const rentarNav = [
 ];
 
 export const texts = [
-    { name: 'Klimaanlage/AC', id: 1 },
+    { name: 'Klimaanlage', id: 1 },
     { name: 'Tempomat', id: 2 },
     { name: 'Navi', id: 3 },
     { name: 'Kindersitz', id: 4 },

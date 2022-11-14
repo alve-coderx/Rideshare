@@ -82,19 +82,17 @@ const SingleCar = () => {
                 <div className='lg:block md:block hidden'>
                   <img className='w-screen lg:w-full' src='https://i.ibb.co/zVCvfqj/Frame-161.png' />
                 </div>
-                {/* <img className='w-screen ' src='https://i.ibb.co/zVCvfqj/Frame-161.png' /> */}
                 <span className='z-10 absolute bottom-10 lg:right-32 right-6 bg-[#FFC53D] text-white text-sm flex items-center rounded-lg px-3 py-1'><AiFillStar /> 5.0</span>
               </div>
             ))
           }
-
         </Slider>
       </div>
-      <h1 className='absolute flex justify-between top-5 right-4 left-4 z-10 lg:mx-[7rem]'>
-        <p className='bg-[#7D7AFF] text-white font-[500] text-[11px] flex items-center justify-between rounded-lg px-2'><GoLocation className='mr-1' /> 20 km</p>
+      <h1 className='absolute flex justify-between top-5 right-8 left-4 z-10 lg:mx-60 mx-0'>
+        <p className='bg-[#7D7AFF] text-white font-[500] text-[11px] flex items-center justify-between rounded-lg px-2 py-2'><GoLocation className='mr-1' /> 20 km</p>
         <Link to={`/startsite/cars`}>
-          <div className='bg-[black]  p-3 rounded-xl '>
-            <p className='text-white'><AiOutlineClose className='font-[900] text-[15px] ' /></p>
+          <div className='bg-[black] p-3 rounded-xl lg:mr-2'>
+            <p className='text-white'><AiOutlineClose className='font-[900] text-[15px]' /></p>
           </div>
         </Link>
       </h1>
@@ -106,12 +104,12 @@ const SingleCar = () => {
       >
 
         <div className='w-[100%] rounded-t-xl	shadow-xl pt-10' >
-          <div className='mx-5 lg:mx-[8rem] pb-24 h-5/6' >
+          <div className='mx-9 lg:mx-64 pb-24 h-5/6' >
             <div className='border-b-2 '>
               <p className="text-[32px] font-[600] flex justify-between"><span>Tesla</span> <span>30 €</span></p>
               <p className="text-[12px] font-[400] text-slate-500 flex justify-between">  <span>Model 3</span> <span>für 2 std</span></p>
             </div>
-            <div className='flex justify-left my-4'>
+            <div className='flex justify-between my-4'>
               <p className={style.span}>
                 <span className={style.spanVal}>Sitzanzahl</span>
                 <span className='bg-[#7D7AFF] text-white text-[10px] rounded-lg px-3 py-1'> 4</span>
@@ -154,7 +152,7 @@ const SingleCar = () => {
                 40km kostenlos
               </p>
             </div>
-            <div>
+            <div className='mt-5'>
               <p className='text-[14px] font-[600] mt-1'>
                 Technische Daten
               </p>
@@ -202,7 +200,7 @@ const SingleCar = () => {
           </div>
           <div className='mx-auto right-0 left-0 w-full bg-white bottom-0 absolute text-center'>
             <Link to={'/user/1/message'}>
-              <button className="mb-4 mt-1 bg-[#1E2024] text-white text-[14px] py-6 px-4 rounded-lg lg:w-[30%] md:w-[60%] w-[80%]">
+              <button className="mb-2 mt-1 bg-[#1E2024] text-white text-[14px] py-5 px-4 rounded-lg lg:w-[30%] md:w-[60%] w-[80%]">
                 Buchung anfragen
               </button>
             </Link>

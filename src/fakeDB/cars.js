@@ -25,14 +25,14 @@ export const brands = [
   ];
 
 export const kilometers = [
-    {value : '15-60.000km',id : 1},
+    {value : '70.00-120.000km',id : 1},
     {value : '70.00-120.000km',id : 2},
 ];
 export const fuel = [
-    {value : 'Diesel',id : 1},
+    {value : 'Volkswagen',id : 1},
     {value : '70.00-120.000km',id : 2},
 ];
 export const transmission = [
-    {value : 'Automatik',id : 1},
+    {value : 'Volkswagen',id : 1},
     {value : '70.00-120.000km',id : 2},
 ];

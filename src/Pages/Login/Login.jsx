@@ -29,7 +29,7 @@ const Login = () => {
     };
 
     return (
-        <div className='text-center w-full px-8 md:px-64 lg:px-96'>
+        <div className='text-center w-full px-8 md:px-64 lg:px-[40rem]'>
             <div className='mt-16 text-center'>
                 <p className="text-[28px] font-[600]">Hello Again</p>
                 <p className="text-[15px] text-[#636B75] mt-2 font-[400] ">Lorem ipsum dolor sit amet, consectetur <br/> adipiscing elit. Amet, urna, a, fusce</p>

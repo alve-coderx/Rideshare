@@ -6,8 +6,8 @@ import { landLordNav, rentarNav } from '../../fakeDB/elements';
 
 const Rentals = () => {
     const [active, setActive] = useState(1)
-    const landlord = true;
-    const renter = false ;
+    const landlord = false;
+    const renter = true;
     const clickHandler = (index) => {
         setActive((prev) => {
             return prev === index ? null : index;
@@ -15,22 +15,26 @@ const Rentals = () => {
     };
 
     const style = {
-        nav: 'font-[600] text-[11.346px] bg-white py-2 px-2 text-[#7D7AFF] rounded-lg ',
-        nav_active: 'text-[11.346px] text-black py-2 px-2 '
+        nav: 'font-[700] text-[11.346px] bg-white py-2 px-2 text-[#7D7AFF] rounded-lg ',
+        nav_active: 'font-[700] text-[11.346px] text-[gray] py-2 px-4 '
     }
     return (
-        <div style={{ overflow: 'hidden', height: '100vh' }} className="lg:px-44 md:px-20 px-10 ">
+        <div style={{ overflow: 'hidden', height: '100vh' }} className="lg:px-64 md:px-20 px-8 ">
             {
                 landlord &&
-                <div className='bg-slate-200 flex justify-around mt-8 shadow-sm rounded-lg absolute lg:left-[42%] md:left-[33%] left-[10%] px-8 py-1'>
-                    {landLordNav.map((element) => <p key={element.id} style={{ cursor: 'pointer' }} onClick={() => clickHandler(element.id)} className={active === element.id ? style.nav : style.nav_active}>{element.name}</p>)}
+                <div className='flex justify-center'>
+                    <div className='bg-slate-200 flex justify-around mt-8 shadow-sm absolute mx-auto rounded-lg p-1'>
+                        {landLordNav.map((element) => <p key={element.id} style={{ cursor: 'pointer' }} onClick={() => clickHandler(element.id)} className={active === element.id ? style.nav : style.nav_active}>{element.name}</p>)}
+                    </div>
                 </div>
             }
             {
                 renter &&
-                <p className='bg-slate-200 flex justify-around mt-8 shadow-sm rounded-lg absolute lg:left-[42%] md:left-[33%] left-[18%] px-8 py-1'>
-                    {rentarNav.map((element) => <p key={element.id} style={{ cursor: 'pointer' }} onClick={() => clickHandler(element.id)} className={active === element.id ? style.nav : style.nav_active}>{element.name}</p>)}
-                </p>
+                <div className='flex justify-center'>
+                    <div className='bg-slate-200 flex justify-around mt-8 shadow-sm absolute mx-auto rounded-lg p-1'>
+                        {rentarNav.map((element) => <p key={element.id} style={{ cursor: 'pointer' }} onClick={() => clickHandler(element.id)} className={active === element.id ? style.nav : style.nav_active}>{element.name}</p>)}
+                    </div>
+                </div>
             }
             {
                 landlord && (<LandlordRole active={active} />)

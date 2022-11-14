@@ -5,13 +5,13 @@ import { BaseCard } from '../../Components';
 
 const MyCars = () => {
     return (
-        <div className='mx-5 lg:mx-20' style={{overflow : 'hidden', height : '100vh'}}>
+        <div className='mx-5 lg:mx-80' style={{overflow : 'hidden', height : '100vh'}}>
             <div className='text-center my-5'>
                 <p className='font-[600] text-[24px]'>Meine Autos</p>
             </div>
             <div className='mt-y'>
                 <Link to={`/createcar`}>
-                    <p className='flex items-center border border-[#52C41A] px-5 justify-center rounded-lg py-3'><AiOutlinePlusCircle className='mr-5 text-[#52C41A]' /> Fahrzeug hinzufügen</p>
+                    <p className='flex items-center border-[2px] border-[#52C41A] px-5 justify-center rounded-lg py-3'><AiOutlinePlusCircle className='mr-5 text-[#52C41A] text-lg' /> Fahrzeug hinzufügen</p>
                 </Link>
             </div>
             <div className='mt-5 pb-20 h-5/6' style={{ overflowY: 'auto' }}>

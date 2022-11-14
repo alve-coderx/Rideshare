@@ -21,9 +21,9 @@ const UserProfile = () => {
         <div style={{ overflow: 'hidden', height: '100vh' }}>
             <div>
                 <Link to='/startsite/search'>
-                    <p className='z-10 absolute top-10 left-5 lg:left-20 text-[#7D7AFF]'>zurück</p>
+                    <p className='z-10 absolute top-10 left-5 lg:left-96 text-[#7D7AFF] font-[600]'>zurück</p>
                 </Link>
-                <span className='z-10 absolute top-10 right-5 lg:right-20 bg-[#FFC53D] text-white text-sm flex items-center rounded-lg px-3 py-1'><AiFillStar /> 5.0</span>
+                <span className='z-10 absolute top-10 right-5 lg:right-96 bg-[#FFC53D] text-white text-sm flex items-center rounded-lg px-3 py-1'><AiFillStar /> 5.0</span>
             </div>
             <div className='flex flex-col items-center justify-center mt-10 '>
                 <img className='mt-3 rounded-[100px]' src={user?.photoURL || avater} />
@@ -32,7 +32,7 @@ const UserProfile = () => {
                     Profil bearbeiten
                 </button>
             </div>
-            <div className='pb-16 h-4/6 mx-5 lg:mx-32'>
+            <div className='pb-16 h-4/6 mx-5 lg:mx-96'>
                 <p className='mt-3 font-black text-sm'>Zahlungen</p>
                 <div className='grid grid-cols-1  gap-4' >
                     {

@@ -10,12 +10,8 @@ const RentalRoles = () => {
         return prev === index ? null : index;
     });
 };
-  const texts = [{name : "Bevorstehend",id :1},{name : "Abgeschlossen",id :2}]
   return (
     <div className=' mt-20 pb-16 h-5/6' style={{ overflowY: 'auto' }}>
-      <div className='bg-white flex justify-center'>
-          {texts.map((index) => <p key={index.id} className={active === index.id ? 'p-2 text-[#7D7AFF] underline underline-offset-1	' : 'p-2 text-[#838D95]'} onClick={() => clickHandler(index.id)}>{index.name}</p>)}
-      </div>
       <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
         {
           cars.map((car) => (

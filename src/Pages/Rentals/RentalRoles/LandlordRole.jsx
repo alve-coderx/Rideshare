@@ -10,19 +10,16 @@ const LandlordRole = ({ active }) => {
             return prev === index ? null : index;
         });
     };
-    const texts = [{ name: "Bevorstehend", id: 1 }, { name: "Laufend", id: 2 },{ name: "Abgeschlossen", id: 3 }]
     return (
         <div className='mt-20 pb-16 h-5/6' style={{ overflowY: 'auto' }}>
-            <div className='bg-white flex justify-center'>
-                {texts.map((index) => <p key={index.id} className={toggle === index.id ? 'p-2 text-[#7D7AFF] underline underline-offset-1	' : 'p-2 text-[#838D95]'} onClick={() => clickHandler(index.id)}>{index.name}</p>)}
-            </div>
+           
             {
                 active === 1 ?
                     (
                         <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
                             {
                                 [1, 2, 3, 4, 5, 6].map((index) => (
-                                    <BaseCard key={index} image={avater} title='Thomas' datePicker={true} subLink='Antworten' link={`/rent/${index}`} rentPrice='20 €' />
+                                    <BaseCard key={index} image={avater} title='Thomas' datePicker={true} subLink='Antworten' link={`/rent/${index}`} />
                                 ))
                             }
                         </div>

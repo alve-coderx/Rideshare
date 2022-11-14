@@ -50,6 +50,10 @@ const Inbox = () => {
     scrollToBottom()
   }, []);
 
+  const sendMsg = ( ) => {
+    setMessages(current => [...current, { msg: message, author: 'me' }])
+    setMessage('')
+  }
 
 
   return (
@@ -75,7 +79,7 @@ const Inbox = () => {
         </div>
       </div>
 
-      <div style={{ overflowY: 'scroll' }} className='h-3/4 pb-16'>
+      <div style={{ overflowY: 'auto' }} className='h-3/4 pb-16'>
 
         {
           active === 1 ?
@@ -124,7 +128,7 @@ const Inbox = () => {
                   <img src={car} className='w-[302px] h-[208px] mt-3 lg:hidden md:hidden block' />
                   <img src={car2} className='w-[888px] mt-3 lg:block md:block hidden' />
                 </div>
-                <div className='mx-5 lg:mx-10 '>
+                <div className='mx-5 lg:mx-10 pb-5'>
                   <div className='flex justify-between' >
                     <div>
                       <p className='text-[32px] font-[600]'>Tesla </p>
@@ -167,16 +171,16 @@ const Inbox = () => {
       {
         active === 1 ?
           (
-            <div className='mx-auto right-0 left-0 bottom-5 absolute w-[92%] flex items-center'>
-              <button onClick={() => setMessages(current => [...current, { msg: message, author: 'me' }])} className='absolute right-5 bg-[#7D7AFF] p-1 rounded-lg shadow-xl text-white' >
+            <div className='mx-auto right-0 left-0 bottom-5 absolute w-[62%] flex items-center'>
+              <input onChange={(e) => handleSubmitMsg(e)} step={{ outline: 'none' }} className="shadow-lg rounded w-full py-4 px-3 text-gray-700  border-0" type="text" placeholder="Nachricht senden..." />
+              <button onClick={() => sendMsg()} className='absolute right-5 bg-[#7D7AFF] p-1 rounded-lg shadow-xl text-white' >
                 <AiOutlineArrowUp className='text-[25px] ' />
               </button>
-              <input onChange={(e) => handleSubmitMsg(e)} step={{ outline: 'none' }} className="shadow-lg rounded w-full py-4 px-3 text-gray-700  border-0" type="text" placeholder="Nachricht senden..." />
             </div>
           )
           :
           (
-            <div className='right-0 left-0 bottom-5 absolute  flex justify-around '>
+            <div className='right-0 left-0 bottom-2 absolute  flex justify-around '>
               <Link to='/create/rent'>
                 <button type='submit' className="bg-[#7D7AFF] text-[14px] font-[500] text-white px-10 py-3 rounded-lg w-full">
                   Anpassen oder Stornieren

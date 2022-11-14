@@ -27,13 +27,13 @@ export default function SimpleMap() {
         // Important! Always set the container height explicitly
         <div className="relative " style={{ overflowX: 'hidden' }}>
             <div className='absolute z-10 top-5 w-full left-2 mt-1'>
-                <div className='flex justify-around items-center mt-5 '>
-                    <div className='bg-white flex justify-between lg:w-[60rem] md:w-[40rem] rounded-lg '>
+                <div className='flex justify-around items-center mt-5 lg:mx-32 md:mx-24'>
+                    <div className='bg-white flex justify-between lg:w-[60rem] md:w-[40rem] w-64 rounded-lg shadow-2xl'>
                         <p className='text-[14px] font-[600] text-[#636B75] flex items-center bg-white p-2 rounded-lg'><GrLocation /> Aktueller Standort</p>
                         <Filter />
                     </div>
                     <div className='bg-black p-2 rounded-lg '>
-                        <img className='w-6' src={filter_alt} />
+                        <img className='w-8' src={filter_alt} />
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@ export default function SimpleMap() {
                     />
                 </GoogleMapReact>
             </div>
-            <div className="absolute bottom-[2rem] rounded-xl lg:left-44 mx-auto flex">
+            <div className="absolute bottom-[2rem] rounded-xl lg:left-64 flex">
                 <div className="hidden lg:block md:block">
                     <MapCard />
                 </div>

@@ -17,8 +17,8 @@ class Horizontal extends Component {
     render() {
         const { value } = this.state
         return (
-            <div className='slider'>
-                <p className='text-[#7D7AFF] text-[500] text-[16px]'>{value} km</p>
+            <div className='slider my-10'>
+                <p className='text-[#7D7AFF] font-[700] text-[16px]'>{value} km</p>
                 <Slider
                     min={0}
                     max={100}

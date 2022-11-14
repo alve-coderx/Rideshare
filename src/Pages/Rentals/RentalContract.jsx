@@ -10,15 +10,16 @@ const RentalContract = () => {
   }
   return (
     <div>
-      <div className='mt-8 mx-5 lg:mx-20 flex items-center'>
+      <div className='mt-8 mx-5 lg:mx-96 flex items-center justify-between'>
         <Link to='/create/rent'>
-          <p className='text-[#7D7AFF] text-[500] text-[16px]'>zurück</p>
+          <p className='text-[#7D7AFF] font-[600] text-[16px]'>zurück</p>
         </Link> 
-        <p className='font-[600] text-[14px] ml-16'>
+        <p className='font-[600] text-[14px]'>
           Mietvertrag
         </p>
+        <p>.</p>
       </div>
-      <div style={{ overflowY: 'auto', maxHeight: '80vh' }} className='mx-5 lg:mx-20'>
+      <div style={{ overflowY: 'auto', maxHeight: '80vh' }} className='mx-5 lg:mx-96'>
         <div className=' mt-5'>
           <div className='relative'>
             <p className={style.boldText}>Zahlungen</p>
@@ -66,7 +67,7 @@ const RentalContract = () => {
         </div>
 
       </div>
-      <div className='mx-auto right-0 left-0 bottom-2 absolute w-[92%] lg:w-[32%]'>
+      <div className='mx-auto right-0 left-0 bottom-3 absolute w-[92%] lg:w-[32%]'>
         <Link to='/rental/sign'>
           <button className="mt-10 bg-[#1E2024]  text-white py-4 px-4 rounded-lg w-full">
             Unterschreibe den Mietvertrag

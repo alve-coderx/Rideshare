@@ -19,19 +19,19 @@ const OrderInfo = () => {
         { header: 'Premium', span: 'Reduzierte SB von 0€ Kaution von 50€ ggfs. Ersatzauto inklsive / 22€ am Tag<', id: 3 },
     ]
     const style = {
-        wrapper_secondary: 'flex items-center text-left bg-[#FFFBE6] rounded-lg shadow-xl py-3 mt-10 px-20 ',
-        primary: 'text-[#838D95] w-96 text-[10px] font-[400] ',
+        wrapper_secondary: 'flex items-center text-left bg-[#FFFBE6] rounded-lg shadow-xl py-3 mt-10 lg:px-16 md:px-16 px-5 ',
+        primary: 'text-[#838D95]  lg:text-[11px] md:text-[12px] text-[10px] font-[400] ',
         secondary: 'flex items-center text-[#636B75] text-[13px] font-[600]',
-        text_bold: 'text-black text-[30px]',
+        text_bold: 'text-black text-[39px]',
     }
     return (
-        <div className='lg:mx-36 mx-5'>
-            <div className='flex items-center py-9 justify-between'>
+        <div className='lg:mx-[21rem] mx-5'>
+            <div className='flex items-center py-9 items-center justify-between'>
                 <Link to={`/order/info`}>
-                    <p className='text-[#7D7AFF] text-[500] text-[16px]'>zurück</p>
+                    <p className='text-[#7D7AFF] font-[600] text-[16px]'>zurück</p>
                 </Link>
-                <div className='flex items-center ml-10'>
-                    <p className='font-[600] text-[14px] '>
+                <div className='flex items-center lg:ml-10 md:ml-10'>
+                    <p className='font-[600] lg:text-[19px] lg:text-[16px] text-[15px] '>
                         Bestätigen und bezahlen
                     </p>
                 </div>
@@ -39,34 +39,34 @@ const OrderInfo = () => {
             </div>
             <div>
                 <p className='text-[18px] font-[600]'>
-                    Versicherungsschutz <br /> auswählen
+                    Versicherungsschutz auswählen
                 </p>
             </div>
             {
                 plans.map((plan) => (
-                    <div onClick={() => clickHandler(plan.id)} key={plan.id} className={show === plan.id ? `mt-3 py-5 px-4 shadow-xl rounded-xl bg-[#7D7AFF]` : `mt-3 py-5 px-4 shadow-xl rounded-xl bg-[white]`} >
-                        <p className={show === plan.id ? ' text-[14px] text-[white] font-[600]' : ' text-[14px] text-[black] font-[600]'}>{plan.header} <br /> <span className='text-[10px] font-[400]'>{plan.span}</span></p>
+                    <div onClick={() => clickHandler(plan.id)} key={plan.id} className={show === plan.id ? `cursor-pointer mt-8 py-5 px-4 shadow-xl rounded-xl bg-[#7D7AFF]` : `cursor-pointer mt-8 py-5 py-5 px-4 shadow-xl rounded-xl bg-[white]`} >
+                        <p className={show === plan.id ? ' text-[15px] text-[white] font-[600]' : ' text-[15px] text-[black] font-[600]'}>{plan.header} <br /> <span className='text-[10px] font-[400]'>{plan.span}</span></p>
                     </div>
                 ))
             }
             <div className={style.wrapper_secondary}>
-                <p > <AiOutlineInfoCircle className={style.text_bold} /></p>
-                <p className='ml-1'>
-                    <p className='text-sm font-[900]'>Versicherungsschutz</p>
-                    <p className={style.primary}>Lorem ipsum dolor sit amet, .</p>
+                <p> <AiOutlineInfoCircle className={style.text_bold} /></p>
+                <p className='ml-2'>
+                    <p className='text-lg font-[900]'>Versicherungsschutz</p>
+                    <p className={style.primary}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper pharetra at tellus interdum amet. .</p>
                 </p>
             </div>
-            <div className='mt-5 '>
+            <div className='mt-5'>
                 <p className=' font-[600] text-[18px]'>
                     Zahlungsmethode
                 </p>
                 <img className='mt-5' src={paypal} />
-                <p className='mt-3 font-[600] text-[14px]'>
+                <p className='mt-3 font-[600] text-[16px]'>
                     Preis
                 </p>
             </div>
-            <div className='mx-auto right-0 left-0 bottom-2 absolute lg:w-[50%] w-[92%]'>
-                <button className="mt-10 bg-[#1E2024] text-white py-4 px-4 rounded-lg w-full">
+            <div className='mx-auto lg:w-[40%] w-[92%] my-10'>
+                <button className=" bg-[#1E2024] text-white p-4 rounded-lg w-full">
                     Anmietung anschauen
                 </button>
             </div>

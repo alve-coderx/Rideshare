@@ -5,10 +5,9 @@ import avater from '../../assets/avater.png';
 import { BaseCard, MenuItem } from '../../Components';
 const FinishedPage = () => {
   return (
-    <div className='mx-6 lg:mx-36'>
+    <div className='mx-6 lg:mx-96'>
       <div className='mt-5'>
-
-        <p className='flex justify-between text-[14px] font-[600]'><span className='text-[#7D7AFF]'>fertig</span><span>Anmietung #2395753</span><span className='text-[#7D7AFF]'>hilfe</span></p>
+        <p className='flex justify-between text-[14px] font-[600] mb-10'><span className='text-[#7D7AFF]'>fertig</span><span>Anmietung #2395753</span><span className='text-[#7D7AFF]'>hilfe</span></p>
         <li className='text-[#636B75] text-[12px] font-[400] mt-5 mx-1 w-92'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum, tincidunt quisque mattis risus.</li>
         <li className='text-[#636B75] text-[12px] font-[400] mt-5 mx-1 w-92'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum, tincidunt quisque mattis risus.</li>
         <Link to='/rental/documents'>
@@ -17,7 +16,7 @@ const FinishedPage = () => {
           </button>
         </Link>
       </div>
-      <div className='mt-5'>
+      <div className='mt-8'>
         <p className='text-[14px] font-[600]'>Oft genutzte Funktionen</p>
         <MenuItem text="Verlängere die Anmietung oder passe sie an" icon={<AiOutlineRight />} />
         <MenuItem text="Die Anmietung stornieren" icon={<AiOutlineRight />} />

@@ -6,7 +6,7 @@ import DatePicker from './DatePicker'
 
 const BaseCard = ({edit,arrow,color,bg, link, image, primaryTag, secondaryTag, title, subTitle, price, hours, iconTag, tagBg, datePicker, subLink, rentPrice, lfTag }) => {
     return (
-        <div className={`w-full flex items-top bg-[white] p-5 rounded-xl relative shadow-xl mt-2 `}>
+        <div className={`w-full flex items-top bg-[white] py-4 px-3 rounded-xl relative shadow-xl mt-2 `}>
             <Link to={link}>
                 <div className='flex items-center'>
                     {
@@ -24,20 +24,20 @@ const BaseCard = ({edit,arrow,color,bg, link, image, primaryTag, secondaryTag, t
                     </div>
                     <div className='ml-4'>
                         <p className={`mt-2 text-[${(color)}] flex items-center text-[16] font-[600]`}>{title} {arrow && <span className='ml-32'>{arrow}</span>}</p>
-                        <p className='mt-2 text-[#838D95] text-[12px]'>{subTitle}</p>
-                        <p className='mt-2 font-black text-[18]'>{price}<span className='text-[#838D95] text-[10px] ml-2'>{hours}</span>  </p>
+                        {subTitle && <p className='mt-2 text-[#838D95] text-[12px]'>{subTitle}</p>}
+                        {hours && <p className='mt-2 font-black text-[18]'>{price}<span className='text-[#838D95] text-[10px] ml-2'>{hours}</span>  </p>}
                         {datePicker && <DatePicker color='#E6E5FF' />}
                         {edit && <p className='flex mt-1 text-[#7D7AFF] text-[9px] border border-[#7D7AFF] rounded-lg p-2'>informationen bearbeiten <AiOutlineEdit className='ml-3' /></p>}
-                        <p className='mt-1 text-[#7D7AFF] text-[12px]'>{rentPrice}</p>
+                        {rentPrice && <p className='mt-1 text-[#7D7AFF] text-[12px]'>{rentPrice}</p>}
 
                     </div>
-                </div>
+                </div>  
             </Link>
             {
                 secondaryTag && <span className='absolute bottom-3 right-3 bg-[#FFC53D] text-white text-sm flex items-center rounded-lg p-1'><AiFillStar /> {secondaryTag}</span>
             }
             {
-                subLink && <span className='absolute bottom-2 right-3 font-[500] text-[12px] flex items-center rounded-lg p-1'>{subLink} <AiOutlineArrowRight /> </span>
+                subLink && <span className='absolute bottom-2 right-1 font-[600] text-[10px] flex items-center rounded-lg p-2'>{subLink} <AiOutlineArrowRight /> </span>
             }
 
         </div>

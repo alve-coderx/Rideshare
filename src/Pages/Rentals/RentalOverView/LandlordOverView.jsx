@@ -11,9 +11,9 @@ const LandlordOverView = () => {
         absolute : 'flex items-center text-[10px] font-[600]'
     }
     return (
-        <div className='lg:mx-20 mx-5'>
+        <div className='lg:mx-[25rem] mx-5   '>
             <div>
-                <div className='text-center pt-5 ' >
+                <div className='text-center py-5 ' >
                     <p className='text-black font-[600] text-[16px]'>Anmietung #2395753</p>
                 </div>
                 <div className='bg-white rounded-lg shadow-lg mt-2  p-4 flex items-center relative'>

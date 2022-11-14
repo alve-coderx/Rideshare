@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const MapCard = () => {
     return (
         <Link to='/startsite/cars'>
-            <div className="bg-white p-1 rounded-xl shadow-xl ml-16">
+            <div className="bg-white p-1 rounded-xl shadow-xl ml-10">
                 <img src={mapcar} />
                 <div className='mx-4 flex items-end justify-between'>
                     <div>

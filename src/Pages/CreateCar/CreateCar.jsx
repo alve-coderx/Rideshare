@@ -33,19 +33,19 @@ const CreateCar = () => {
   const style = {
     wrapper: 'flex justify-between bg-white rounded-lg shadow-xl p-3 relative w-full',
     wrapper_secondary: 'mx-auto flex items-center text-left  bg-[#FFFBE6] rounded-lg shadow-xl py-3 mt-10 px-2 ',
-    primary: 'text-[#838D95] w-96 text-[10px] font-[400] ml-10',
+    primary: 'text-[#838D95] w-96 text-[10px] font-[600] lg:ml-5 md:ml-10 ml-1',
     secondary: 'flex items-center text-[#636B75] text-[13px] font-[600]',
     heading: 'text-[#838D95] text-[12px] font-[400]',
     semiText: 'text-[24px] font-[600] ',
-    text_bold: 'text-black text-[30px] ml-10',
+    text_bold: 'text-black text-[30px] lg:ml-5 md:ml-10 ml-1',
     btn: 'flex items-center justify-center mt-10 bg-[#7D7AFF] text-white py-4 px-4 rounded-lg w-full',
     input: 'mt-3 bg-white text-black text-sm rounded-lg block w-full p-2.5 border-0'
 
   }
   const Dropdown = ({ value, options, onChange }) => {
     return (
-      <div className='absolute right-14'>
-        <select className='flex items-center text-[#636B75] text-[13px] font-[600] border-0 px-6' value={value.value} onChange={onChange}>
+      <div className='absolute right-1'>
+        <select className='flex items-center text-[#636B75] text-[13px] font-[600] border-0 px-8' value={value.value} onChange={onChange}>
           {options.map((option) => (
             <option key={option.id} value={option}>{option.value}</option>
           ))}
@@ -76,28 +76,27 @@ const CreateCar = () => {
     // Send formData object
     // axios.post("api/uploadfile", formData);
   };
-  console.log(prograss)
   return (
     <div>
-      <div className='bg-white lg:px-20 px-5 py-7 '>
+      <div className='bg-white lg:px-[26rem] px-5 py-7 '>
         <div className={prograss === 16.66 ? `flex justify-end` : 'flex justify-between'}>
-          <p onClick={() => setPrograss((prevState) => prevState - 16)} className={prograss === 16 ? 'hidden' : 'text-[#7D7AFF]'} style={{ cursor: "pointer" }}>zurück</p>
+          <p onClick={() => setPrograss((prevState) => prevState - 16)} className={prograss === 16 ? 'hidden ' : 'text-[#7D7AFF] font-[600]'} style={{ cursor: "pointer" }}>zurück</p>
           <Link to='/startsite/mycars'>
             <div className='bg-black text-white p-2 rounded-lg'>
               <AiOutlineClose />
             </div>
           </Link>
         </div>  
-        <div className='mt-32'>
-          <div className="w-full bg-gray-200 h-1">
-            <div className="bg-[#7D7AFF] h-1" style={{ maxWidth: '96%', width: `${prograss}%` }}></div>
+        <div className='mt-2 mr-10'>
+          <div className="w-[100%] bg-gray-200 h-1">
+            <div className="bg-[#7D7AFF] h-1" style={{ maxWidth: '100%', width: `${prograss}%` }}></div>
           </div>
         </div>
       </div>
       <div className='text-center mx-5 mt-8'>
         {
           prograss === 16 ? (
-            <div className='lg:mx-20 mx-5'>
+            <div className='lg:mx-96 mx-5'>
               <p className='text-[24px] font-[600]'>Modell deines Fahrzeugs</p>
               <div className='grid lg:grid-cols-1 gap-2 grid-cols-1 justify-items-center'>
                 <div className={`mt-5 ${style.wrapper} lg:py-6`}>
@@ -141,7 +140,7 @@ const CreateCar = () => {
           )
             :
             prograss === 32 ? (
-              <div className='lg:mx-10 mx-5'>
+              <div className='lg:mx-96 mx-5'>
                 <p className={style.semiText}>Details hinzufügen</p>
                 <div className={`mt-5 ${style.wrapper} py-6  right-0 left-0 mx-auto`}>
                   <p className={style.heading}>Kraftstoff</p>
@@ -161,9 +160,9 @@ const CreateCar = () => {
                 </div>
                 <div className=''>
                   <Counter name='Anzahl der Türen' />
-                  <p className='border-b border-black text-white w-[35%]'>.</p>
+                  <p className='border-b-[3px] border-[#838D95] text-white w-full'>.</p>
                   <Counter name='Anzahl der Sitze' />
-                  <div className='grid lg:grid-cols-5 md:grid-cols-3 grid-cols-3 gap-4 mt-2 justify-items-center'>
+                  <div className='grid lg:grid-cols-5 md:grid-cols-3 grid-cols-3 gap-4 mt-4 justify-items-center'>
                     {
                       texts.map((text) => <p key={text.id} onClick={() => clickHandler(text.id)} className={active === text.id ? 'text-[white] p-2 rounded-xl text-[12px] bg-[#7D7AFF] font-[400]' : 'text-[black] border border-black p-2 rounded-xl text-[12px] bg-[transparent] font-[400]'}>{text.name}</p>)
                     }
@@ -174,7 +173,7 @@ const CreateCar = () => {
             )
               :
               prograss === 48 ? (
-                <div className='lg:mx-20 mx-5'>
+                <div className='lg:mx-96 mx-5'>
                   <p className={style.semiText}>Zulassung</p>
                   <div className='grid lg:grid-cols-1 gap-2 grid-cols-1 justify-items-center'>
                     <div className={`mt-5 ${style.wrapper} lg:py-6`}>
@@ -210,7 +209,7 @@ const CreateCar = () => {
               )
                 :
                 prograss === 64 ? (
-                  <div className='lg:mx-20 mx-5'>
+                  <div className='lg:mx-96 mx-5'>
                     <p className={style.semiText}>Preisangabe</p>
                     <Counter name='Anzahl der Türen' />
                     <div className={`mt-5 ${style.wrapper} lg:py-6`}>
@@ -231,14 +230,14 @@ const CreateCar = () => {
 
                   :
                   prograss === 80 ? (
-                    <div className='lg:mx-36 mx-5' >
+                    <div className='lg:mx-96 mx-5' >
                       <p className={style.semiText}>Treffpunkt einstellen</p>
                       <div className='flex justify-center'>
                         <img className='rounded-3xl my-3 h-52 lg:block md:block hidden' src={map} />
                         <img className='rounded-3xl my-3 h-32 lg:hidden md:hidden block' src={map2} />
                       </div>
                       <div className='bg-white rounded-lg shadow-xl p-3 mt-8 lg:py-6 mx-auto'>
-                        <p className='flex justify-start items-center text-[#838D95] text-[12px] font-[400]'><GoLocation />Standord eingeben</p>
+                        <p className='flex justify-start items-center text-[#838D95] text-[12px] font-[400]'>Getriebe</p>
                       </div>
                       <div className={style.wrapper_secondary}>
                         <p > <AiOutlineInfoCircle className={style.text_bold} /></p>
@@ -249,7 +248,7 @@ const CreateCar = () => {
                   )
                     :
                     prograss === 96 ? (
-                      <div className='lg:mx-10 mx-5'>
+                      <div className='lg:mx-96 mx-5'>
                         <p className={style.semiText}>Lade Bilder von deinem Auto hoch</p>
                         <div className='text-center bg-[#E6E6FF] flex items-center justify-center rounded-lg py-10 mt-5 lg:py-6  mx-auto'>
                           <div className="flex w-full items-center justify-center bg-grey-lighter">
@@ -260,11 +259,6 @@ const CreateCar = () => {
                               <input type='file' onChange={onFileChange} className="hidden" />
                             </label>
                           </div>
-                          {/* <button onClick={() => {
-                                  onFileUpload()
-                                }}>
-                                  Upload
-                                </button> */}
                         </div>
 
                         <div className={style.wrapper_secondary}>
@@ -278,14 +272,12 @@ const CreateCar = () => {
                       ''
         }
       </div>
-      <div className='mx-auto right-0 left-0 bottom-2 lg:bottom-10 absolute w-[92%] lg:w-[32%]'>
+      <div className='mx-auto right-0 left-0 pb-2 lg:pb-0 lg:bottom-10 lg:absolute w-[92%] lg:w-[32%]'>
         <button onClick={() => setPrograss((prevState) => prevState + 16)} className={prograss === 96 ? "hidden" : style.btn}>
           Nächster Schritt
-          <AiOutlineRight className='ml-5 text-[20px]' />
         </button>
         <button onClick={() => setOpen(true)} className={prograss === 96 ? style.btn : "hidden"}>
           Nächster Schritt
-          <AiOutlineRight className='ml-5 text-[20px]' />
         </button>
         <Modal open={open} setOpen={setOpen} />
       </div>
