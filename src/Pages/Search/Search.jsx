@@ -18,10 +18,10 @@ const Search = () => {
 
   };
   return (
-    <div  className="lg:overflow-hidden overflow-auto h-screen lg:h-auto lg:pb-5 pb-20">
-      <div className='bg-[white] flex flex-col items-center relative ' >
+    <div className="lg:overflow-hidden overflow-auto h-screen lg:h-auto lg:pb-5 pb-20 mt-1">
+      <div className='bg-[#fafafa] flex flex-col items-center relative ' >
         <div>
-          <p className='mt-5 lg:mt-0 font-[900] text-[21px] text-center'>Suche dein Auto</p>
+          <p className='mt-5 lg:mt-1 font-[900] text-[21px] text-center'>Suche dein Auto</p>
           <Link to='/map'>
             <img className='rounded-3xl my-4 lg:px-[18rem] md:px-10 px-8 py-3 lg:block md:block block lg:h-auto md:h-auto h-32' src={map} />
           </Link>
@@ -48,19 +48,20 @@ const Search = () => {
           </label>
         </div>
       </div>
-      <div className='flex justify-between items-end lg:px-[18rem] md:px-10 px-8 mt-2'>
-        <p className='border-b border-[gray] text-white w-[30%] lg:w-[40%] md:w-[40%]'>.</p>
+      <div className='flex justify-between items-end lg:px-[19rem] md:px-10 px-8 mt-2'>
+        <p className='border-b-[3px] border-[#838D95] text-white w-[30%] lg:w-[40%] md:w-[40%]'>.</p>
         <p className='flex items-center text-[14px] font-[600] cursor-pointer' onClick={() => setToggle((prev) => !prev)}>mehr filtern
           <AiOutlineDown aria-hidden="true" />
         </p>
-        <p className='border-b border-[gray] text-white w-[30%] lg:w-[40%] md:w-[40%]'>.</p>
+        <p className='border-b-[3px] border-[#838D95] text-white w-[30%] lg:w-[40%] md:w-[40%]'>.</p>
       </div>
       {toggle &&
         <div className='lg:px-[18rem] md:px-10 px-8 '>
           <Counter name='Anzahl der Türen' />
-          <p className='border-b border-black text-white w-[35%]'>.</p>
+          <hr className='border-[1px] border-[#838D95] mx-4'/>
           <Counter name='Anzahl der Sitze' />
-          <div className='grid lg:grid-cols-5 md:grid-cols-3 grid-cols-3 gap-4 mt-2 justify-items-center'>
+          <p className='mx-3 text-black text-[14px] my-5 font-[800]'>Weitere Merkmale</p>
+          <div className='grid lg:grid-cols-5 md:grid-cols-3 grid-cols-3 gap-2 mt-2 justify-items-center'>
             {
               texts.map((text) => <p key={text.id} onClick={() => clickHandler(text.id)} className={active === text.id ? 'cursor-pointer text-[white] p-2 rounded-xl text-[12px] bg-[#7D7AFF] font-[400]' : 'cursor-pointer text-[black] border border-black p-2 rounded-xl text-[12px] bg-[transparent] font-[400]'}>{text.name}</p>)
             }

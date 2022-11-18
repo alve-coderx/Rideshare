@@ -140,7 +140,7 @@ const CreateCar = () => {
           )
             :
             prograss === 32 ? (
-              <div className='lg:mx-96 mx-5'>
+              <div className='lg:mx-96 md:mx-96 mx-5'>
                 <p className={style.semiText}>Details hinzufügen</p>
                 <div className={`mt-5 ${style.wrapper} py-6  right-0 left-0 mx-auto`}>
                   <p className={style.heading}>Kraftstoff</p>
@@ -158,9 +158,9 @@ const CreateCar = () => {
                     onChange={handleChange}
                   />
                 </div>
-                <div className=''>
+                <div>
                   <Counter name='Anzahl der Türen' />
-                  <p className='border-b-[3px] border-[#838D95] text-white w-full'>.</p>
+                  <hr className='border border-[#838D95] mx-2'/>
                   <Counter name='Anzahl der Sitze' />
                   <div className='grid lg:grid-cols-5 md:grid-cols-3 grid-cols-3 gap-4 mt-4 justify-items-center'>
                     {

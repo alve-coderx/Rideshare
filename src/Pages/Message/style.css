@@ -1,7 +1,7 @@
 .speech {
     position: absolute;
-    right: 15%;
-    top: 15%;
+    right: 0;
+    top: 0;
     outline: none;
     height: auto;
     background-color: white;

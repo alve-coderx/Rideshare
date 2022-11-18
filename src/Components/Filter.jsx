@@ -10,9 +10,9 @@ export default function Example() {
   return (
     <Menu as="div" className="relative inline-block text-left ">
       <div className=' '>
-        <Menu.Button className="flex items-center shadow-xl  rounded-r-xl  bg-white px-4 py-4 text-[12px] font-[600] text-[#1E2024] border-l-4 lg:w-86 md:w-86 w-24">
+        <Menu.Button className="flex items-center shadow-xl  rounded-r-xl  bg-white px-4 py-4 text-[12px] font-[600] text-[#1E2024] border-l-4 lg:w-36 md:w-86 w-24">
           <AiOutlineClockCircle className='text-[14px] font-[600] text-[#636B75]'/>
-          <p className='text-[14px] font-[600] text-[#636B75]'>Jetzt</p>
+          <p className='text-[14px] font-[600] text-[#636B75] pr-4'>Jetzt</p>
           <AiOutlineDown className="ml-1 h-4 w-4" aria-hidden="true" />
         </Menu.Button>
       </div>

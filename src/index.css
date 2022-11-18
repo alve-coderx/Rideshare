@@ -15,3 +15,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+::-webkit-inner-spin-button { display: none; }
+::-webkit-datetime-edit-fields-wrapper { 
+  margin-left: 50px;
+}
+
+::-webkit-calendar-picker-indicator { 
+  font-size: 20px;
+  position: absolute;
+ }

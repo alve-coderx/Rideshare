@@ -23,7 +23,7 @@ const Navigator = () => {
   ]
   return (
     <div>
-      <div className='flex justify-around bg-white p-5 absolute bottom-0 lg:static shadow-lg w-full z-10'>
+      <div className='flex justify-around bg-white p-5 absolute bottom-0 lg:static shadow-2xl shadow-[#fafafa] w-full '>
         {
           navigations.map((nav) => (
             <Link key={nav.id} to={nav.href}>
